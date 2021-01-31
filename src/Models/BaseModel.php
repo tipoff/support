@@ -1,6 +1,6 @@
 <?php
 
-namespace Models;
+namespace Tipoff\Support\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
