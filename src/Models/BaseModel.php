@@ -17,9 +17,10 @@ class BaseModel extends Model
      */
     public function belongsTo($related, $foreignKey = null, $ownerKey = null, $relation = null)
     {
-        if (!class_exists($related)) {
+        if (! class_exists($related)) {
             return;
         }
+
         return parent::belongsTo($related, $foreignKey, $ownerKey, $relation);
     }
 
@@ -33,10 +34,10 @@ class BaseModel extends Model
      */
     public function hasMany($related, $foreignKey = null, $localKey = null)
     {
-        if (!class_exists($related)) {
+        if (! class_exists($related)) {
             return;
         }
+
         return parent::hasMany($related, $foreignKey, $localKey);
     }
-
 }
