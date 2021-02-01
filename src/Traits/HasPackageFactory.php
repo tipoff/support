@@ -1,6 +1,6 @@
 <?php
 
-namespace Tipoffs\Support\Traits;
+namespace Tipoff\Support\Traits;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Str;
