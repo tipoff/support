@@ -17,6 +17,7 @@
     "require": {
         "php": "^7.4|^8.0",
         "spatie/laravel-package-tools": "^1.1",
+        "laravel/nova": "^3.0",
         "illuminate/contracts": "^8.0"
     },
     "require-dev": {
@@ -28,7 +29,10 @@
         "psr-4": {
             "Tipoff\\Support\\": "src",
             "Tipoff\\Support\\Database\\Factories\\": "database/factories"
-        }
+        },
+        "files": [
+            "src/Helpers/Test.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -53,6 +57,12 @@
             }
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
