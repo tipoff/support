@@ -70,6 +70,7 @@ abstract class Resource extends NovaResource
     }
 
     // https://github.com/laravel/nova-issues/issues/58#issuecomment-533821333
+
     /**
      * Creates and returns a fresh instance of the model represented by the resource.
      *
