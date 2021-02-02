@@ -1,0 +1,124 @@
+<?php namespace Tipoff\Support\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection as DbCollection;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
+use Spatie\EloquentSortable\Sortable;
+use Spatie\EloquentSortable\SortableTrait;
+use Tipoff\Support\Traits\HasPackageFactory;
+use Tipoff\Support\Traits\HasSlug;
+
+class Tag extends Model implements Sortable
+{
+    use SortableTrait, HasSlug, HasPackageFactory;
+
+    protected $guarded = ['id'];
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($tag) {
+            if (auth()->check()) {
+                $tag->creator_id = auth()->id();
+            }
+        });
+
+        static::saving(function ($tag) {
+            if (empty($tag->slug)) {
+                $tag->slug = $tag->generateSlug();
+            }
+            if (auth()->check()) {
+                $tag->updater_id = auth()->id();
+            }
+        });
+    }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+    public function getPathAttribute()
+    {
+        return "/tags/{$this->slug}";
+    }
+
+    public function scopeWithType(Builder $query, string $type = null): Builder
+    {
+        if (is_null($type)) {
+            return $query;
+        }
+
+        return $query->where('type', $type)->ordered();
+    }
+
+    /**
+     * @param string|array|\ArrayAccess $values
+     * @param string|null $type
+     *
+     * @return static
+     */
+    public static function findOrCreate($values, string $type = null)
+    {
+        $tags = collect($values)->map(function ($value) use ($type) {
+            if ($value instanceof self) {
+                return $value;
+            }
+
+            return static::findOrCreateFromString($value, $type);
+        });
+
+        return is_string($values) ? $tags->first() : $tags;
+    }
+
+    public static function getWithType(string $type): DbCollection
+    {
+        return static::withType($type)->ordered()->get();
+    }
+
+    public static function findFromString(string $name, string $type = null)
+    {
+        return static::query()
+            ->where('name', $name)
+            ->where('type', $type)
+            ->first();
+    }
+
+    public static function findFromStringOfAnyType(string $name)
+    {
+        return static::query()
+            ->where('name', $name)
+            ->first();
+    }
+
+    protected static function findOrCreateFromString(string $name, string $type = null)
+    {
+        $tag = static::findFromString($name, $type);
+
+        if (!$tag) {
+            $tag = static::create([
+                'name' => $name,
+                'type' => $type,
+            ]);
+        }
+
+        return $tag;
+    }
+
+    public static function getTypes(): Collection
+    {
+        return static::groupBy('type')->pluck('type');
+    }
+
+    public function creator()
+    {
+        return $this->belongsTo(config('support.user_model'), 'creator_id');
+    }
+
+    public function updater()
+    {
+        return $this->belongsTo(config('support.user_model'), 'updater_id');
+    }
+}
