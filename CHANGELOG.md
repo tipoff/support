@@ -19,3 +19,8 @@ All notable changes to `support` will be documented in this file.
 - add common nova resource
 - add helpers
 - use strict_types
+
+## 1.0.4 - 2021-02-02
+
+- add money & enum castables
+- add enum validation rule
