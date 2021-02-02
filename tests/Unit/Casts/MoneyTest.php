@@ -6,7 +6,6 @@ namespace Tipoff\Support\Tests\Unit\Casts;
 
 use Brick\Money\Money;
 use Illuminate\Database\Eloquent\Model;
-use MabeEnum\Enum;
 use Tipoff\Support\Tests\TestCase;
 
 class MoneyTest extends TestCase
@@ -15,7 +14,8 @@ class MoneyTest extends TestCase
     public function get_value_converts_to_money()
     {
         $cast = new \Tipoff\Support\Casts\Money();
-        $value = $cast->get(new class extends Model {}, 'attribute', 1000, []);
+        $value = $cast->get(new class extends Model {
+        }, 'attribute', 1000, []);
 
         $this->assertInstanceOf(Money::class, $value);
         $this->assertEquals('$10.00', $value->formatTo('en-US'));
@@ -25,7 +25,8 @@ class MoneyTest extends TestCase
     public function set_by_money_converts_to_int()
     {
         $cast = new \Tipoff\Support\Casts\Money();
-        $value = $cast->set(new class extends Model {}, 'attribute', Money::ofMinor(1000, 'USD'), []);
+        $value = $cast->set(new class extends Model {
+        }, 'attribute', Money::ofMinor(1000, 'USD'), []);
 
         $this->assertIsInt($value);
         $this->assertEquals(1000, $value);
@@ -38,6 +39,7 @@ class MoneyTest extends TestCase
         $this->expectExceptionMessage('Money class expected');
 
         $cast = new \Tipoff\Support\Casts\Money();
-        $cast->set(new class extends Model {}, 'attribute', 'NotMoney', []);
+        $cast->set(new class extends Model {
+        }, 'attribute', 'NotMoney', []);
     }
 }

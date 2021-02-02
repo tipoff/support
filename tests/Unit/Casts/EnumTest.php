@@ -14,7 +14,8 @@ class EnumTest extends TestCase
     public function get_valid_value_converts_to_enum()
     {
         $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
-        $value = $cast->get(new class extends Model {}, 'attribute', TestEnum::TEST_VALUE, []);
+        $value = $cast->get(new class extends Model {
+        }, 'attribute', TestEnum::TEST_VALUE, []);
 
         $this->assertInstanceOf(Enum::class, $value);
         $this->assertTrue($value->is(TestEnum::TEST_VALUE()));
@@ -27,14 +28,16 @@ class EnumTest extends TestCase
         $this->expectExceptionMessage('Unknown value \'bad_value\' for enumeration Tipoff\Support\Tests\Unit\Casts\TestEnum');
 
         $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
-        $cast->get(new class extends Model {}, 'attribute', 'bad_value', []);
+        $cast->get(new class extends Model {
+        }, 'attribute', 'bad_value', []);
     }
 
     /** @test */
     public function set_by_enum_converts_to_string()
     {
         $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
-        $value = $cast->set(new class extends Model {}, 'attribute', TestEnum::TEST_VALUE(), []);
+        $value = $cast->set(new class extends Model {
+        }, 'attribute', TestEnum::TEST_VALUE(), []);
 
         $this->assertIsString($value);
         $this->assertEquals(TestEnum::TEST_VALUE, $value);
@@ -47,7 +50,8 @@ class EnumTest extends TestCase
         $this->expectExceptionMessage('Enum class expected');
 
         $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
-        $cast->set(new class extends Model {}, 'attribute', 'NotEnum', []);
+        $cast->set(new class extends Model {
+        }, 'attribute', 'NotEnum', []);
     }
 }
 

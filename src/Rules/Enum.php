@@ -25,7 +25,7 @@ class Enum implements Rule
      */
     public function passes($attribute, $value)
     {
-        return call_user_func(array($this->enumClass, 'has'), $value);
+        return call_user_func([$this->enumClass, 'has'], $value);
     }
 
     /**
@@ -35,7 +35,6 @@ class Enum implements Rule
      */
     public function message()
     {
-
         return 'The :attribute is not a valid value for ' . class_basename($this->enumClass) . '.';
     }
 }

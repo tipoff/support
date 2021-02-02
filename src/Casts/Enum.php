@@ -18,7 +18,7 @@ class Enum implements CastsAttributes
 
     public function get($model, string $key, $value, array $attributes)
     {
-        return call_user_func(array($this->enumClass, 'byValue'), $value);
+        return call_user_func([$this->enumClass, 'byValue'], $value);
     }
 
     public function set($model, string $key, $value, array $attributes)
