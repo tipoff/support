@@ -11,7 +11,9 @@ use Tipoff\Support\Traits\HasSlug;
 
 class Tag extends Model implements Sortable
 {
-    use SortableTrait, HasSlug, HasPackageFactory;
+    use SortableTrait;
+    use HasSlug;
+    use HasPackageFactory;
 
     protected $guarded = ['id'];
 
@@ -97,7 +99,7 @@ class Tag extends Model implements Sortable
     {
         $tag = static::findFromString($name, $type);
 
-        if (!$tag) {
+        if (! $tag) {
             $tag = static::create([
                 'name' => $name,
                 'type' => $type,
