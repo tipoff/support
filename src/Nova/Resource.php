@@ -25,6 +25,7 @@ abstract class Resource extends NovaResource
      * Build a Scout search query for the given resource.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     * @psalm-suppress UndefinedDocblockClass
      * @param  \Laravel\Scout\Builder  $query
      * @return \Laravel\Scout\Builder
      */
@@ -63,6 +64,7 @@ abstract class Resource extends NovaResource
     protected static function applyOrderings($query, array $orderings)
     {
         if (empty($orderings) && property_exists(static::class, 'orderBy')) {
+            /** @psalm-suppress UndefinedPropertyFetch */
             $orderings = static::$orderBy;
         }
 
@@ -78,6 +80,7 @@ abstract class Resource extends NovaResource
      */
     public static function newModel()
     {
+        /** @psalm-suppress UndefinedPropertyFetch */
         $model = static::$model;
 
         $instance = new $model;
