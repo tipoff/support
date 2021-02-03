@@ -24,3 +24,9 @@ All notable changes to `support` will be documented in this file.
 
 - add money & enum castables
 - add enum validation rule
+
+## 1.0.5 - 2021-02-0
+
+- improve psalm tests
+- add assertions
+- allow null values in custom casts
