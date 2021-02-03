@@ -18,11 +18,15 @@ class Enum implements CastsAttributes
 
     public function get($model, string $key, $value, array $attributes)
     {
-        return call_user_func([$this->enumClass, 'byValue'], $value);
+        return is_null($value) ? $value : call_user_func([$this->enumClass, 'byValue'], $value);
     }
 
     public function set($model, string $key, $value, array $attributes)
     {
+        if (is_null($value)) {
+            return $value;
+        }
+
         if ($value instanceof \MabeEnum\Enum) {
             return $value->getValue();
         }
