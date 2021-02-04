@@ -18,8 +18,6 @@ class SupportServiceProvider extends PackageServiceProvider
         $package
             ->name('support')
             ->hasConfigFile()
-            ->hasViews()
-            ->hasMigration('create_support_table')
             ->hasCommand(SupportCommand::class);
     }
 }
