@@ -21,6 +21,7 @@ class BaseModel extends Model
 
     /**
      * @inheritDoc
+     * @psalm-suppress UnusedVariable
      */
     protected function guessBelongsToRelation()
     {
