@@ -34,3 +34,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.0.6 - 2021-02-03
 
 - update nova dependency
+
+## 1.0.7 - 2021-02-04
+
+- add stub for test model
