@@ -33,7 +33,6 @@ trait TestModelStub
     protected static function newFactory()
     {
         $factory = new class extends Factory {
-
             public function setModelNameResolver($class): self
             {
                 self::$modelNameResolver = function () use ($class) {
