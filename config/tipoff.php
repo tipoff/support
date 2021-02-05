@@ -54,7 +54,7 @@ return [
 
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
-        'rate' => \App\Models\Rate::class,
+        'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
 
         'recurring_schedule' => \App\Models\RecurringSchedule::class,
 
@@ -62,7 +62,7 @@ return [
 
         'review' => \App\Models\Review::class,
 
-        'room' => \App\Models\Room::class,
+        'room' => \Tipoff\EscapeRoom\Models\Room::class,
 
         'schedule' => \App\Models\Schedule::class,
 
@@ -78,13 +78,13 @@ return [
 
         'status' => \App\Models\Status::class,
 
-        'supervision' => \App\Models\Supervision::class,
+        'supervision' => \Tipoff\EscapeRoom\Models\Supervision::class,
 
         'tag' => \DrewRoberts\Media\Models\Tag::class,
 
         'tax' => \Tipoff\Taxes\Models\Tax::class,
 
-        'theme' => \App\Models\Theme::class,
+        'theme' => \Tipoff\EscapeRoom\Models\Theme::class,
 
         'topic' => \DrewRoberts\Blog\Models\Topic::class,
 
