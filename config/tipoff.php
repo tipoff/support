@@ -4,7 +4,7 @@ return [
 
     'model_class' => [
 
-        'block' => \App\Models\Block::class,
+        'block' => \Tipoff\Scheduling\Models\Block::class,
 
         'booking' => \App\Models\Booking::class,
 
@@ -26,9 +26,9 @@ return [
 
         'flex_day' => \App\Models\FlexDay::class,
 
-        'game' => \App\Models\Game::class,
+        'game' => \Tipoff\Scheduling\Models\Game::class,
 
-        'hold' => \App\Models\Hold::class,
+        'hold' => \Tipoff\Scheduling\Models\Hold::class,
 
         'image' => \DrewRoberts\Media\Models\Image::class,
 
@@ -56,7 +56,7 @@ return [
 
         'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
 
-        'recurring_schedule' => \App\Models\RecurringSchedule::class,
+        'recurring_schedule' => \Tipoff\Scheduling\Models\RecurringSchedule::class,
 
         'refund' => \App\Models\Refund::class,
 
@@ -66,13 +66,13 @@ return [
 
         'schedule' => \App\Models\Schedule::class,
 
-        'schedule_eraser' => \App\Models\ScheduleEraser::class,
+        'schedule_eraser' => \Tipoff\Scheduling\Models\ScheduleEraser::class,
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
 
         'signature' => \App\Models\Signature::class,
 
-        'slot' => \App\Models\Slot::class,
+        'slot' => \Tipoff\Scheduling\Models\Slot::class,
 
         'snapshot' => \App\Models\Snapshot::class,
 
