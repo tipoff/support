@@ -38,3 +38,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.0.7 - 2021-02-04
 
 - add stub for test model
+
+## 1.0.8 - 2021-02-04
+
+- add config
