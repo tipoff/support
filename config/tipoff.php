@@ -46,13 +46,13 @@ return [
 
         'order' => \App\Models\Order::class,
 
-        'page' => \App\Models\Page::class,
+        'page' => \DrewRoberts\Blog\Models\Page::class,
 
         'participant' => \App\Models\Participant::class,
 
         'payment' => \App\Models\Payment::class,
 
-        'post' => \App\Models\Post::class,
+        'post' => \DrewRoberts\Blog\Models\Post::class,
 
         'rate' => \App\Models\Rate::class,
 
@@ -68,7 +68,7 @@ return [
 
         'schedule_eraser' => \App\Models\ScheduleEraser::class,
 
-        'series' => \App\Models\Series::class,
+        'series' => \DrewRoberts\Blog\Models\Series::class,
 
         'signature' => \App\Models\Signature::class,
 
@@ -80,13 +80,13 @@ return [
 
         'supervision' => \App\Models\Supervision::class,
 
-        'tag' => \App\Models\Tag::class,
+        'tag' => \DrewRoberts\Media\Models\Tag::class,
 
         'tax' => \App\Models\Tax::class,
 
         'theme' => \App\Models\Theme::class,
 
-        'topic' => \App\Models\Topic::class,
+        'topic' => \DrewRoberts\Blog\Models\Topic::class,
 
         'user' => \App\Models\User::class,
 
