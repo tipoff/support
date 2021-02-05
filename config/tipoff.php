@@ -20,7 +20,7 @@ return [
 
         'discount' => \App\Models\Discount::class,
 
-        'fee' => \App\Models\Fee::class,
+        'fee' => \Tipoff\Fees\Models\Fee::class,
 
         'feedback' => \App\Models\Feedback::class,
 
