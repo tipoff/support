@@ -82,7 +82,7 @@ return [
 
         'tag' => \DrewRoberts\Media\Models\Tag::class,
 
-        'tax' => \App\Models\Tax::class,
+        'tax' => \Tipoff\Taxes\Models\Tax::class,
 
         'theme' => \App\Models\Theme::class,
 
