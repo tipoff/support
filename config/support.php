@@ -2,27 +2,9 @@
 
 return [
 
-    'user' => \App\Models\User::class,
-
-    'slot' => \App\Models\Slot::class,
+    'block' => \App\Models\Block::class,
 
     'booking' => \App\Models\Booking::class,
-
-    'schedule' => \App\Models\Schedule::class,
-
-    'schedule_eraser' => \App\Models\ScheduleEraser::class,
-
-    'signature' => \App\Models\Signature::class,
-
-    'recurring_schedule' => \App\Models\RecurringSchedule::class,
-
-    'game' => \App\Models\Game::class,
-
-    'location' => \App\Models\Location::class,
-
-    'market' => \App\Models\Market::class,
-
-    'block' => \App\Models\Block::class,
 
     'cart' => \App\Models\Cart::class,
 
@@ -42,7 +24,11 @@ return [
 
     'flex_day' => \App\Models\FlexDay::class,
 
+    'game' => \App\Models\Game::class,
+
     'hold' => \App\Models\Hold::class,
+
+    'image' => \DrewRoberts\Media\Models\Image::class,
 
     'insight' => \App\Models\Insight::class,
 
@@ -50,15 +36,25 @@ return [
 
     'key' => \App\Models\Key::class,
 
+    'location' => \App\Models\Location::class,
+
+    'market' => \App\Models\Market::class,
+
     'note' => \App\Models\Note::class,
 
     'order' => \App\Models\Order::class,
+
+    'page' => \App\Models\Page::class,
 
     'participant' => \App\Models\Participant::class,
 
     'payment' => \App\Models\Payment::class,
 
+    'post' => \App\Models\Post::class,
+
     'rate' => \App\Models\Rate::class,
+
+    'recurring_schedule' => \App\Models\RecurringSchedule::class,
 
     'refund' => \App\Models\Refund::class,
 
@@ -66,22 +62,36 @@ return [
 
     'room' => \App\Models\Room::class,
 
+    'schedule' => \App\Models\Schedule::class,
+
+    'schedule_eraser' => \App\Models\ScheduleEraser::class,
+
+    'series' => \App\Models\Series::class,
+
+    'signature' => \App\Models\Signature::class,
+
+    'slot' => \App\Models\Slot::class,
+
     'snapshot' => \App\Models\Snapshot::class,
 
     'status' => \App\Models\Status::class,
 
     'supervision' => \App\Models\Supervision::class,
 
+    'tag' => \App\Models\Tag::class,
+
     'tax' => \App\Models\Tax::class,
 
     'theme' => \App\Models\Theme::class,
 
+    'topic' => \App\Models\Topic::class,
+
+    'user' => \App\Models\User::class,
+
+    'video' => \DrewRoberts\Media\Models\Video::class,
+
     'voucher' => \App\Models\Voucher::class,
 
     'voucher_type' => \App\Models\VoucherType::class,
-
-    'image' => \DrewRoberts\Media\Models\Image::class,
-
-    'video' => \DrewRoberts\Media\Models\Video::class,
 
 ];
