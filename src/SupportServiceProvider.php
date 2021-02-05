@@ -17,7 +17,7 @@ class SupportServiceProvider extends PackageServiceProvider
          */
         $package
             ->name('support')
-            ->hasConfigFile()
+            ->hasConfigFile('tipoff')
             ->hasCommand(SupportCommand::class);
     }
 }
