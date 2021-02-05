@@ -24,7 +24,7 @@ return [
 
         'feedback' => \App\Models\Feedback::class,
 
-        'flex_day' => \App\Models\FlexDay::class,
+        'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
 
         'game' => \Tipoff\Scheduling\Models\Game::class,
 
