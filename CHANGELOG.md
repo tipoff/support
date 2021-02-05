@@ -47,3 +47,7 @@ All notable changes to `support` will be documented in this file.
 
 - replace framework dependency
 - add enum appliesto class
+
+## 1.0.10 - 2021-02-05
+
+- add docker setup
