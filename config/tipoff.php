@@ -38,9 +38,9 @@ return [
 
         'key' => \App\Models\Key::class,
 
-        'location' => \App\Models\Location::class,
+        'location' => \Tipoff\Locations\Models\Location::class,
 
-        'market' => \App\Models\Market::class,
+        'market' => \Tipoff\Locations\Models\Market::class,
 
         'note' => \App\Models\Note::class,
 
