@@ -42,3 +42,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.0.8 - 2021-02-04
 
 - add config
+
+## 1.0.9 - 2021-02-05
+
+- replace framework dependency
+- add enum appliesto class
