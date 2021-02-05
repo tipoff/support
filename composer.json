@@ -18,8 +18,9 @@
         "php": "^7.4|^8.0",
         "beberlei/assert": "^3.3",
         "cakephp/chronos": "^1.2.3|^2.0",
+        "illuminate/collections": "^8.0",
         "illuminate/contracts": "^8.0",
-        "laravel/framework": "^8.2",
+        "illuminate/database": "^8.14",
         "laravel/nova": "^3.20",
         "marc-mabe/php-enum": "^4.4",
         "spatie/laravel-package-tools": "^1.1"
