@@ -72,7 +72,7 @@ return [
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
 
-        'signature' => \App\Models\Signature::class,
+        'signature' => \Tipoff\Waivers\Models\Signature::class,
 
         'slot' => \Tipoff\Scheduling\Models\Slot::class,
 
