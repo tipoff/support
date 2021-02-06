@@ -18,7 +18,7 @@ return [
 
         'customer' => \Tipoff\Addresses\Models\Customer::class, // Will be renamed later to address when new features added
 
-        'discount' => \App\Models\Discount::class,
+        'discount' => \Tipoff\Discounts\Models\Discount::class,
 
         'fee' => \Tipoff\Fees\Models\Fee::class,
 
