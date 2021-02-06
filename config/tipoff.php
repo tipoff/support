@@ -8,9 +8,9 @@ return [
 
         'booking' => \App\Models\Booking::class,
 
-        'cart' => \App\Models\Cart::class,
+        'cart' => \Tipoff\Checkout\Models\Cart::class,
 
-        'cart_item' => \App\Models\CartItem::class,
+        'cart_item' => \Tipoff\Checkout\Models\CartItem::class,
 
         'competitor' => \Tipoff\Reviews\Models\Competitor::class,
 
@@ -44,7 +44,9 @@ return [
 
         'note' => \App\Models\Note::class,
 
-        'order' => \App\Models\Order::class,
+        'order' => \Tipoff\Checkout\Models\Order::class,
+
+        'order_item' => \Tipoff\Checkout\Models\OrderItem::class,
 
         'page' => \DrewRoberts\Blog\Models\Page::class,
 
