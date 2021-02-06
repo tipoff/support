@@ -19,5 +19,13 @@ class ModelResolvingTest extends TestCase
             array_intersect($loader->getAliases(), config('tipoff.model_class'))
         );
     }
+
+    /** @test */
+    public function test_if_class_can_be_overwrited()
+    {
+        $loader = AliasLoader::getInstance();
+        $loader->alias('user', \Tipoff\Support\Models\BaseModel::class);
+        $this->assertEquals(get_class(resolve('user')), \Tipoff\Support\Models\BaseModel::class);
+    }
 }
 
