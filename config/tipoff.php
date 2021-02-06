@@ -60,7 +60,7 @@ return [
 
         'recurring_schedule' => \Tipoff\Scheduling\Models\RecurringSchedule::class,
 
-        'refund' => \App\Models\Refund::class,
+        'refund' => \Tipoff\Refunds\Models\Refund::class,
 
         'review' => \Tipoff\Reviews\Models\Review::class,
 
