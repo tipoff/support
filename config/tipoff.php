@@ -94,9 +94,9 @@ return [
 
         'video' => \DrewRoberts\Media\Models\Video::class,
 
-        'voucher' => \App\Models\Voucher::class,
+        'voucher' => \Tipoff\Vouchers\Models\Voucher::class,
 
-        'voucher_type' => \App\Models\VoucherType::class,
+        'voucher_type' => \Tipoff\Vouchers\Models\VoucherType::class,
 
     ]
 
