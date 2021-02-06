@@ -52,7 +52,7 @@ return [
 
         'participant' => \App\Models\Participant::class,
 
-        'payment' => \App\Models\Payment::class,
+        'payment' => \Tipoff\Payments\Models\Payment::class,
 
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
