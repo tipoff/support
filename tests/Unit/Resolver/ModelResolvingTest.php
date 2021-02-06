@@ -28,4 +28,3 @@ class ModelResolvingTest extends TestCase
         $this->assertEquals(get_class(resolve('user')), \Tipoff\Support\Models\BaseModel::class);
     }
 }
-
