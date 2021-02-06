@@ -20,4 +20,3 @@ class ModelResolvingTest extends TestCase
         );
     }
 }
-

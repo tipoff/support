@@ -10,7 +10,8 @@ class Support
      * @param  string  $name
      * @return mixed
      */
-    public static function resolve($name) {
+    public static function resolve($name)
+    {
         return app($name);
     }
 }
