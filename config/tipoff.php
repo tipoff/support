@@ -6,7 +6,7 @@ return [
 
         'block' => \Tipoff\Scheduling\Models\Block::class,
 
-        'booking' => \App\Models\Booking::class,
+        'booking' => \Tipoff\Bookings\Models\Booking::class,
 
         'cart' => \Tipoff\Checkout\Models\Cart::class,
 
