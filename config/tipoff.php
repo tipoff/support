@@ -12,7 +12,7 @@ return [
 
         'cart_item' => \App\Models\CartItem::class,
 
-        'competitor' => \App\Models\Competitor::class,
+        'competitor' => \Tipoff\Reviews\Models\Competitor::class,
 
         'contact' => \App\Models\Contact::class,
 
@@ -32,11 +32,11 @@ return [
 
         'image' => \DrewRoberts\Media\Models\Image::class,
 
-        'insight' => \App\Models\Insight::class,
+        'insight' => \Tipoff\Reviews\Models\Insight::class,
 
         'invoice' => \App\Models\Invoice::class,
 
-        'key' => \App\Models\Key::class,
+        'key' => \Tipoff\Reviews\Models\Key::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
 
@@ -60,7 +60,7 @@ return [
 
         'refund' => \App\Models\Refund::class,
 
-        'review' => \App\Models\Review::class,
+        'review' => \Tipoff\Reviews\Models\Review::class,
 
         'room' => \Tipoff\EscapeRoom\Models\Room::class,
 
@@ -74,7 +74,7 @@ return [
 
         'slot' => \Tipoff\Scheduling\Models\Slot::class,
 
-        'snapshot' => \App\Models\Snapshot::class,
+        'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
         'status' => \App\Models\Status::class,
 
