@@ -66,8 +66,6 @@ return [
 
         'room' => \Tipoff\EscapeRoom\Models\Room::class,
 
-        'schedule' => \App\Models\Schedule::class,
-
         'schedule_eraser' => \Tipoff\Scheduling\Models\ScheduleEraser::class,
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
