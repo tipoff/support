@@ -78,7 +78,7 @@ return [
 
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
-        'status' => \App\Models\Status::class,
+        'status' => \Tipoff\Statuses\Models\Status::class,
 
         'supervision' => \Tipoff\EscapeRoom\Models\Supervision::class,
 
