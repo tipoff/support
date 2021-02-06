@@ -22,7 +22,7 @@ return [
 
         'fee' => \Tipoff\Fees\Models\Fee::class,
 
-        'feedback' => \App\Models\Feedback::class,
+        'feedback' => \Tipoff\Feedback\Models\Feedback::class,
 
         'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
 
