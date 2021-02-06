@@ -50,7 +50,7 @@ return [
 
         'page' => \DrewRoberts\Blog\Models\Page::class,
 
-        'participant' => \App\Models\Participant::class,
+        'participant' => \Tipoff\EscapeRoom\Participant::class,
 
         'payment' => \Tipoff\Payments\Models\Payment::class,
 
