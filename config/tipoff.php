@@ -34,7 +34,7 @@ return [
 
         'insight' => \Tipoff\Reviews\Models\Insight::class,
 
-        'invoice' => \App\Models\Invoice::class,
+        'invoice' => \Tipoff\Invoices\Models\Invoice::class,
 
         'key' => \Tipoff\Reviews\Models\Key::class,
 
