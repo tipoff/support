@@ -16,7 +16,7 @@ return [
 
         'contact' => \App\Models\Contact::class,
 
-        'customer' => \App\Models\Customer::class,
+        'customer' => \Tipoff\Addresses\Models\Customer::class, // Will be renamed later to address when new features added
 
         'discount' => \App\Models\Discount::class,
 
