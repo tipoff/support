@@ -42,7 +42,7 @@ return [
 
         'market' => \Tipoff\Locations\Models\Market::class,
 
-        'note' => \App\Models\Note::class,
+        'note' => \Tipoff\Notes\Models\Note::class,
 
         'order' => \Tipoff\Checkout\Models\Order::class,
 
