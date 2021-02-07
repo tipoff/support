@@ -51,3 +51,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.0.10 - 2021-02-05
 
 - add docker setup
+
+## 1.0.11 - 2021-02-06
+
+- update models in config
+- add model aliases
