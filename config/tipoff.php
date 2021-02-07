@@ -4,87 +4,87 @@ return [
 
     'model_class' => [
 
-        'block' => \App\Models\Block::class,
+        'block' => \Tipoff\Scheduling\Models\Block::class,
 
-        'booking' => \App\Models\Booking::class,
+        'booking' => \Tipoff\Bookings\Models\Booking::class,
 
-        'cart' => \App\Models\Cart::class,
+        'cart' => \Tipoff\Checkout\Models\Cart::class,
 
-        'cart_item' => \App\Models\CartItem::class,
+        'cart_item' => \Tipoff\Checkout\Models\CartItem::class,
 
-        'competitor' => \App\Models\Competitor::class,
+        'competitor' => \Tipoff\Reviews\Models\Competitor::class,
 
-        'contact' => \App\Models\Contact::class,
+        'contact' => \Tipoff\Forms\Models\Contact::class,
 
-        'customer' => \App\Models\Customer::class,
+        'customer' => \Tipoff\Addresses\Models\Customer::class, // Will be renamed later to address when new features added
 
-        'discount' => \App\Models\Discount::class,
+        'discount' => \Tipoff\Discounts\Models\Discount::class,
 
-        'fee' => \App\Models\Fee::class,
+        'fee' => \Tipoff\Fees\Models\Fee::class,
 
-        'feedback' => \App\Models\Feedback::class,
+        'feedback' => \Tipoff\Feedback\Models\Feedback::class,
 
-        'flex_day' => \App\Models\FlexDay::class,
+        'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
 
-        'game' => \App\Models\Game::class,
+        'game' => \Tipoff\Scheduling\Models\Game::class,
 
-        'hold' => \App\Models\Hold::class,
+        'hold' => \Tipoff\Scheduling\Models\Hold::class,
 
         'image' => \DrewRoberts\Media\Models\Image::class,
 
-        'insight' => \App\Models\Insight::class,
+        'insight' => \Tipoff\Reviews\Models\Insight::class,
 
-        'invoice' => \App\Models\Invoice::class,
+        'invoice' => \Tipoff\Invoices\Models\Invoice::class,
 
-        'key' => \App\Models\Key::class,
+        'key' => \Tipoff\Reviews\Models\Key::class,
 
-        'location' => \App\Models\Location::class,
+        'location' => \Tipoff\Locations\Models\Location::class,
 
-        'market' => \App\Models\Market::class,
+        'market' => \Tipoff\Locations\Models\Market::class,
 
-        'note' => \App\Models\Note::class,
+        'note' => \Tipoff\Notes\Models\Note::class,
 
-        'order' => \App\Models\Order::class,
+        'order' => \Tipoff\Checkout\Models\Order::class,
+
+        'order_item' => \Tipoff\Checkout\Models\OrderItem::class,
 
         'page' => \DrewRoberts\Blog\Models\Page::class,
 
-        'participant' => \App\Models\Participant::class,
+        'participant' => \Tipoff\EscapeRoom\Participant::class,
 
-        'payment' => \App\Models\Payment::class,
+        'payment' => \Tipoff\Payments\Models\Payment::class,
 
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
-        'rate' => \App\Models\Rate::class,
+        'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
 
-        'recurring_schedule' => \App\Models\RecurringSchedule::class,
+        'recurring_schedule' => \Tipoff\Scheduling\Models\RecurringSchedule::class,
 
-        'refund' => \App\Models\Refund::class,
+        'refund' => \Tipoff\Refunds\Models\Refund::class,
 
-        'review' => \App\Models\Review::class,
+        'review' => \Tipoff\Reviews\Models\Review::class,
 
-        'room' => \App\Models\Room::class,
+        'room' => \Tipoff\EscapeRoom\Models\Room::class,
 
-        'schedule' => \App\Models\Schedule::class,
-
-        'schedule_eraser' => \App\Models\ScheduleEraser::class,
+        'schedule_eraser' => \Tipoff\Scheduling\Models\ScheduleEraser::class,
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
 
-        'signature' => \App\Models\Signature::class,
+        'signature' => \Tipoff\Waivers\Models\Signature::class,
 
-        'slot' => \App\Models\Slot::class,
+        'slot' => \Tipoff\Scheduling\Models\Slot::class,
 
-        'snapshot' => \App\Models\Snapshot::class,
+        'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
-        'status' => \App\Models\Status::class,
+        'status' => \Tipoff\Statuses\Models\Status::class,
 
-        'supervision' => \App\Models\Supervision::class,
+        'supervision' => \Tipoff\EscapeRoom\Models\Supervision::class,
 
         'tag' => \DrewRoberts\Media\Models\Tag::class,
 
-        'tax' => \App\Models\Tax::class,
+        'tax' => \Tipoff\Taxes\Models\Tax::class,
 
-        'theme' => \App\Models\Theme::class,
+        'theme' => \Tipoff\EscapeRoom\Models\Theme::class,
 
         'topic' => \DrewRoberts\Blog\Models\Topic::class,
 
@@ -92,9 +92,9 @@ return [
 
         'video' => \DrewRoberts\Media\Models\Video::class,
 
-        'voucher' => \App\Models\Voucher::class,
+        'voucher' => \Tipoff\Vouchers\Models\Voucher::class,
 
-        'voucher_type' => \App\Models\VoucherType::class,
+        'voucher_type' => \Tipoff\Vouchers\Models\VoucherType::class,
 
     ]
 
