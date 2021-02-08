@@ -63,3 +63,39 @@ EOT;
         eval($classDef);
     }
 }
+
+if (! function_exists('createNovaResourceStub')) {
+    /**
+     * Dynamically defines a Nova resource class on the fly if not already defined.  Useful
+     * for creating stub resources to allow isolated testing of Nova resources in a package.
+     *
+     * @param string $novaClassName
+     */
+    function createNovaResourceStub(string $novaClass, string $modelClass): void
+    {
+        if (class_exists($novaClass)) {
+            return;
+        }
+
+        $classBasename = class_basename($novaClass);
+        $classNamespace = substr($novaClass, 0, strrpos($novaClass, '\\'));
+
+        $classDef = <<<EOT
+namespace {$classNamespace};
+
+use Illuminate\Http\Request;
+use Laravel\Nova\Resource;
+
+class {$classBasename} extends Resource
+{
+    public static \$model = \\{$modelClass}::class;
+
+    public function fields(Request \$request)
+    {
+    }
+}
+EOT;
+        // alias the anonymous class with your class name
+        eval($classDef);
+    }
+}
