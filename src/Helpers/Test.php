@@ -13,9 +13,9 @@ if (! function_exists('randomOrCreate')) {
 	 */
     function randomOrCreate($classNameOrModel): Model
     {
-    	if (is_string($classNameOrModel)) {
-    		$className = $classNameOrModel;
-    	}
+        if (is_string($classNameOrModel)) {
+            $className = $classNameOrModel;
+        }
 
     	if ($classNameOrModel instanceof Model) {
     		$className = class_basename($classNameOrModel);
