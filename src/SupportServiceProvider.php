@@ -2,7 +2,6 @@
 
 namespace Tipoff\Support;
 
-use Illuminate\Foundation\AliasLoader;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Tipoff\Support\Commands\SupportCommand;

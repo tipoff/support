@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Tests\Unit\Resolver;
 
-use Illuminate\Foundation\AliasLoader;
 use Tipoff\Support\Tests\TestCase;
 
 class ModelResolvingTest extends TestCase
@@ -26,7 +25,6 @@ class ModelResolvingTest extends TestCase
             $this->app->getAlias('nova.user')
         );
     }
-
 
     /** @test */
     public function test_if_class_can_be_overwrited()
