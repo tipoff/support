@@ -18,7 +18,7 @@ if (! function_exists('randomOrCreate')) {
         }
 
         if ($classNameOrModel instanceof Model) {
-            $className = class_basename($classNameOrModel);
+            $className = get_class($classNameOrModel);
         }
 
         if ($className::count() > 0) {
