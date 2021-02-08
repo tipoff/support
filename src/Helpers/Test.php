@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 if (! function_exists('randomOrCreate')) {
     /**
-     * Ger random model or create model using factory.
+     * Get random model or create model using factory.
      *
      * @param  string|Model $classNameOrModel
      * @return Model
