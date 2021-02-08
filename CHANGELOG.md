@@ -56,3 +56,7 @@ All notable changes to `support` will be documented in this file.
 
 - update models in config
 - add model aliases
+
+## 1.1.0 - 2021-02-08
+
+- refactor for model instances
