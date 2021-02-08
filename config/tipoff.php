@@ -96,6 +96,102 @@ return [
 
         'voucher_type' => \Tipoff\Vouchers\Models\VoucherType::class,
 
+    ],
+
+    'nova_class' => [
+
+        'block' => \Tipoff\Scheduling\Nova\Block::class,
+
+        'booking' => \Tipoff\Bookings\Nova\Booking::class,
+
+        'cart' => \Tipoff\Checkout\Nova\Cart::class,
+
+        'cart_item' => \Tipoff\Checkout\Nova\CartItem::class,
+
+        'competitor' => \Tipoff\Reviews\Nova\Competitor::class,
+
+        'contact' => \Tipoff\Forms\Nova\Contact::class,
+
+        'customer' => \Tipoff\Addresses\Nova\Customer::class, // Will be renamed later to address when new features added
+
+        'discount' => \Tipoff\Discounts\Nova\Discount::class,
+
+        'fee' => \Tipoff\Fees\Nova\Fee::class,
+
+        'feedback' => \Tipoff\Feedback\Nova\Feedback::class,
+
+        'flex_day' => \Tipoff\FlexScheduling\Nova\FlexDay::class,
+
+        'game' => \Tipoff\Scheduling\Nova\Game::class,
+
+        'hold' => \Tipoff\Scheduling\Nova\Hold::class,
+
+        'image' => \DrewRoberts\Media\Nova\Image::class,
+
+        'insight' => \Tipoff\Reviews\Nova\Insight::class,
+
+        'invoice' => \Tipoff\Invoices\Nova\Invoice::class,
+
+        'key' => \Tipoff\Reviews\Nova\Key::class,
+
+        'location' => \Tipoff\Locations\Nova\Location::class,
+
+        'market' => \Tipoff\Locations\Nova\Market::class,
+
+        'note' => \Tipoff\Notes\Nova\Note::class,
+
+        'order' => \Tipoff\Checkout\Nova\Order::class,
+
+        'order_item' => \Tipoff\Checkout\Nova\OrderItem::class,
+
+        'page' => \DrewRoberts\Blog\Nova\Page::class,
+
+        'participant' => \Tipoff\EscapeRoom\Participant::class,
+
+        'payment' => \Tipoff\Payments\Nova\Payment::class,
+
+        'post' => \DrewRoberts\Blog\Nova\Post::class,
+
+        'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
+
+        'recurring_schedule' => \Tipoff\Scheduling\Nova\RecurringSchedule::class,
+
+        'refund' => \Tipoff\Refunds\Nova\Refund::class,
+
+        'review' => \Tipoff\Reviews\Nova\Review::class,
+
+        'room' => \Tipoff\EscapeRoom\Nova\Room::class,
+
+        'schedule_eraser' => \Tipoff\Scheduling\Nova\ScheduleEraser::class,
+
+        'series' => \DrewRoberts\Blog\Nova\Series::class,
+
+        'signature' => \Tipoff\Waivers\Nova\Signature::class,
+
+        'slot' => \Tipoff\Scheduling\Nova\Slot::class,
+
+        'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
+
+        'status' => \Tipoff\Statuses\Nova\Status::class,
+
+        'supervision' => \Tipoff\EscapeRoom\Nova\Supervision::class,
+
+        'tag' => \DrewRoberts\Media\Nova\Tag::class,
+
+        'tax' => \Tipoff\Taxes\Nova\Tax::class,
+
+        'theme' => \Tipoff\EscapeRoom\Nova\Theme::class,
+
+        'topic' => \DrewRoberts\Blog\Nova\Topic::class,
+
+        'user' => \App\Nova\User::class,
+
+        'video' => \DrewRoberts\Media\Nova\Video::class,
+
+        'voucher' => \Tipoff\Vouchers\Nova\Voucher::class,
+
+        'voucher_type' => \Tipoff\Vouchers\Nova\VoucherType::class,
+
     ]
 
 ];
