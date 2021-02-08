@@ -29,12 +29,34 @@ class SupportServiceProvider extends PackageServiceProvider
      */
     public function boot()
     {
-        $loader = AliasLoader::getInstance();
-        $aliases = $loader->getAliases();
+        $this->registerModelsAliases();
+        $this->registerNovaModelsAliases();
+    }
 
+    /**
+     * Add model aliases to service conainer.
+     *
+     * @return void
+     */
+    public function registerModelsAliases(): void
+    {
         foreach (config('tipoff.model_class') as $alias => $class) {
             if (empty($aliases[$alias])) {
-                $loader->alias($alias, $class);
+                $this->app->alias($class, $alias);
+            }
+        }
+    }
+
+    /**
+     * Add nova model aliases to service conainer.
+     *
+     * @return void
+     */
+    public function registerNovaModelsAliases(): void
+    {
+        foreach (config('tipoff.nova_class') as $alias => $class) {
+            if (empty($aliases[$alias])) {
+                $this->app->alias($class, 'nova.' . $alias);
             }
         }
     }
