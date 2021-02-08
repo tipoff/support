@@ -77,7 +77,7 @@ if (! function_exists('createNovaResourceStub')) {
             return;
         }
 
-        $classBasename  = class_basename($novaClass);
+        $classBasename = class_basename($novaClass);
         $classNamespace = substr($novaClass, 0, strrpos($novaClass, '\\'));
 
         $classDef = <<<EOT
