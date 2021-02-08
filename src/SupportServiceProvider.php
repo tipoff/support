@@ -40,9 +40,7 @@ class SupportServiceProvider extends PackageServiceProvider
     public function registerModelsAliases(): void
     {
         foreach (config('tipoff.model_class') as $alias => $class) {
-            if (empty($aliases[$alias])) {
-                $this->app->alias($class, $alias);
-            }
+            $this->app->alias($class, $alias);
         }
     }
 
@@ -54,9 +52,7 @@ class SupportServiceProvider extends PackageServiceProvider
     public function registerNovaModelsAliases(): void
     {
         foreach (config('tipoff.nova_class') as $alias => $class) {
-            if (empty($aliases[$alias])) {
-                $this->app->alias($class, 'nova.' . $alias);
-            }
+            $this->app->alias($class, 'nova.' . $alias);
         }
     }
 }
