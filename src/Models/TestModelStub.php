@@ -21,7 +21,7 @@ trait TestModelStub
     public static function createTable(): void
     {
         $table = (new static)->getTable();
-        if (!Schema::hasTable($table)) {
+        if (! Schema::hasTable($table)) {
             Schema::create($table, function (Blueprint $table) {
                 $table->id();
                 $table->timestamps();
