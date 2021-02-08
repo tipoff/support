@@ -14,7 +14,9 @@ class BaseModel extends Model
      */
     public function belongsTo($related, $foreignKey = null, $ownerKey = null, $relation = null)
     {
-        Assert::that($related)->classExists();
+        if (is_string($related)) {
+            Assert::that($related)->classExists();
+        }
 
         return parent::belongsTo($related, $foreignKey, $ownerKey, $relation);
     }
@@ -36,7 +38,9 @@ class BaseModel extends Model
      */
     public function hasMany($related, $foreignKey = null, $localKey = null)
     {
-        Assert::that($related)->classExists();
+        if (is_string($related)) {
+            Assert::that($related)->classExists();
+        }
 
         return parent::hasMany($related, $foreignKey, $localKey);
     }
