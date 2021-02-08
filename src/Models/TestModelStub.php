@@ -21,10 +21,12 @@ trait TestModelStub
     public static function createTable(): void
     {
         $table = (new static)->getTable();
-        Schema::create($table, function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        if (!Schema::hasTable($table)) {
+            Schema::create($table, function (Blueprint $table) {
+                $table->id();
+                $table->timestamps();
+            });
+        }
     }
 
     /**
