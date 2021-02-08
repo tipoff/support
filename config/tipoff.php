@@ -50,7 +50,7 @@ return [
 
         'page' => \DrewRoberts\Blog\Models\Page::class,
 
-        'participant' => \Tipoff\EscapeRoom\Participant::class,
+        'participant' => \Tipoff\EscapeRoom\Models\Participant::class,
 
         'payment' => \Tipoff\Payments\Models\Payment::class,
 
@@ -146,7 +146,7 @@ return [
 
         'page' => \DrewRoberts\Blog\Nova\Page::class,
 
-        'participant' => \Tipoff\EscapeRoom\Participant::class,
+        'participant' => \Tipoff\EscapeRoom\Nova\Participant::class,
 
         'payment' => \Tipoff\Payments\Nova\Payment::class,
 
