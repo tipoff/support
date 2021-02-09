@@ -60,3 +60,9 @@ All notable changes to `support` will be documented in this file.
 ## 1.1.0 - 2021-02-08
 
 - refactor for model instances
+
+## 1.1.1 - 2021-02-08
+
+- add default nova classes
+- add resolver for nova models
+- add test helper for nova resource stubs
