@@ -18,7 +18,7 @@ abstract class BaseNovaTestbenchServiceProvider extends NovaApplicationServicePr
      *   NovaCoreServiceProvider::class,
      *   NovaTestbenchServiceProvider::class,
      */
-    static array $packageResources = [
+    public static array $packageResources = [
 
     ];
 
