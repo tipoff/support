@@ -9,6 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class BaseModel extends Model
 {
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
     /**
      * @inheritDoc
      */

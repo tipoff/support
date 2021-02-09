@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Models;
 
-interface UserInterface
+interface UserInterface extends BaseModelInterface
 {
     public function hasRole($roles, string $guard = null): bool;
 
