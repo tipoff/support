@@ -66,3 +66,7 @@ All notable changes to `support` will be documented in this file.
 - add default nova classes
 - add resolver for nova models
 - add test helper for nova resource stubs
+
+## 1.1.2 - 2021-02-09
+
+- update base test class
