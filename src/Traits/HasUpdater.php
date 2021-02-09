@@ -22,5 +22,4 @@ trait HasUpdater
     {
         return $this->belongsTo(app('user'), 'updater_id');
     }
-
 }

@@ -22,5 +22,4 @@ trait HasCreator
     {
         return $this->belongsTo(app('user'), 'creator_id');
     }
-
 }
