@@ -70,3 +70,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.1.2 - 2021-02-09
 
 - update base test class
+
+## 1.2.0 - 2021-02-09
+
+- add trait for creators
+- add trait for updaters
