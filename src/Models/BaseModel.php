@@ -46,18 +46,18 @@ class BaseModel extends Model implements BaseModelInterface
         return parent::hasMany($related, $foreignKey, $localKey);
     }
 
-    public static function find(int $id)
+    public static function find($id)
     {
         return static::find($id);
     }
 
-    public static function findOrFail(int $id)
+    public static function findOrFail($id)
     {
         return static::findOrFail($id);
     }
 
-    public function getId(): ?int
+    public function getId()
     {
-        return (int) $this->id;
+        return $this->id;
     }
 }
