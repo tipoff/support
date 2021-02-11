@@ -83,3 +83,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.2.2 - 2021-02-11
 
 - remove spatie laravel permissions dependency
+
+## 1.2.3 - 2021-02-11
+
+- add base model interface
+- add base service
