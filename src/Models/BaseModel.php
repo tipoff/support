@@ -6,8 +6,9 @@ namespace Tipoff\Support\Models;
 
 use Assert\Assert;
 use Illuminate\Database\Eloquent\Model;
+use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
-class BaseModel extends Model
+class BaseModel extends Model implements BaseModelInterface
 {
     /**
      * @inheritDoc
@@ -43,5 +44,20 @@ class BaseModel extends Model
         }
 
         return parent::hasMany($related, $foreignKey, $localKey);
+    }
+
+    public static function find(int $id)
+    {
+        return static::find($id);
+    }
+
+    public static function findOrFail(int $id)
+    {
+        return static::findOrFail($id);
+    }
+
+    public function getId(): ?int
+    {
+        return (int) $this->id;
     }
 }
