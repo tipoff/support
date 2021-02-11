@@ -10,14 +10,19 @@ interface BaseModelInterface
      * Using docblock typehints to allow implementing classes freedom
      * to include docblock with class specific type
      *
+     * @param mixed $id
      * @return self
      */
-    public static function find(int $id);
+    public static function find($id);
 
     /**
+     * @param mixed $id
      * @return self
      */
-    public static function findOrFail(int $id);
+    public static function findOrFail($id);
 
-    public function getId(): ?int;
+    /**
+     * @return mixed|null
+     */
+    public function getId();
 }
