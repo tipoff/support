@@ -76,6 +76,10 @@ All notable changes to `support` will be documented in this file.
 - add trait for creators
 - add trait for updaters
 
-## 1.2.1 - 2021-02-09
+## 1.2.1 - 2021-02-11
 
 - require spatie laravel permissions
+
+## 1.2.2 - 2021-02-11
+
+- remove spatie laravel permissions dependency
