@@ -101,3 +101,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.2.6 - 2021-02-12
 
 - interface/service registration check helper
+
+## 1.2.7 - 2021-02-12
+
+- helper to resolve nova classes
