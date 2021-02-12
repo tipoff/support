@@ -31,6 +31,21 @@ if (! function_exists('randomOrCreate')) {
     }
 }
 
+if (! function_exists('nova')) {
+    function nova(string $model): string
+    {
+        $model = preg_match('/^nova\./', $model) ? $model : 'nova.' . $model;
+
+        $alias = app()->getAlias($model);
+
+        if ($alias === $model) {
+            throw new \Exception("Could not find alias for {$model}");
+        }
+
+        return $alias;
+    }
+}
+
 if (! function_exists('findModel')) {
     /**
      * Helper to retrieve model interface by Id but only if
