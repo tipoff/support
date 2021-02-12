@@ -97,3 +97,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.2.5 - 2021-02-12
 
 - base service provider
+
+## 1.2.6 - 2021-02-12
+
+- interface/service registration check helper
