@@ -100,6 +100,4 @@ class TestTest extends TestCase
 
 class TestService implements BaseService
 {
-
 }
-
