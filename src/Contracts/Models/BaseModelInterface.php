@@ -11,7 +11,7 @@ interface BaseModelInterface
      * to include docblock with class specific type
      *
      * @param mixed $id
-     * @return self
+     * @return self|null
      */
     public static function find($id);
 

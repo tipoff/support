@@ -50,12 +50,18 @@ class BaseModel extends Model implements BaseModelInterface
 
     public static function find($id)
     {
-        return static::query()->find($id);
+        /** @var BaseModelInterface|null $result */
+        $result = static::query()->find($id);
+
+        return $result;
     }
 
     public static function findOrFail($id)
     {
-        return static::query()->findOrFail($id);
+        /** @var BaseModelInterface $result */
+        $result = static::query()->findOrFail($id);
+
+        return $result;
     }
 
     public function getId()
