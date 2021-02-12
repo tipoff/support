@@ -2,19 +2,12 @@
 
 namespace Tipoff\Support;
 
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
 use Tipoff\Support\Commands\SupportCommand;
 
-class SupportServiceProvider extends PackageServiceProvider
+class SupportServiceProvider extends TipoffServiceProvider
 {
-    public function configurePackage(Package $package): void
+    public function configureTipoffPackage(TipoffPackage $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
             ->name('support')
             ->hasConfigFile('tipoff')
