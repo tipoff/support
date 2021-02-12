@@ -3,6 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
+use Tipoff\Support\Contracts\Models\BaseModelInterface;
+use Tipoff\Support\Contracts\Services\BaseService;
 
 if (! function_exists('randomOrCreate')) {
     /**
@@ -29,6 +31,70 @@ if (! function_exists('randomOrCreate')) {
     }
 }
 
+if (! function_exists('findModel')) {
+    /**
+     * Helper to retrieve model interface by Id but only if
+     * interface class has been registered.  Null if interface
+     * is not registered or model is not found
+     *
+     * @param string $interfaceClass
+     * @param mixed $id
+     * @return BaseModelInterface|null
+     */
+    function findModel(string $interfaceClass, $id)
+    {
+        if (app()->has($interfaceClass)) {
+            /** @var BaseModelInterface $interface */
+            $interface = app($interfaceClass);
+
+            return $interface::find($id);
+        }
+
+        return null;
+    }
+}
+
+if (! function_exists('findModelOrFail')) {
+    /**
+     * Helper to retrieve model interface by Id but only if
+     * interface class has been registered, exception if
+     * not found, null if interface is not registered
+     *
+     * @param string $interfaceClass
+     * @param mixed $id
+     * @return BaseModelInterface|null
+     */
+    function findModelOrFail(string $interfaceClass, $id)
+    {
+        if (app()->has($interfaceClass)) {
+            /** @var BaseModelInterface $interface */
+            $interface = app($interfaceClass);
+
+            return $interface::findOrFail($id);
+        }
+
+        return null;
+    }
+}
+
+if (! function_exists('findService')) {
+    /**
+     * Helper to retrieve service interface if it is
+     * registered, null otherwise
+     *
+     * @param string $interfaceClass
+     * @return BaseService|null
+     */
+    function findService(string $serviceClass)
+    {
+        if (app()->has($serviceClass)) {
+            return app($serviceClass);
+        }
+
+        return null;
+    }
+}
+
 if (! function_exists('createModelStub')) {
     /**
      * Dynamically defines a model class on the fly if not already defined.  Useful
@@ -48,15 +114,11 @@ if (! function_exists('createModelStub')) {
         $classDef = <<<EOT
 namespace {$classNamespace};
 
-use Illuminate\Database\Eloquent\Model;
+use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Models\TestModelStub;
 
-class {$classBasename} extends Model {
+class {$classBasename} extends BaseModel {
     use TestModelStub;
-
-    protected \$guarded = [
-        'id',
-    ];
 };
 EOT;
         // alias the anonymous class with your class name
