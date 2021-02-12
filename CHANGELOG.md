@@ -93,3 +93,7 @@ All notable changes to `support` will be documented in this file.
 
 - base model includes guarded id
 - flexible id handling
+
+## 1.2.5 - 2021-02-12
+
+- base service provider
