@@ -10,6 +10,7 @@ use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
 class BaseModel extends Model implements BaseModelInterface
 {
+    protected $guarded = ['id'];
     /**
      * @inheritDoc
      */
