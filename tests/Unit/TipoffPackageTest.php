@@ -5,13 +5,12 @@ declare(strict_types=1);
 namespace Tipoff\Support\Tests\Unit;
 
 use Illuminate\Database\Eloquent\Model;
-use Spatie\LaravelPackageTools\Package;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Services\BaseService;
 use Tipoff\Support\Models\BaseModel;
+use Tipoff\Support\Tests\TestCase;
 use Tipoff\Support\TipoffPackage;
 use Tipoff\Support\TipoffServiceProvider;
-use Tipoff\Support\Tests\TestCase;
 
 class TipoffPackageTest extends TestCase
 {
@@ -193,25 +192,20 @@ class TestServiceProvider extends TipoffServiceProvider
 
 interface TestService extends BaseService
 {
-
 }
 
 class BaseServiceImplementation implements BaseService
 {
-
 }
 
 class TestServiceImplementation implements TestService
 {
-
 }
 
 interface TestModelInterface extends BaseModelInterface
 {
-
 }
 
 class TestModel extends BaseModel implements TestModelInterface
 {
-
 }

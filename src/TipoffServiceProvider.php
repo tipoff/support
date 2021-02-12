@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Tipoff\Support;
 
-use Assert\Assert;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use ReflectionClass;
-use Spatie\LaravelPackageTools\Exceptions\InvalidPackage;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -40,7 +38,7 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 
         // Model interfaces
         foreach ($package->modelInterfaces as $interface => $implementation) {
-            if (!(new ReflectionClass($implementation))->implementsInterface($interface)) {
+            if (! (new ReflectionClass($implementation))->implementsInterface($interface)) {
                 throw new \InvalidArgumentException("{$implementation} does not implement {$interface}");
             }
             $this->app->bind($interface, $implementation);
@@ -48,7 +46,7 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 
         // Service interfaces
         foreach ($package->services as $interface => $implementation) {
-            if (!(new ReflectionClass($implementation))->implementsInterface($interface)) {
+            if (! (new ReflectionClass($implementation))->implementsInterface($interface)) {
                 throw new \InvalidArgumentException("{$implementation} does not implement {$interface}");
             }
             $this->app->singleton($interface, $implementation);
@@ -56,7 +54,7 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 
         // Policies
         foreach ($package->policies as $model => $policy) {
-            if (!is_a($model, Model::class, true)) {
+            if (! is_a($model, Model::class, true)) {
                 throw new \InvalidArgumentException("{$model} is not a Model instance");
             }
             Gate::policy($model, $policy);
