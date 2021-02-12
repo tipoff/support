@@ -88,3 +88,8 @@ All notable changes to `support` will be documented in this file.
 
 - add base model interface
 - add base service
+
+## 1.2.4 - 2021-02-11
+
+- base model includes guarded id
+- flexible id handling
