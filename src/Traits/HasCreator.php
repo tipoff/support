@@ -8,7 +8,7 @@ trait HasCreator
 {
     protected static function bootHasCreator()
     {
-        static::saving(function ($model) {
+        static::creating(function ($model) {
             if (auth()->check()) {
                 $model->creator_id = auth()->id();
             }
