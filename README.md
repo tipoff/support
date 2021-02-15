@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/tipoff/support.svg?style=flat-square)](https://packagist.org/packages/tipoff/support)
 
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+This is where your description should go.
 
 ## Installation
 
@@ -13,13 +13,6 @@ You can install the package via composer:
 
 ```bash
 composer require tipoff/support
-```
-
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --provider="Tipoff\Support\SupportServiceProvider" --tag="support-migrations"
-php artisan migrate
 ```
 
 You can publish the config file with:
@@ -32,13 +25,6 @@ This is the contents of the published config file:
 ```php
 return [
 ];
-```
-
-## Usage
-
-```php
-$support = new Tipoff\Support();
-echo $support->echoPhrase('Hello, Tipoff!');
 ```
 
 ## Testing
