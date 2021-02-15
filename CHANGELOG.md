@@ -105,3 +105,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.2.7 - 2021-02-12
 
 - helper to resolve nova classes
+
+## 1.3.0 - 2021-02-15
+
+- base resource for nova
