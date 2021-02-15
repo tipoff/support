@@ -43,7 +43,7 @@ if (! function_exists('nova')) {
             return null;
         }
 
-        if (!class_exists($alias)) {
+        if (! class_exists($alias)) {
             return null;
         }
 

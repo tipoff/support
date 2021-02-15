@@ -28,7 +28,7 @@ abstract class Resource extends NovaResource
     protected function dataFields(): array
     {
         return [
-            ID::make()
+            ID::make(),
         ];
     }
 
@@ -37,7 +37,8 @@ abstract class Resource extends NovaResource
      */
     protected function creatorDataFields(): array
     {
-        $userResource =  nova('user');
+        $userResource = nova('user');
+
         return $userResource ? [
             BelongsTo::make('Created By', 'creator', $userResource)->exceptOnForms(),
             DateTime::make('Created At')->exceptOnForms(),
@@ -49,7 +50,8 @@ abstract class Resource extends NovaResource
      */
     protected function updaterDataFields(): array
     {
-        $userResource =  nova('user');
+        $userResource = nova('user');
+
         return $userResource ? [
             BelongsTo::make('Updated By', 'updater', $userResource)->exceptOnForms(),
             DateTime::make('Updated At')->exceptOnForms(),
@@ -80,7 +82,8 @@ abstract class Resource extends NovaResource
     {
         // Filter classes requested to those that actually exist
         // and return map class to instantiated instance
-        return array_map(function (string $class) {
+        return array_map(
+            function (string $class) {
             return new $class;
         },
             array_filter($classes, function (string $class) {
