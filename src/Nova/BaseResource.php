@@ -84,8 +84,8 @@ abstract class BaseResource extends NovaResource
         // and return map class to instantiated instance
         return array_map(
             function (string $class) {
-            return new $class;
-        },
+                return new $class;
+            },
             array_filter($classes, function (string $class) {
                 return class_exists($class);
             })
