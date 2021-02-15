@@ -57,10 +57,7 @@
         "laravel": {
             "providers": [
                 "Tipoff\\Support\\SupportServiceProvider"
-            ],
-            "aliases": {
-                "Support": "Tipoff\\Support\\SupportFacade"
-            }
+            ]
         }
     },
     "repositories": [
