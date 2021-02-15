@@ -12,7 +12,7 @@ use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource as NovaResource;
 
-abstract class Resource extends NovaResource
+abstract class BaseResource extends NovaResource
 {
     protected array $filterClassList = [];
 
