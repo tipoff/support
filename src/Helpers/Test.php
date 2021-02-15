@@ -32,14 +32,19 @@ if (! function_exists('randomOrCreate')) {
 }
 
 if (! function_exists('nova')) {
-    function nova(string $model): string
+    function nova(string $model): ?string
     {
         $model = preg_match('/^nova\./', $model) ? $model : 'nova.' . $model;
 
         $alias = app()->getAlias($model);
 
         if ($alias === $model) {
-            throw new \Exception("Could not find alias for {$model}");
+            // Alias has no definition
+            return null;
+        }
+
+        if (! class_exists($alias)) {
+            return null;
         }
 
         return $alias;

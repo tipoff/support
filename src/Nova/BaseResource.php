@@ -4,11 +4,94 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Nova;
 
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\BelongsTo;
+use Laravel\Nova\Fields\DateTime;
+use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource as NovaResource;
 
-abstract class Resource extends NovaResource
+abstract class BaseResource extends NovaResource
 {
+    protected array $filterClassList = [];
+
+    protected array $cardClassList = [];
+
+    protected array $lensClassList = [];
+
+    protected array $actionClassList = [];
+
+    /**
+     * @return array|Field[]
+     */
+    protected function dataFields(): array
+    {
+        return [
+            ID::make(),
+        ];
+    }
+
+    /**
+     * @return array|Field[]
+     */
+    protected function creatorDataFields(): array
+    {
+        $userResource = nova('user');
+
+        return $userResource ? [
+            BelongsTo::make('Created By', 'creator', $userResource)->exceptOnForms(),
+            DateTime::make('Created At')->exceptOnForms(),
+        ] : [];
+    }
+
+    /**
+     * @return array|Field[]
+     */
+    protected function updaterDataFields(): array
+    {
+        $userResource = nova('user');
+
+        return $userResource ? [
+            BelongsTo::make('Updated By', 'updater', $userResource)->exceptOnForms(),
+            DateTime::make('Updated At')->exceptOnForms(),
+        ] : [];
+    }
+
+    public function cards(Request $request)
+    {
+        return $this->processClasses($this->cardClassList);
+    }
+
+    public function filters(Request $request)
+    {
+        return $this->processClasses($this->filterClassList);
+    }
+
+    public function lenses(Request $request)
+    {
+        return $this->processClasses($this->lensClassList);
+    }
+
+    public function actions(Request $request)
+    {
+        return $this->processClasses($this->actionClassList);
+    }
+
+    private function processClasses(array $classes): array
+    {
+        // Filter classes requested to those that actually exist
+        // and return map class to instantiated instance
+        return array_map(
+            function (string $class) {
+                return new $class;
+            },
+            array_filter($classes, function (string $class) {
+                return class_exists($class);
+            })
+        );
+    }
+
     /**
      * Build an "index" query for the given resource.
      *

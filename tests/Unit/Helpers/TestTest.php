@@ -35,18 +35,30 @@ class TestTest extends TestCase
     }
 
     /** @test */
-    public function test_nova()
+    public function test_nova_with_existing_resource()
     {
+        createModelStub(config('tipoff.model_class.user'));
+        createNovaResourceStub(config('tipoff.nova_class.user'), config('tipoff.model_class.user'));
+
         $user = nova('user');
         $this->assertStringContainsString('\\User', $user);
 
         $novaUser = nova('nova.user');
         $this->assertEquals($user, $novaUser);
+    }
 
-        $this->expectException(\Exception::class);
-        $this->expectExceptionMessage('Could not find alias for nova.usr');
+    /** @test */
+    public function test_nova_unknown_alias()
+    {
+        $result = nova('usr');
+        $this->assertNull($result);
+    }
 
-        nova('usr');
+    /** @test */
+    public function test_nova_unknown_class()
+    {
+        $result = nova('order');
+        $this->assertNull($result);
     }
 
     /** @test */
