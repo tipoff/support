@@ -1,8 +1,8 @@
 <?php
 
-namespace Tipoff\Support;
+declare(strict_types=1);
 
-use Tipoff\Support\Commands\SupportCommand;
+namespace Tipoff\Support;
 
 class SupportServiceProvider extends TipoffServiceProvider
 {
@@ -10,8 +10,7 @@ class SupportServiceProvider extends TipoffServiceProvider
     {
         $package
             ->name('support')
-            ->hasConfigFile('tipoff')
-            ->hasCommand(SupportCommand::class);
+            ->hasConfigFile('tipoff');
     }
 
     /**

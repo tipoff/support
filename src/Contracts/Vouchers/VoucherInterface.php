@@ -6,6 +6,7 @@ namespace Tipoff\Support\Contracts\Vouchers;
 
 use Tipoff\Support\Contracts\BaseModelInterface;
 use Tipoff\Support\Contracts\Checkout\CartDeduction;
+use Tipoff\Support\Contracts\Checkout\CartInterface;
 
 interface VoucherInterface extends BaseModelInterface, CartDeduction
 {
