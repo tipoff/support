@@ -19,7 +19,7 @@ interface SlotInterface extends BaseModelInterface
 
     public function releaseHold(): SlotInterface;
 
-    public function getHold(): ?HoldInterface;
+    public function getHold(): ?object;
 
     public function getStartAt(): ?Carbon;
 
