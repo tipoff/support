@@ -13,7 +13,7 @@ use Tipoff\Support\Contracts\Taxes\TaxInterface;
 
 interface SlotInterface extends BaseModelInterface
 {
-    public static function resolveSlot(string $slotNumber): SlotInterface;
+    public static function resolveSlot(string $slotNumber): ?SlotInterface;
 
     public function setHold(int $userId, ?Carbon $expiresAt = null): SlotInterface;
 
