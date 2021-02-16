@@ -6,7 +6,7 @@ namespace Tipoff\Support\Models;
 
 use Assert\Assert;
 use Illuminate\Database\Eloquent\Model;
-use Tipoff\Support\Contracts\Models\BaseModelInterface;
+use Tipoff\Support\Contracts\BaseModelInterface;
 
 class BaseModel extends Model implements BaseModelInterface
 {

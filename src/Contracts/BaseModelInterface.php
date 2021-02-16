@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tipoff\Support\Contracts\Models;
+namespace Tipoff\Support\Contracts;
 
 interface BaseModelInterface
 {

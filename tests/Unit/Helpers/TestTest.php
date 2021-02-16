@@ -7,8 +7,8 @@ namespace Tipoff\Support\Tests\Unit\Helpers;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Tipoff\Support\Contracts\Models\BaseModelInterface;
-use Tipoff\Support\Contracts\Services\BaseService;
+use Tipoff\Support\Contracts\BaseModelInterface;
+use Tipoff\Support\Contracts\BaseService;
 use Tipoff\Support\Tests\TestCase;
 
 class TestTest extends TestCase

@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Tipoff\Support\Tests\Unit;
 
 use Illuminate\Database\Eloquent\Model;
-use Tipoff\Support\Contracts\Models\BaseModelInterface;
-use Tipoff\Support\Contracts\Services\BaseService;
+use Tipoff\Support\Contracts\BaseModelInterface;
+use Tipoff\Support\Contracts\BaseService;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Tests\TestCase;
 use Tipoff\Support\TipoffPackage;

@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Database\Eloquent\Model;
-use Tipoff\Support\Contracts\Models\BaseModelInterface;
-use Tipoff\Support\Contracts\Services\BaseService;
+use Tipoff\Support\Contracts\BaseModelInterface;
+use Tipoff\Support\Contracts\BaseService;
 
 if (! function_exists('randomOrCreate')) {
     /**
