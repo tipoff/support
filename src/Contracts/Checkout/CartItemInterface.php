@@ -6,6 +6,9 @@ namespace Tipoff\Support\Contracts\Checkout;
 
 use Brick\Money\Money;
 use Tipoff\Support\Contracts\BaseModelInterface;
+use Tipoff\Support\Contracts\EscapeRoom\RateInterface;
+use Tipoff\Support\Contracts\Fees\FeeInterface;
+use Tipoff\Support\Contracts\Taxes\TaxInterface;
 
 interface CartItemInterface extends BaseModelInterface
 {
@@ -21,6 +24,9 @@ interface CartItemInterface extends BaseModelInterface
 
     public function getTotalDeductions(): Money;
 
-    // TODO - typehint return value to FeeInterface when available
-    public function getFee();
+    public function getFee(): ?FeeInterface;
+
+    public function getRate(): ?RateInterface;
+
+    public function getTax(): ?TaxInterface;
 }

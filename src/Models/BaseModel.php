@@ -64,6 +64,14 @@ class BaseModel extends Model implements BaseModelInterface
         return $result;
     }
 
+    public static function create(array $attributes)
+    {
+        /** @var BaseModelInterface $result */
+        $result = static::query()->create($attributes);
+
+        return $result;
+    }
+
     public function getId()
     {
         return $this->id;

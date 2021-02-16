@@ -51,6 +51,27 @@ if (! function_exists('nova')) {
     }
 }
 
+if (! function_exists('findModelInterface')) {
+    /**
+     * Helper to retrieve model interface.  Null if interface
+     * is not registered.
+     *
+     * @param string $interfaceClass
+     * @return BaseModelInterface|null
+     */
+    function findModelInterface(string $interfaceClass)
+    {
+        if (app()->has($interfaceClass)) {
+            /** @var BaseModelInterface $interface */
+            $interface = app($interfaceClass);
+
+            return $interface;
+        }
+
+        return null;
+    }
+}
+
 if (! function_exists('findModel')) {
     /**
      * Helper to retrieve model interface by Id but only if
@@ -63,14 +84,9 @@ if (! function_exists('findModel')) {
      */
     function findModel(string $interfaceClass, $id)
     {
-        if (app()->has($interfaceClass)) {
-            /** @var BaseModelInterface $interface */
-            $interface = app($interfaceClass);
+        $interface = findModelInterface($interfaceClass);
 
-            return $interface::find($id);
-        }
-
-        return null;
+        return $interface ? $interface::find($id) : null;
     }
 }
 
@@ -86,14 +102,9 @@ if (! function_exists('findModelOrFail')) {
      */
     function findModelOrFail(string $interfaceClass, $id)
     {
-        if (app()->has($interfaceClass)) {
-            /** @var BaseModelInterface $interface */
-            $interface = app($interfaceClass);
+        $interface = findModelInterface($interfaceClass);
 
-            return $interface::findOrFail($id);
-        }
-
-        return null;
+        return $interface ? $interface::findOrFail($id) : null;
     }
 }
 

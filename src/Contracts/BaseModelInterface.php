@@ -11,18 +11,30 @@ interface BaseModelInterface
      * to include docblock with class specific type
      *
      * @param mixed $id
-     * @return self|null
+     * @return static|null
      */
     public static function find($id);
 
     /**
      * @param mixed $id
-     * @return self
+     * @return static
      */
     public static function findOrFail($id);
+
+    /**
+     * @param array $attributes
+     * @return static
+     */
+    public static function create(array $attributes);
 
     /**
      * @return mixed|null
      */
     public function getId();
+
+    /**
+     * @param array $options
+     * @return static
+     */
+    public function save(array $options = []);
 }
