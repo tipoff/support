@@ -7,6 +7,7 @@ namespace Tipoff\Support\Contracts\Scheduling;
 use Carbon\Carbon;
 use Tipoff\Support\Contracts\BaseModelInterface;
 use Tipoff\Support\Contracts\EscapeRoom\RateInterface;
+use Tipoff\Support\Contracts\EscapeRoom\RoomInterface;
 use Tipoff\Support\Contracts\Fees\FeeInterface;
 use Tipoff\Support\Contracts\Taxes\TaxInterface;
 
@@ -23,6 +24,8 @@ interface SlotInterface extends BaseModelInterface
     public function getStartAt(): ?Carbon;
 
     public function getFormattedStartAt(): ?string;
+
+    public function getRoom(): ?RoomInterface;
 
     public function getFee(): ?FeeInterface;
 
