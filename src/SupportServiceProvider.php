@@ -2,8 +2,6 @@
 
 namespace Tipoff\Support;
 
-use Tipoff\Support\Commands\SupportCommand;
-
 class SupportServiceProvider extends TipoffServiceProvider
 {
     public function configureTipoffPackage(TipoffPackage $package): void
