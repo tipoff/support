@@ -109,3 +109,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.3.0 - 2021-02-15
 
 - base resource for nova
+
+## 1.3.1 - 2021-02-17
+
+- improve helper error message
