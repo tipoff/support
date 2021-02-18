@@ -24,7 +24,7 @@ if (! function_exists('randomOrCreate')) {
             $className = get_class($classNameOrModel);
         }
 
-        if (!isset($className)) {
+        if (! isset($className)) {
             throw new Exception('Cannot find class for ' . $classNameOrModel);
         }
 
