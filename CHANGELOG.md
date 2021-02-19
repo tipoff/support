@@ -117,3 +117,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.4.0 - 2021-02-18
 
 - service provider method to register nova resources
+
+## 1.4.1 - 2021-02-19
+
+- boot service provider
