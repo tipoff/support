@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\Support\Tests\Unit;
 
 use Illuminate\Database\Eloquent\Model;
+use Laravel\Nova\Nova;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Services\BaseService;
 use Tipoff\Support\Models\BaseModel;
@@ -166,6 +167,18 @@ class TipoffPackageTest extends TestCase
             ],
         ], $package->events);
     }
+
+    /** @test */
+    public function nova_resources_are_merged()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package->hasNovaResources([DemoNovaResource::class]);
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertCount(1, $package->novaResources);
+        $this->assertEquals([DemoNovaResource::class], $package->novaResources);
+    }
 }
 
 class TestServiceProvider extends TipoffServiceProvider
@@ -207,5 +220,9 @@ interface TestModelInterface extends BaseModelInterface
 }
 
 class TestModel extends BaseModel implements TestModelInterface
+{
+}
+
+class DemoNovaResource extends Nova
 {
 }
