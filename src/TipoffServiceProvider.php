@@ -7,6 +7,7 @@ namespace Tipoff\Support;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Nova;
 use ReflectionClass;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -66,5 +67,8 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
                 Event::listen($event, $listener);
             }
         }
+
+        // Register Nova resources
+        Nova::resources($package->novaResources);
     }
 }

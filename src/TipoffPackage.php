@@ -43,6 +43,14 @@ class TipoffPackage extends Package
      */
     public array $services = [];
 
+    /**
+     * [
+     *   NovaResource::class,
+     *   // ...
+     * ]
+     */
+    public array $novaResources = [];
+
     public function __construct(Package $package)
     {
         $this->setBasePath($package->basePath);
@@ -78,6 +86,13 @@ class TipoffPackage extends Package
     public function hasServices(array $services): self
     {
         $this->services = array_merge($this->services, $services);
+
+        return $this;
+    }
+
+    public function hasNovaResources(array $novaResources): self
+    {
+        $this->novaResources = array_merge($this->novaResources, $novaResources);
 
         return $this;
     }
