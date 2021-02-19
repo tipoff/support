@@ -18,6 +18,7 @@ class SupportServiceProvider extends TipoffServiceProvider
      */
     public function boot()
     {
+        parent::boot();
         $this->registerModelsAliases();
         $this->registerNovaModelsAliases();
     }
