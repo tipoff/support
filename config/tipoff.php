@@ -72,7 +72,7 @@ return [
 
         'signature' => \Tipoff\Waivers\Models\Signature::class,
 
-        'slot' => \Tipoff\Scheduling\Models\Slot::class,
+        'slot' => \Tipoff\Bookings\Models\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
@@ -168,7 +168,7 @@ return [
 
         'signature' => \Tipoff\Waivers\Nova\Signature::class,
 
-        'slot' => \Tipoff\Scheduling\Nova\Slot::class,
+        'slot' => \Tipoff\Bookings\Nova\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
 
