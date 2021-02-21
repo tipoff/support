@@ -50,7 +50,7 @@ return [
 
         'page' => \DrewRoberts\Blog\Models\Page::class,
 
-        'participant' => \Tipoff\EscapeRoom\Models\Participant::class,
+        'participant' => \Tipoff\Bookings\Models\Participant::class,
 
         'payment' => \Tipoff\Payments\Models\Payment::class,
 
@@ -72,7 +72,7 @@ return [
 
         'signature' => \Tipoff\Waivers\Models\Signature::class,
 
-        'slot' => \Tipoff\Scheduling\Models\Slot::class,
+        'slot' => \Tipoff\Bookings\Models\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
@@ -146,7 +146,7 @@ return [
 
         'page' => \DrewRoberts\Blog\Nova\Page::class,
 
-        'participant' => \Tipoff\EscapeRoom\Nova\Participant::class,
+        'participant' => \Tipoff\Bookings\Nova\Participant::class,
 
         'payment' => \Tipoff\Payments\Nova\Payment::class,
 
@@ -168,7 +168,7 @@ return [
 
         'signature' => \Tipoff\Waivers\Nova\Signature::class,
 
-        'slot' => \Tipoff\Scheduling\Nova\Slot::class,
+        'slot' => \Tipoff\Bookings\Nova\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
 
