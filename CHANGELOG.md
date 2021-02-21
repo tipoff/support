@@ -121,3 +121,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.4.1 - 2021-02-19
 
 - boot service provider
+
+## 1.4.2 - 2021-02-20
+
+- slot & participant to tipoff/bookings
