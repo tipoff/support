@@ -4,7 +4,7 @@ return [
 
     'model_class' => [
 
-        'block' => \Tipoff\Scheduling\Models\Block::class,
+        'block' => \Tipoff\Scheduler\Models\Block::class,
 
         'booking' => \Tipoff\Bookings\Models\Booking::class,
 
@@ -24,11 +24,11 @@ return [
 
         'feedback' => \Tipoff\Feedback\Models\Feedback::class,
 
-        'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
+        'flex_day' => \Tipoff\FlexScheduler\Models\FlexDay::class,
 
-        'game' => \Tipoff\Scheduling\Models\Game::class,
+        'game' => \Tipoff\Scheduler\Models\Game::class,
 
-        'hold' => \Tipoff\Scheduling\Models\Hold::class,
+        'hold' => \Tipoff\Scheduler\Models\Hold::class,
 
         'image' => \DrewRoberts\Media\Models\Image::class,
 
@@ -58,7 +58,7 @@ return [
 
         'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
 
-        'recurring_schedule' => \Tipoff\Scheduling\Models\RecurringSchedule::class,
+        'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
 
         'refund' => \Tipoff\Refunds\Models\Refund::class,
 
@@ -66,7 +66,7 @@ return [
 
         'room' => \Tipoff\EscapeRoom\Models\Room::class,
 
-        'schedule_eraser' => \Tipoff\Scheduling\Models\ScheduleEraser::class,
+        'schedule_eraser' => \Tipoff\Scheduler\Models\ScheduleEraser::class,
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
 
@@ -100,7 +100,7 @@ return [
 
     'nova_class' => [
 
-        'block' => \Tipoff\Scheduling\Nova\Block::class,
+        'block' => \Tipoff\Scheduler\Nova\Block::class,
 
         'booking' => \Tipoff\Bookings\Nova\Booking::class,
 
@@ -120,11 +120,11 @@ return [
 
         'feedback' => \Tipoff\Feedback\Nova\Feedback::class,
 
-        'flex_day' => \Tipoff\FlexScheduling\Nova\FlexDay::class,
+        'flex_day' => \Tipoff\FlexScheduler\Nova\FlexDay::class,
 
-        'game' => \Tipoff\Scheduling\Nova\Game::class,
+        'game' => \Tipoff\Scheduler\Nova\Game::class,
 
-        'hold' => \Tipoff\Scheduling\Nova\Hold::class,
+        'hold' => \Tipoff\Scheduler\Nova\Hold::class,
 
         'image' => \DrewRoberts\Media\Nova\Image::class,
 
@@ -154,7 +154,7 @@ return [
 
         'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
 
-        'recurring_schedule' => \Tipoff\Scheduling\Nova\RecurringSchedule::class,
+        'recurring_schedule' => \Tipoff\Scheduler\Nova\RecurringSchedule::class,
 
         'refund' => \Tipoff\Refunds\Nova\Refund::class,
 
@@ -162,7 +162,7 @@ return [
 
         'room' => \Tipoff\EscapeRoom\Nova\Room::class,
 
-        'schedule_eraser' => \Tipoff\Scheduling\Nova\ScheduleEraser::class,
+        'schedule_eraser' => \Tipoff\Scheduler\Nova\ScheduleEraser::class,
 
         'series' => \DrewRoberts\Blog\Nova\Series::class,
 
