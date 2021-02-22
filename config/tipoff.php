@@ -24,7 +24,7 @@ return [
 
         'feedback' => \Tipoff\Feedback\Models\Feedback::class,
 
-        'flex_day' => \Tipoff\FlexScheduler\Models\FlexDay::class,
+        'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
 
         'game' => \Tipoff\Scheduler\Models\Game::class,
 
@@ -120,7 +120,7 @@ return [
 
         'feedback' => \Tipoff\Feedback\Nova\Feedback::class,
 
-        'flex_day' => \Tipoff\FlexScheduler\Nova\FlexDay::class,
+        'flex_day' => \Tipoff\FlexScheduling\Nova\FlexDay::class,
 
         'game' => \Tipoff\Scheduler\Nova\Game::class,
 
