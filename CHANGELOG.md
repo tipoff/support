@@ -129,3 +129,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.4.3 - 2021-02-22
 
 - update namespaces of scheduler classes
+
+## 1.4.4 - 2021-02-23
+
+- discountable value object
