@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Events\Checkout;
 
-
 use Tipoff\Support\Contracts\Checkout\CartInterface;
 
 class CartUpdated

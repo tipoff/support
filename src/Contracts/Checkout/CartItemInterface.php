@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Checkout;
 
-use Tipoff\Support\Contracts\Sellable\Sellable;
-use Tipoff\Support\Objects\DiscountableValue;
 use Carbon\Carbon;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
+use Tipoff\Support\Contracts\Sellable\Sellable;
+use Tipoff\Support\Objects\DiscountableValue;
 
 interface CartItemInterface extends BaseModelInterface
 {
@@ -25,14 +25,15 @@ interface CartItemInterface extends BaseModelInterface
      * Get/Set item quantity
      */
     public function getQuantity(): int;
+
     public function setQuantity(int $qty): self;
 
     /**
      * Get/Set user friendly description
      */
     public function getDescription(): string;
-    public function setDescription(string $description): self;
 
+    public function setDescription(string $description): self;
 
     /**
      * Get/set discountable amount for this cart item
@@ -41,6 +42,7 @@ interface CartItemInterface extends BaseModelInterface
      * @return $this
      */
     public function setAmount($amount): self;
+
     public function getAmount(): DiscountableValue;
 
     /**
@@ -48,18 +50,21 @@ interface CartItemInterface extends BaseModelInterface
      * have different locations.
      */
     public function getLocationId(): ?int;
+
     public function setLocationId(?int $locationId): self;
 
     /**
      * Get/set tax code for this item
      */
     public function getTaxCode(): ?string;
+
     public function setTaxCode(?string $taxCode): self;
 
     /**
      * Get/set expiration for this item
      */
     public function getExpiresAt(): Carbon;
+
     public function setExpiresAt(Carbon $expiresAt): self;
 
     /**
@@ -68,6 +73,7 @@ interface CartItemInterface extends BaseModelInterface
      * ensures related items are handled as a unit.
      */
     public function getParentItem(): ?CartItemInterface;
+
     public function setParentItem(?CartItemInterface $parent): self;
 
     /**

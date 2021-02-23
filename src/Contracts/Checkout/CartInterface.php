@@ -63,18 +63,21 @@ interface CartInterface extends BaseModelInterface
      * @return $this
      */
     public function setShipping($value): self;
+
     public function getShipping(): DiscountableValue;
 
     /**
      * Get/set methods for cart level discounts.
      */
     public function getCartDiscounts(): int;
+
     public function addCartDiscounts(int $value): self;
 
     /**
      * Get/set methods for cart level credits pending redemption.
      */
     public function getCartCredits(): int;
+
     public function addCartCredits(int $value): self;
 
     /**
