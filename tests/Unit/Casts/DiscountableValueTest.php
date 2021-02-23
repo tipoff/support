@@ -76,7 +76,7 @@ class DiscountableValueTest extends TestCase
 
         $this->assertEquals([
             'attribute' => 100,
-            'attribute_discounts' => 0
+            'attribute_discounts' => 0,
         ], $value);
     }
 
@@ -89,7 +89,7 @@ class DiscountableValueTest extends TestCase
 
         $this->assertEquals([
             'attribute' => 0,
-            'attribute_discounts' => 0
+            'attribute_discounts' => 0,
         ], $value);
     }
 
@@ -105,7 +105,7 @@ class DiscountableValueTest extends TestCase
 
         $this->assertEquals([
             'attribute' => 1000,
-            'attribute_discounts' => 200
+            'attribute_discounts' => 200,
         ], $value);
     }
 
