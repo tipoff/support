@@ -31,6 +31,23 @@ class DiscountableValueTest extends TestCase
     }
 
     /** @test */
+    public function reset()
+    {
+        $value = (new DiscountableValue(1000))
+            ->addDiscounts(200);
+
+        $result = $value->reset();
+        $this->assertEquals(1000, $result->getOriginalAmount());
+        $this->assertEquals(0, $result->getDiscounts());
+        $this->assertEquals(1000, $result->getDiscountedAmount());
+
+        // Value should be unchanged
+        $this->assertEquals(1000, $value->getOriginalAmount());
+        $this->assertEquals(200, $value->getDiscounts());
+        $this->assertEquals(800, $value->getDiscountedAmount());
+    }
+
+    /** @test */
     public function add_multiple_discounts()
     {
         $value = (new DiscountableValue(1000))
