@@ -12,8 +12,6 @@ class DiscountableValue implements CastsAttributes
 
     public function get($model, string $key, $value, array $attributes)
     {
-
-
         return (new \Tipoff\Support\Objects\DiscountableValue((int) ($attributes[$key] ?? ($value ?? 0))))
             ->addDiscounts((int) ($attributes[$this->getDiscountsKey($key)] ?? 0));
     }
@@ -22,7 +20,7 @@ class DiscountableValue implements CastsAttributes
     {
         if (is_null($value)) {
             $value = new \Tipoff\Support\Objects\DiscountableValue(0);
-        } else if (is_int($value)) {
+        } elseif (is_int($value)) {
             $value = new \Tipoff\Support\Objects\DiscountableValue($value);
         }
 
