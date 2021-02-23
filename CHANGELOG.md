@@ -125,3 +125,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.4.2 - 2021-02-20
 
 - slot & participant to tipoff/bookings
+
+## 1.4.3 - 2021-02-22
+
+- update namespaces of scheduler classes
