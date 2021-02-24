@@ -20,9 +20,8 @@ interface CartInterface extends BaseModelInterface
     public static function activeCart(int $userId): self;
 
     /**
-     * Adds or updates an item in the cart using Sellable supplied $itemId as unique identifier.
-     * A CartItemCreated or CartItemUpdated event will be dispatched.  A Sellable may set additional
-     * information in an event listener or the CartItemInterface API.
+     * Creates a new, DETACHED, cart item with required information.  Use `insertItem` to attach
+     * the created item to a cart.
      *
      * @param string $itemId
      * @param Sellable $sellable
@@ -30,7 +29,26 @@ interface CartInterface extends BaseModelInterface
      * @param int $qty
      * @return CartItemInterface
      */
-    public function upsertItem(Sellable $sellable, string $itemId, $amount, int $qty = 1): CartItemInterface;
+    public static function createItem(Sellable $sellable, string $itemId, $amount, int $qty = 1): CartItemInterface;
+
+    /**
+     * Adds a newly created cart item to the cart.  Item is validated prior to insertion.  Once attached to
+     * the cart, a CartItemCreated event is dispatched.
+     *
+     * @param CartItemInterface $cartItem
+     * @return CartItemInterface
+     */
+    public function insertItem(CartItemInterface $cartItem): CartItemInterface;
+
+    /**
+     * Finds an existing cart item be Sellable type and Sellable defined item it.  Null is returned
+     * if item is not found;
+     *
+     * @param Sellable $sellable
+     * @param string $itemId
+     * @return CartItemInterface|null
+     */
+    public function findItem(Sellable $sellable, string $itemId): ?CartItemInterface;
 
     /**
      * Remove an item from the cart by its Sellable defined item id.  If an item is removed, a CartItemRemoved
@@ -74,7 +92,7 @@ interface CartInterface extends BaseModelInterface
     public function addCartDiscounts(int $value): self;
 
     /**
-     * Get/set methods for cart level credits pending redemption.
+     * Get/update methods for cart level credits pending redemption.
      */
     public function getCartCredits(): int;
 
@@ -87,9 +105,11 @@ interface CartInterface extends BaseModelInterface
     public function applyCode(string $code): self;
 
     /**
-     * Get unique location established for cart via its items (if any)
+     * Get/set unique location established for cart via its items (if any)
      */
     public function getLocationId(): ?int;
+
+    public function setLocationId(?int $locationId): self;
 
     /**
      * Return a collection of objects implementing CartItemInterface

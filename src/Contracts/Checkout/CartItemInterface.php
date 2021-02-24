@@ -12,6 +12,11 @@ use Tipoff\Support\Objects\DiscountableValue;
 interface CartItemInterface extends BaseModelInterface
 {
     /**
+     * Get cart containing this cart item
+     */
+    public function getCart(): ?CartInterface;
+
+    /**
      * Get instance of Sellable associated w/this cart item
      */
     public function getSellable(): Sellable;
