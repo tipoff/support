@@ -51,6 +51,8 @@ class TipoffPackage extends Package
      */
     public array $novaResources = [];
 
+    public array $bindings = [];
+
     public function __construct(Package $package)
     {
         $this->setBasePath($package->basePath);
