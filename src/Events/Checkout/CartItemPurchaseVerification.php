@@ -7,7 +7,7 @@ namespace Tipoff\Support\Events\Checkout;
 
 use Tipoff\Support\Contracts\Checkout\CartItemInterface;
 
-class CartItemPurchased extends SellableEvent
+class CartItemPurchaseVerification extends SellableEvent
 {
     public CartItemInterface $cartItem;
 

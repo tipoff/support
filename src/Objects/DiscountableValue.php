@@ -51,4 +51,10 @@ class DiscountableValue
 
         return $result->addDiscounts($other->getDiscounts());
     }
+
+    public function isEqual(DiscountableValue $other): bool
+    {
+        return $this->originalAmount === $other->originalAmount &&
+            $this->discounts === $other->discounts;
+    }
 }

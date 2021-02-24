@@ -48,6 +48,23 @@ class DiscountableValueTest extends TestCase
     }
 
     /** @test */
+    public function is_equal()
+    {
+        $value1 = (new DiscountableValue(1000))
+            ->addDiscounts(200);
+
+        $value2 = (new DiscountableValue(1000))
+            ->addDiscounts(200);
+
+        $value3 = (new DiscountableValue(1001))
+            ->addDiscounts(200);
+
+        $this->assertTrue($value1->isEqual($value2));
+        $this->assertFalse($value1->isEqual($value3));
+        $this->assertFalse($value1->isEqual(new DiscountableValue(1000)));
+    }
+
+    /** @test */
     public function add_multiple_discounts()
     {
         $value = (new DiscountableValue(1000))
