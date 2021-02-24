@@ -8,5 +8,10 @@ interface Sellable
 {
     public function getDescription(): string;
 
-    public function getMorphClass(): string;
+    /**
+     * Get the class name for polymorphic relations.
+     *
+     * @return string
+     */
+    public function getMorphClass();
 }
