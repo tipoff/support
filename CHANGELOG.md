@@ -137,3 +137,10 @@ All notable changes to `support` will be documented in this file.
 ## 1.4.5 - 2021-02-24
 
 - tax interface
+
+## 1.4.6 - 2021-02-24
+
+- base event
+- cart interface
+- cart item interface
+- sellable
