@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Nova\Nova;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Services\BaseService;
+use Tipoff\Support\Contracts\Taxes\TaxRequest;
+use Tipoff\Support\Contracts\Taxes\TaxRequestItem;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Tests\TestCase;
 use Tipoff\Support\TipoffPackage;
@@ -178,6 +180,24 @@ class TipoffPackageTest extends TestCase
         $package = $provider->register()->getPackage();
         $this->assertCount(1, $package->novaResources);
         $this->assertEquals([DemoNovaResource::class], $package->novaResources);
+    }
+
+    /** @test */
+    public function bindings_are_merged()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasBindings([TaxRequest::class => 'b'])
+                ->hasBindings([TaxRequestItem::class => 'c'])
+                ->hasBindings([TaxRequest::class => 'c']);
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertCount(2, $package->bindings);
+        $this->assertEquals([
+            TaxRequestItem::class => 'c',
+            TaxRequest::class => 'c',
+        ], $package->bindings);
     }
 }
 

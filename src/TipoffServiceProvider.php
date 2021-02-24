@@ -68,6 +68,11 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
             }
         }
 
+        // Bindings
+        foreach ($package->bindings as $interface => $implementation) {
+            $this->app->bind($interface, $implementation);
+        }
+
         // Register Nova resources
         Nova::resources($package->novaResources);
     }

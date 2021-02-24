@@ -51,6 +51,8 @@ class TipoffPackage extends Package
      */
     public array $novaResources = [];
 
+    public array $bindings = [];
+
     public function __construct(Package $package)
     {
         $this->setBasePath($package->basePath);
@@ -93,6 +95,13 @@ class TipoffPackage extends Package
     public function hasNovaResources(array $novaResources): self
     {
         $this->novaResources = array_merge($this->novaResources, $novaResources);
+
+        return $this;
+    }
+
+    public function hasBindings(array $bindings): self
+    {
+        $this->bindings = array_merge($this->bindings, $bindings);
 
         return $this;
     }
