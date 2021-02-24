@@ -26,10 +26,10 @@ interface CartInterface extends BaseModelInterface
      * @param string $itemId
      * @param Sellable $sellable
      * @param DiscountableValue|int $amount
-     * @param int $qty
+     * @param int $quantity
      * @return CartItemInterface
      */
-    public static function createItem(Sellable $sellable, string $itemId, $amount, int $qty = 1): CartItemInterface;
+    public static function createItem(Sellable $sellable, string $itemId, $amount, int $quantity = 1): CartItemInterface;
 
     /**
      * Adds a newly created cart item to the cart or indicates an existing item has been changed. Item is validated as
