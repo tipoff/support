@@ -133,3 +133,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.4.4 - 2021-02-23
 
 - discountable value object
+
+## 1.4.5 - 2021-02-24
+
+- tax interface
