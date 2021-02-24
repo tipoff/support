@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Nova\Nova;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Services\BaseService;
+use Tipoff\Support\Contracts\Taxes\TaxRequest;
+use Tipoff\Support\Contracts\Taxes\TaxRequestItem;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Tests\TestCase;
 use Tipoff\Support\TipoffPackage;
 use Tipoff\Support\TipoffServiceProvider;
-use Tipoff\Support\Contracts\Taxes\TaxRequest;
-use Tipoff\Support\Contracts\Taxes\TaxRequestItem;
 
 class TipoffPackageTest extends TestCase
 {
