@@ -13,6 +13,8 @@ class BaseModel extends Model implements BaseModelInterface
     protected $guarded = ['id'];
 
     /**
+     * NOTE:  Override introduces extra stack frame requiring custom `guessBelongsToRelation` override.
+     *
      * @inheritDoc
      */
     public function belongsTo($related, $foreignKey = null, $ownerKey = null, $relation = null)
@@ -25,6 +27,22 @@ class BaseModel extends Model implements BaseModelInterface
     }
 
     /**
+     * NOTE:  Override introduces extra stack frame requiring custom `guessBelongsToRelation` override.
+     *
+     * @inheritDoc
+     */
+    public function morphTo($name = null, $type = null, $id = null, $ownerKey = null)
+    {
+        if (is_string($type)) {
+            Assert::that($type)->classExists();
+        }
+
+        return parent::morphTo($name, $type, $id, $ownerKey);
+    }
+
+    /**
+     * NOTE:  Override required to discard extra stack frame created in other overrides.
+     *
      * @inheritDoc
      * @psalm-suppress UnusedVariable
      */
