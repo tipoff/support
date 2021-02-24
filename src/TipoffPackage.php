@@ -96,4 +96,11 @@ class TipoffPackage extends Package
 
         return $this;
     }
+
+    public function hasBindings(array $bindings): self
+    {
+        $this->bindings = array_merge($this->bindings, $bindings);
+
+        return $this;
+    }
 }
