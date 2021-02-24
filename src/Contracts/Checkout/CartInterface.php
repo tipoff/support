@@ -20,7 +20,7 @@ interface CartInterface extends BaseModelInterface
     public static function activeCart(int $userId): self;
 
     /**
-     * Creates a new, DETACHED, cart item with required information.  Use `insertItem` to attach
+     * Creates a new, DETACHED, cart item with required information.  Use `upsertItem` to attach
      * the created item to a cart.
      *
      * @param string $itemId
@@ -32,13 +32,14 @@ interface CartInterface extends BaseModelInterface
     public static function createItem(Sellable $sellable, string $itemId, $amount, int $qty = 1): CartItemInterface;
 
     /**
-     * Adds a newly created cart item to the cart.  Item is validated prior to insertion.  Once attached to
-     * the cart, a CartItemCreated event is dispatched.
+     * Adds a newly created cart item to the cart or indicates an existing item has been changed. Item is validated as
+     * part of the operation.  A CartItemCreated or CartItemUpdated event is dispatched depending on the actual
+     * operation performed.
      *
      * @param CartItemInterface $cartItem
      * @return CartItemInterface
      */
-    public function insertItem(CartItemInterface $cartItem): CartItemInterface;
+    public function upsertItem(CartItemInterface $cartItem): CartItemInterface;
 
     /**
      * Finds an existing cart item be Sellable type and Sellable defined item it.  Null is returned

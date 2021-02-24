@@ -4,13 +4,11 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Events\Checkout;
 
-use Illuminate\Foundation\Events\Dispatchable;
 use Tipoff\Support\Contracts\Sellable\Sellable;
+use Tipoff\Support\Events\BaseEvent;
 
-abstract class SellableEvent
+abstract class SellableEvent extends BaseEvent
 {
-    use Dispatchable;
-
     public Sellable $sellable;
 
     public function __construct(Sellable $sellable)
