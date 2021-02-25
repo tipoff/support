@@ -60,7 +60,5 @@ interface CartItemInterface extends BaseItemInterface
      * should have its parent set to the cart item for the pending booking.  This
      * ensures related items are handled as a unit.
      */
-    public function getParentItem(): ?CartItemInterface;
-
     public function setParentItem(?CartItemInterface $parent): self;
 }

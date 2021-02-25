@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Checkout;
 
+use Illuminate\Support\Collection;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Objects\DiscountableValue;
 
@@ -33,4 +34,9 @@ interface BaseItemContainerInterface extends BaseModelInterface
      * Get unique location established for order via its items (if any)
      */
     public function getLocationId(): ?int;
+
+    /**
+     * Return a collection of items in the container
+     */
+    public function getItems(): Collection;
 }

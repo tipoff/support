@@ -20,7 +20,7 @@ interface OrderInterface extends BaseItemContainerInterface
     public function findItem(Sellable $sellable, string $itemId): ?OrderItemInterface;
 
     /**
-     * Return a collection of objects implementing OrderItemInterface
+     * Get order number
      */
-    public function getOrderItems(): Collection;
+    public function getOrderNumber(): string;
 }

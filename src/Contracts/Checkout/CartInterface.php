@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Checkout;
 
-use Illuminate\Support\Collection;
 use Tipoff\Support\Contracts\Sellable\Sellable;
 use Tipoff\Support\Objects\DiscountableValue;
 
@@ -90,9 +89,4 @@ interface CartInterface extends BaseItemContainerInterface
      * Set unique location established for cart via its items (if any)
      */
     public function setLocationId(?int $locationId): self;
-
-    /**
-     * Return a collection of objects implementing CartItemInterface
-     */
-    public function getCartItems(): Collection;
 }

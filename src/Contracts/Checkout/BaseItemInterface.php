@@ -16,6 +16,23 @@ interface BaseItemInterface extends BaseModelInterface
     public function getSellable(): Sellable;
 
     /**
+     * Set instance of Sellable associated w/this order item.  Set allows a change in
+     * the sellable association during order item creation from cart item.
+     * @param Sellable $sellable
+     * @return static
+     */
+    public function setSellable(Sellable $sellable);
+
+    /**
+     * Get parent item for a bundled order item.  For example, a booking fee
+     * should have its parent set to the order item for the booking.  This
+     * ensures related items are handled as a unit.
+     *
+     * @return static
+     */
+    public function getParentItem();
+
+    /**
      * Get Sellable provided opaque item id
      */
     public function getItemId(): string;
@@ -66,7 +83,7 @@ interface BaseItemInterface extends BaseModelInterface
      *
      * @param string|null $key
      * @param $value
-     * @return $this
+     * @return static
      */
-    public function setMetaData(?string $key, $value): self;
+    public function setMetaData(?string $key, $value);
 }
