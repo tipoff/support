@@ -52,9 +52,23 @@ class DiscountableValue
         return $result->addDiscounts($other->getDiscounts());
     }
 
+    public function multiply(int $count): DiscountableValue
+    {
+        $result = clone $this;
+        $result->originalAmount *= $count;
+        $result->discounts *= $count;
+
+        return $result;
+    }
+
     public function isEqual(DiscountableValue $other): bool
     {
         return $this->originalAmount === $other->originalAmount &&
             $this->discounts === $other->discounts;
+    }
+
+    public function __toString()
+    {
+        return (string) $this->originalAmount;
     }
 }
