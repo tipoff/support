@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Checkout;
 
-use Illuminate\Support\Collection;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
-use Tipoff\Support\Contracts\Sellable\Sellable;
 use Tipoff\Support\Objects\DiscountableValue;
 
 interface BaseItemContainerInterface extends BaseModelInterface
