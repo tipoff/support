@@ -5,11 +5,10 @@ declare(strict_types=1);
 namespace Tipoff\Support\Contracts\Checkout;
 
 use Illuminate\Support\Collection;
-use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Sellable\Sellable;
 use Tipoff\Support\Objects\DiscountableValue;
 
-interface CartInterface extends BaseModelInterface
+interface CartInterface extends BaseItemContainerInterface
 {
     /**
      * Retrieve or create the current active cart for the given user.
@@ -62,41 +61,21 @@ interface CartInterface extends BaseModelInterface
     public function removeItem(Sellable $sellable, string $itemId): self;
 
     /**
-     * Returns the DiscountableValue representing the total item amount / total item amount discounts
-     *
-     * @return DiscountableValue
-     */
-    public function getItemAmount(): DiscountableValue;
-
-    /**
-     * Returns tax in cents.
-     *
-     * @return int
-     */
-    public function getTax(): int;
-
-    /**
-     * Get/Set methods for discountable shipping fee.
+     * Set methods for discountable shipping fee.
      *
      * @param DiscountableValue|int $value
      * @return $this
      */
     public function setShipping($value): self;
 
-    public function getShipping(): DiscountableValue;
-
     /**
-     * Get/set methods for cart level discounts.
+     * Update methods for cart level discounts.
      */
-    public function getCartDiscounts(): int;
-
     public function addCartDiscounts(int $value): self;
 
     /**
-     * Get/update methods for cart level credits pending redemption.
+     * Update methods for cart level credits pending redemption.
      */
-    public function getCartCredits(): int;
-
     public function addCartCredits(int $value): self;
 
     /**
@@ -106,10 +85,8 @@ interface CartInterface extends BaseModelInterface
     public function applyCode(string $code): self;
 
     /**
-     * Get/set unique location established for cart via its items (if any)
+     * Set unique location established for cart via its items (if any)
      */
-    public function getLocationId(): ?int;
-
     public function setLocationId(?int $locationId): self;
 
     /**
