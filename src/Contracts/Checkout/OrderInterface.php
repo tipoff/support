@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Checkout;
 
-use Illuminate\Support\Collection;
 use Tipoff\Support\Contracts\Sellable\Sellable;
 
 interface OrderInterface extends BaseItemContainerInterface
