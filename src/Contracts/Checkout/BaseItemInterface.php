@@ -71,10 +71,10 @@ interface BaseItemInterface extends BaseModelInterface
      * Get meta data by optional key.  Dot notion in key paths is supported via Arr::get(...)
      *
      * @param string|null $key
-     * @param $default
+     * @param mixed|null $default
      * @return mixed
      */
-    public function getMetaData(?string $key, $default);
+    public function getMetaData(?string $key, $default = null);
 
     /**
      * Set an array item to a given value using "dot" notation.

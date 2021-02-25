@@ -89,4 +89,22 @@ interface CartInterface extends BaseItemContainerInterface
      * Set unique location established for cart via its items (if any)
      */
     public function setLocationId(?int $locationId): self;
+
+    /**
+     * Verify cart can be purchased.  Exception thrown if not valid.
+     *
+     * CartItemPurchaseVerification events are dispatched allowing Sellable an
+     * opportunity for a final inventory or validity check.
+     */
+    public function verifyPurchasable(): self;
+
+    /**
+     * Transactional conversion of cart into an order, completing the purchase
+     *
+     * OrderItemCreated events are dispatched for each new OrderItem allowing
+     * Sellable limited ability to modify the newly created OrderItem.
+     *
+     * An OrderCreated event is dispatched just before committing the transaction.
+     */
+    public function completePurchase(): OrderInterface;
 }
