@@ -27,14 +27,9 @@ interface BaseItemContainerInterface extends BaseModelInterface
     public function getShipping(): DiscountableValue;
 
     /**
-     * Get methods for order level discounts.
+     * Get methods for container level discounts not reflected in item discounts
      */
-    public function getCartDiscounts(): int;
-
-    /**
-     * Get methods for order level credits applied.
-     */
-    public function getCartCredits(): int;
+    public function getDiscounts(): int;
 
     /**
      * Get unique location established for order via its items (if any)

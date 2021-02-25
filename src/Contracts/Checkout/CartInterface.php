@@ -63,20 +63,22 @@ interface CartInterface extends BaseItemContainerInterface
     /**
      * Set methods for discountable shipping fee.
      *
-     * @param DiscountableValue|int $value
+     * @param DiscountableValue|int $shipping
      * @return $this
      */
-    public function setShipping($value): self;
+    public function setShipping($shipping): self;
 
     /**
-     * Update methods for cart level discounts.
+     * Update methods for container level discounts.
      */
-    public function addCartDiscounts(int $value): self;
+    public function addDiscounts(int $amount): self;
 
     /**
-     * Update methods for cart level credits pending redemption.
+     * Get/Update methods for credits pending redemption.
      */
-    public function addCartCredits(int $value): self;
+    public function addCredits(int $amount): self;
+
+    public function getCredits(): int;
 
     /**
      * Applies a coded discount or coded voucher to the cart.  An exception is thrown
