@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Events\Checkout;
 
-use Tipoff\Support\Contracts\Checkout\CartInterface;
 use Tipoff\Support\Contracts\Checkout\OrderInterface;
 use Tipoff\Support\Events\BaseEvent;
 
