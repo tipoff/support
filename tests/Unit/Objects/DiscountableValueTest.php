@@ -31,6 +31,23 @@ class DiscountableValueTest extends TestCase
     }
 
     /** @test */
+    public function multiply()
+    {
+        $value = (new DiscountableValue(1000))
+            ->addDiscounts(200);
+
+        $result = $value->multiply(5);
+        $this->assertEquals(5000, $result->getOriginalAmount());
+        $this->assertEquals(1000, $result->getDiscounts());
+        $this->assertEquals(4000, $result->getDiscountedAmount());
+
+        // Original unchanged
+        $this->assertEquals(1000, $value->getOriginalAmount());
+        $this->assertEquals(200, $value->getDiscounts());
+        $this->assertEquals(800, $value->getDiscountedAmount());
+    }
+
+    /** @test */
     public function reset()
     {
         $value = (new DiscountableValue(1000))

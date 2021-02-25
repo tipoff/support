@@ -4,12 +4,10 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Checkout;
 
-use Illuminate\Support\Collection;
-use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Sellable\Sellable;
 use Tipoff\Support\Objects\DiscountableValue;
 
-interface CartInterface extends BaseModelInterface
+interface CartInterface extends BaseItemContainerInterface
 {
     /**
      * Retrieve or create the current active cart for the given user.
@@ -62,42 +60,24 @@ interface CartInterface extends BaseModelInterface
     public function removeItem(Sellable $sellable, string $itemId): self;
 
     /**
-     * Returns the DiscountableValue representing the total item amount / total item amount discounts
+     * Set methods for discountable shipping fee.
      *
-     * @return DiscountableValue
-     */
-    public function getItemAmount(): DiscountableValue;
-
-    /**
-     * Returns tax in cents.
-     *
-     * @return int
-     */
-    public function getTax(): int;
-
-    /**
-     * Get/Set methods for discountable shipping fee.
-     *
-     * @param DiscountableValue|int $value
+     * @param DiscountableValue|int $shipping
      * @return $this
      */
-    public function setShipping($value): self;
-
-    public function getShipping(): DiscountableValue;
+    public function setShipping($shipping): self;
 
     /**
-     * Get/set methods for cart level discounts.
+     * Update methods for container level discounts.
      */
-    public function getCartDiscounts(): int;
-
-    public function addCartDiscounts(int $value): self;
+    public function addDiscounts(int $amount): self;
 
     /**
-     * Get/update methods for cart level credits pending redemption.
+     * Get/Update methods for credits pending redemption.
      */
-    public function getCartCredits(): int;
+    public function addCredits(int $amount): self;
 
-    public function addCartCredits(int $value): self;
+    public function getCredits(): int;
 
     /**
      * Applies a coded discount or coded voucher to the cart.  An exception is thrown
@@ -106,14 +86,25 @@ interface CartInterface extends BaseModelInterface
     public function applyCode(string $code): self;
 
     /**
-     * Get/set unique location established for cart via its items (if any)
+     * Set unique location established for cart via its items (if any)
      */
-    public function getLocationId(): ?int;
-
     public function setLocationId(?int $locationId): self;
 
     /**
-     * Return a collection of objects implementing CartItemInterface
+     * Verify cart can be purchased.  Exception thrown if not valid.
+     *
+     * CartItemPurchaseVerification events are dispatched allowing Sellable an
+     * opportunity for a final inventory or validity check.
      */
-    public function getCartItems(): Collection;
+    public function verifyPurchasable(): self;
+
+    /**
+     * Transactional conversion of cart into an order, completing the purchase
+     *
+     * OrderItemCreated events are dispatched for each new OrderItem allowing
+     * Sellable limited ability to modify the newly created OrderItem.
+     *
+     * An OrderCreated event is dispatched just before committing the transaction.
+     */
+    public function completePurchase(): OrderInterface;
 }
