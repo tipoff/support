@@ -10,7 +10,6 @@ interface CodedCartAdjustment
 
     public static function calculateAdjustments(CartInterface $cart);
 
-
     /**
      * @param CartInterface $cart
      * @return array|string[]
