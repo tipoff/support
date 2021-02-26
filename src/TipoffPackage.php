@@ -58,6 +58,52 @@ class TipoffPackage extends Package
         $this->setBasePath($package->basePath);
     }
 
+    public function hasRoute(string $routeFileName): Package
+    {
+        throw new \Exception('Use hasApiRoute or hasWebRoute for Tipoff routes');
+    }
+
+    public function hasRoutes(...$routeFileNames): Package
+    {
+        throw new \Exception('Use hasApiRoutes or hasWebRoutes for Tipoff routes');
+    }
+
+    public function hasApiRoute(string $routeFileName): Package
+    {
+        if (config('tipoff.api.enabled')) {
+            return parent::hasRoute($routeFileName);
+        }
+
+        return $this;
+    }
+
+    public function hasApiRoutes(...$routeFileNames): Package
+    {
+        if (config('tipoff.api.enabled')) {
+            return parent::hasRoutes(...$routeFileNames);
+        }
+
+        return $this;
+    }
+
+    public function hasWebRoute(string $routeFileName): Package
+    {
+        if (config('tipoff.web.enabled')) {
+            return parent::hasRoute($routeFileName);
+        }
+
+        return $this;
+    }
+
+    public function hasWebRoutes(...$routeFileNames): Package
+    {
+        if (config('tipoff.web.enabled')) {
+            return parent::hasRoutes(...$routeFileNames);
+        }
+
+        return $this;
+    }
+
     public function hasPolicies(array $policies): self
     {
         $this->policies = array_merge($this->policies, $policies);

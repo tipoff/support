@@ -2,6 +2,20 @@
 
 return [
 
+    'api' => [
+        'enabled' => true,
+        'uri_prefix' => 'tipoff',
+        'middleware_group' => 'api',
+        'auth_middleware' => 'auth',
+    ],
+
+    'web' => [
+        'enabled' => true,
+        'uri_prefix' => 'tipoff',
+        'middleware_group' => 'web',
+        'auth_middleware' => 'auth',
+    ],
+
     'model_class' => [
 
         'block' => \Tipoff\Scheduler\Models\Block::class,
