@@ -5,7 +5,8 @@ return [
     'api' => [
         'enabled' => true,
         'uri_prefix' => 'tipoff',
-        'middleware_group' => 'tipoff',
+        'middleware_group' => 'api',
+        'auth_middleware' => 'auth',
     ],
 
     'model_class' => [
