@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace Tipoff\Support\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;
 
-class BaseApiRequest extends FormRequest
+abstract class BaseApiRequest extends FormRequest
 {
     // Default page size in API pagination.
     const PAGE_SIZE = 20;
@@ -20,14 +19,14 @@ class BaseApiRequest extends FormRequest
      */
     protected $model;
 
+    abstract public function getModelClass(): string;
+
     /**
      * Get model related with request basing on children getModelClass method.
      *
      * If possible resolve it.
-     *
-     * @return object
      */
-    public function getModel()
+    public function getModel(): object
     {
         if (empty($this->model)) {
             $model = app($this->getModelClass());
@@ -48,10 +47,8 @@ class BaseApiRequest extends FormRequest
 
     /**
      * Get base name of model class.
-     *
-     * @return string
      */
-    public function getModelClassBasename()
+    public function getModelClassBasename(): string
     {
         $baseName = class_basename($this->getModelClass());
 
@@ -60,24 +57,19 @@ class BaseApiRequest extends FormRequest
 
     /**
      * Get fillable fields of model.
-     *
-     * @return array
      */
-    public function getFillable()
+    public function getFillable(): array
     {
         return $this->getModel()->getFillable();
     }
 
     /**
      * Check if user is authorized to perform action.
-     *
-     * @param string $action
-     * @return bool
      */
-    public function authorizeAction($action)
+    public function authorizeAction(string $action): bool
     {
         $user = $this->user();
-        $policy = Gate::getPolicyFor($this->getModel());
+        // $policy = Gate::getPolicyFor($this->getModel());
 
         switch ($action) {
             case 'viewAny':
@@ -90,10 +82,8 @@ class BaseApiRequest extends FormRequest
 
     /**
      * Get pagination size.
-     *
-     * @return int
      */
-    public function getPageSize()
+    public function getPageSize(): int
     {
         if ($this->has('page.size')) {
             return $this->input('page.size');

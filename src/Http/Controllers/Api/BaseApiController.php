@@ -4,105 +4,80 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Http\Controllers\Api;
 
+use Illuminate\Http\Response;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Tipoff\Support\Http\Controllers\BaseController;
 
-class BaseApiController extends BaseController
+abstract class BaseApiController extends BaseController
 {
-    /**
-     * @var int
-     */
-    protected $statusCode = SymfonyResponse::HTTP_OK;
+    protected int $statusCode = SymfonyResponse::HTTP_OK;
+
+    protected array $allowedRelationships = [];
 
     /**
      * Respond with success status and message.
-     *
-     * @param string $message
-     * @return \Illuminate\Http\Response
      */
-    public function respondSuccess($message = 'SUCCESS')
+    public function respondSuccess(string $message = 'SUCCESS'): Response
     {
         return $this->statusCode(SymfonyResponse::HTTP_OK)->respond(['data' => ['message' => 'success']]);
     }
 
     /**
      * Respond with not found status and message.
-     *
-     * @param string $code
-     * @return \Illuminate\Http\Response
      */
-    public function respondNotFound($code = 'NOT_FOUND')
+    public function respondNotFound(string $code = 'NOT_FOUND'): Response
     {
         return $this->statusCode(SymfonyResponse::HTTP_NOT_FOUND)->respondWithError($code);
     }
 
     /**
      * Respond with method not allowed status and message.
-     *
-     * @param string $code
-     * @return \Illuminate\Http\Response
      */
-    public function respondNotAllowed($code = 'NOT_ALLOWED')
+    public function respondNotAllowed(string $code = 'NOT_ALLOWED'): Response
     {
         return $this->statusCode(SymfonyResponse::HTTP_METHOD_NOT_ALLOWED)->respondWithError($code);
     }
 
     /**
      * Respond with unprocessable entity status and message.
-     * @param string $code
-     * @return \Illuminate\Http\Response
      */
-    public function respondValidationError($code = 'VALIDATION_ERROR')
+    public function respondValidationError(string $code = 'VALIDATION_ERROR'): Response
     {
         return $this->statusCode(SymfonyResponse::HTTP_UNPROCESSABLE_ENTITY)->respondWithError($code);
     }
 
     /**
      * Respond with unauthorized status and code.
-     * @param string $code
-     * @return \Illuminate\Http\Response
      */
-    public function respondUnauthorized($code = 'UNAUTHORIZED')
+    public function respondUnauthorized(string $code = 'UNAUTHORIZED'): Response
     {
         return $this->statusCode(SymfonyResponse::HTTP_UNAUTHORIZED)->respondWithError($code);
     }
 
     /**
-     * Set or get http status code.
-     *
-     * @param int|null $statusCode
-     * @return int|$this
+     * Set http status code.
      */
-    public function statusCode($statusCode = null)
+    public function statusCode(?int $statusCode = null): self
     {
         if (! empty($statusCode)) {
             $this->statusCode = $statusCode;
-
-            return $this;
         }
 
-        return $this->statusCode;
+        return $this;
     }
 
     /**
      * Generate response with specific data and headers.
-     * @param array $data
-     * @param void|array $headers
-     * @return \Illuminate\Http\Response
      */
-    public function respond($data, $headers = [])
+    public function respond(array $data, array $headers = []): Response
     {
-        return response()->json($data, $this->statusCode(), $headers);
+        return response()->json($data, $this->statusCode, $headers);
     }
 
     /**
      * Return error response.
-     *
-     * @param string $status HTTP status code
-     * @param type $code Error code (check resources/lang/en/errors.php)
-     * @return \Illuminate\Http\Response
      */
-    public function respondWithError($code)
+    public function respondWithError(string $code): Response
     {
         return $this->respond([
             'errors' => [
@@ -117,10 +92,8 @@ class BaseApiController extends BaseController
 
     /**
      * Validate include variable (from get), and return it as array.
-     * @param string $include
-     * @return array
      */
-    public function buildRelationships($include)
+    public function buildRelationships(string $include): array
     {
         if (empty($include)) {
             return [];
