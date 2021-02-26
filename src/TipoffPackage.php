@@ -67,10 +67,10 @@ class TipoffPackage extends Package
         return $this;
     }
 
-    public function hasRoutes(array $routeFileNames): Package
+    public function hasRoutes(...$routeFileNames): Package
     {
         if (config('tipoff.api.enabled')) {
-            return parent::hasRoutes($routeFileNames);
+            return parent::hasRoutes(...$routeFileNames);
         }
 
         return $this;
