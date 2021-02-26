@@ -204,8 +204,8 @@ class TipoffPackageTest extends TestCase
     {
         $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
             $package
-                ->hasRoute('abc')
-                ->hasRoutes(['def', 'ghi']);
+                ->hasApiRoute('abc')
+                ->hasApiRoutes(['def', 'ghi']);
         });
 
         $package = $provider->register()->getPackage();
@@ -217,8 +217,33 @@ class TipoffPackageTest extends TestCase
         config('tipoff.api.enabled', false);
         $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
             $package
-                ->hasRoute('abc')
-                ->hasRoutes(['def', 'ghi']);
+                ->hasApiRoute('abc')
+                ->hasApiRoutes(['def', 'ghi']);
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertEquals([], $package->routeFileNames);
+    }
+
+    public function web_routes_registered_if_enabled()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasWebRoute('abc')
+                ->hasWebRoutes(['def', 'ghi']);
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertEquals(['abc', 'def', 'ghi'], $package->routeFileNames);
+    }
+
+    public function web_routes_not_registered_if_disabled()
+    {
+        config('tipoff.web.enabled', false);
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasWebRoute('abc')
+                ->hasWebRoutes(['def', 'ghi']);
         });
 
         $package = $provider->register()->getPackage();
