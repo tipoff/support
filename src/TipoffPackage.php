@@ -58,6 +58,24 @@ class TipoffPackage extends Package
         $this->setBasePath($package->basePath);
     }
 
+    public function hasRoute(string $routeFileName): Package
+    {
+        if (config('tipoff.api.enabled')) {
+            return parent::hasRoute($routeFileName);
+        }
+
+        return $this;
+    }
+
+    public function hasRoutes(array $routeFileNames): Package
+    {
+        if (config('tipoff.api.enabled')) {
+            return parent::hasRoutes($routeFileNames);
+        }
+
+        return $this;
+    }
+
     public function hasPolicies(array $policies): self
     {
         $this->policies = array_merge($this->policies, $policies);
