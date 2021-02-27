@@ -41,6 +41,8 @@ return [
         'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
 
         'game' => \Tipoff\Scheduler\Models\Game::class,
+        
+        'gmb_account' => \Tipoff\GoogleApi\Models\GmbAccount::class,
 
         'hold' => \Tipoff\Scheduler\Models\Hold::class,
 
@@ -137,6 +139,8 @@ return [
         'flex_day' => \Tipoff\FlexScheduling\Nova\FlexDay::class,
 
         'game' => \Tipoff\Scheduler\Nova\Game::class,
+        
+        'gmb_account' => \Tipoff\GoogleApi\Nova\GmbAccount::class,
 
         'hold' => \Tipoff\Scheduler\Nova\Hold::class,
 
