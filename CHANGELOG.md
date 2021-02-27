@@ -161,3 +161,7 @@ All notable changes to `support` will be documented in this file.
 - base api controller
 - api routes
 - base api request
+
+## 1.4.9 - 2021-02-26
+
+- base transformer
