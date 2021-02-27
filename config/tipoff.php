@@ -50,7 +50,7 @@ return [
 
         'invoice' => \Tipoff\Invoices\Models\Invoice::class,
 
-        'key' => \Tipoff\Reviews\Models\Key::class,
+        'key' => \Tipoff\GoogleApi\Models\Key::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
 
@@ -146,7 +146,7 @@ return [
 
         'invoice' => \Tipoff\Invoices\Nova\Invoice::class,
 
-        'key' => \Tipoff\Reviews\Nova\Key::class,
+        'key' => \Tipoff\GoogleApi\Nova\Key::class,
 
         'location' => \Tipoff\Locations\Nova\Location::class,
 
