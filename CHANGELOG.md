@@ -170,3 +170,7 @@ All notable changes to `support` will be documented in this file.
 
 - user model location
 - new location of key model
+
+## 1.4.11 - 2021-02-27
+
+- gmb account model location
