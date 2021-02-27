@@ -102,7 +102,7 @@ return [
 
         'topic' => \DrewRoberts\Blog\Models\Topic::class,
 
-        'user' => \App\Models\User::class,
+        'user' => \Tipoff\Authorization\Models\User::class,
 
         'video' => \DrewRoberts\Media\Models\Video::class,
 
@@ -198,7 +198,7 @@ return [
 
         'topic' => \DrewRoberts\Blog\Nova\Topic::class,
 
-        'user' => \App\Nova\User::class,
+        'user' => \Tipoff\Authorization\Nova\User::class,
 
         'video' => \DrewRoberts\Media\Nova\Video::class,
 
