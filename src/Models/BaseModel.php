@@ -5,8 +5,10 @@ declare(strict_types=1);
 namespace Tipoff\Support\Models;
 
 use Assert\Assert;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
+use Tipoff\Support\Contracts\Models\UserInterface;
 
 class BaseModel extends Model implements BaseModelInterface
 {
@@ -85,5 +87,15 @@ class BaseModel extends Model implements BaseModelInterface
     public function getId()
     {
         return $this->id;
+    }
+
+    public function isOwner(UserInterface $user): bool
+    {
+        return false;
+    }
+
+    public function scopeVisibleBy(Builder $query, UserInterface $user): Builder
+    {
+        return $query->whereRaw('1 = 0');
     }
 }
