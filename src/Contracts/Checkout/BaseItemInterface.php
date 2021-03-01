@@ -48,9 +48,14 @@ interface BaseItemInterface extends BaseModelInterface
     public function getDescription(): string;
 
     /**
-     * Get discountable amount for this order item
+     * Get discountable amount for each item
      */
-    public function getAmount(): DiscountableValue;
+    public function getAmountEach(): DiscountableValue;
+
+    /**
+     * Get discountable amount qty * item
+     */
+    public function getAmountTotal(): DiscountableValue;
 
     /**
      * Get tax charged for this order item
