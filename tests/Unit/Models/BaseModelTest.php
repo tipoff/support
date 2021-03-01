@@ -21,7 +21,8 @@ class BaseModelTest extends TestCase
     /** @test  */
     public function get_id()
     {
-        TestModel::createTable();;
+        TestModel::createTable();
+        ;
 
         /** @var TestModel $model */
         $model = TestModel::create([]);
@@ -33,7 +34,8 @@ class BaseModelTest extends TestCase
     /** @test  */
     public function find()
     {
-        TestModel::createTable();;
+        TestModel::createTable();
+        ;
 
         $result = TestModel::find(1);
         $this->assertNull($result);
@@ -50,7 +52,8 @@ class BaseModelTest extends TestCase
     /** @test  */
     public function find_or_fail()
     {
-        TestModel::createTable();;
+        TestModel::createTable();
+        ;
 
         /** @var TestModel $model */
         $model = TestModel::create([]);
@@ -68,7 +71,8 @@ class BaseModelTest extends TestCase
     /** @test  */
     public function default_is_owner_is_false()
     {
-        TestModel::createTable();;
+        TestModel::createTable();
+        ;
 
         /** @var TestModel $model */
         $model = TestModel::create([]);
@@ -80,9 +84,10 @@ class BaseModelTest extends TestCase
     /** @test  */
     public function default_visible_by_is_hidden()
     {
-        TestModel::createTable();;
+        TestModel::createTable();
+        ;
 
-        foreach(range(1,10) as $i) {
+        foreach (range(1, 10) as $i) {
             TestModel::create([]);
         }
 
@@ -129,7 +134,8 @@ class BaseModelTest extends TestCase
     }
 }
 
-class TestModel extends BaseModel implements UserInterface {
+class TestModel extends BaseModel implements UserInterface
+{
     use TestModelStub;
     use Authenticatable;
     use Authorizable;
