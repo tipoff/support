@@ -96,6 +96,16 @@ class BaseModel extends Model implements BaseModelInterface
 
     public function scopeVisibleBy(Builder $query, UserInterface $user): Builder
     {
+        return $this->scopeNeverVisible($query);
+    }
+
+    protected function scopeNeverVisible(Builder $query): Builder
+    {
         return $query->whereRaw('1 = 0');
+    }
+
+    protected function scopeAlwaysVisible(Builder $query): Builder
+    {
+        return $query;
     }
 }

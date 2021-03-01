@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\Support\Tests\Unit\Models;
 
 use Illuminate\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -92,12 +93,56 @@ class BaseModelTest extends TestCase
 
         $this->assertCount(0, $models);
     }
+
+    /** @test  */
+    public function always_visible()
+    {
+        TestModel::createTable();;
+
+        foreach(range(1,10) as $i) {
+            TestModel::create([]);
+        }
+
+        $this->assertDatabaseCount('test_models', 10);
+
+        $user = TestModel::create([]);
+        $models = TestModel::query()->alwaysVisible($user)->get();
+
+        $this->assertCount(11, $models);
+    }
+
+    /** @test  */
+    public function never_visible()
+    {
+        TestModel::createTable();;
+
+        foreach(range(1,10) as $i) {
+            TestModel::create([]);
+        }
+
+        $this->assertDatabaseCount('test_models', 10);
+
+        $user = TestModel::create([]);
+        $models = TestModel::query()->neverVisible($user)->get();
+
+        $this->assertCount(0, $models);
+    }
 }
 
 class TestModel extends BaseModel implements UserInterface {
     use TestModelStub;
     use Authenticatable;
     use Authorizable;
+
+    public function scopeNeverVisible(Builder $query): Builder
+    {
+        return parent::scopeNeverVisible($query);
+    }
+
+    public function scopeAlwaysVisible(Builder $query): Builder
+    {
+        return parent::scopeAlwaysVisible($query);
+    }
 
     public function hasRole($roles, string $guard = null): bool
     {
