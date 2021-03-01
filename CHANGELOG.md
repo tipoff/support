@@ -179,3 +179,8 @@ All notable changes to `support` will be documented in this file.
 
 - is owner method on user interface
 - visible by method on user interface
+
+## 1.5.1 - 2021-03-01
+
+- change return type of base api controller
+- add test for base api controller
