@@ -174,3 +174,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.4.11 - 2021-02-27
 
 - gmb account model location
+
+## 1.5.0 - 2021-03-01
+
+- is owner method on user interface
+- visible by method on user interface
