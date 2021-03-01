@@ -102,9 +102,10 @@ class BaseModelTest extends TestCase
     /** @test  */
     public function always_visible()
     {
-        TestModel::createTable();;
+        TestModel::createTable();
+        ;
 
-        foreach(range(1,10) as $i) {
+        foreach (range(1, 10) as $i) {
             TestModel::create([]);
         }
 
@@ -119,9 +120,10 @@ class BaseModelTest extends TestCase
     /** @test  */
     public function never_visible()
     {
-        TestModel::createTable();;
+        TestModel::createTable();
+        ;
 
-        foreach(range(1,10) as $i) {
+        foreach (range(1, 10) as $i) {
             TestModel::create([]);
         }
 
