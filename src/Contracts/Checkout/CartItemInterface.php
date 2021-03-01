@@ -30,7 +30,7 @@ interface CartItemInterface extends BaseItemInterface
      * @param DiscountableValue|int $amount
      * @return $this
      */
-    public function setAmount($amount): self;
+    public function setAmountEach($amount): self;
 
     /**
      * Set tax charged for this order item

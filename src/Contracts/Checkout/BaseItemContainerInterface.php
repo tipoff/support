@@ -13,7 +13,7 @@ interface BaseItemContainerInterface extends BaseModelInterface
     /**
      * Returns the DiscountableValue representing the total item amount / total item amount discounts
      */
-    public function getItemAmount(): DiscountableValue;
+    public function getItemAmountTotal(): DiscountableValue;
 
     /**
      * Returns tax in cents.
