@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Http\Controllers\Api;
 
-use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
 use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 use Tipoff\Support\Http\Controllers\BaseController;
 
@@ -17,7 +17,7 @@ abstract class BaseApiController extends BaseController
     /**
      * Respond with success status and message.
      */
-    public function respondSuccess(string $message = 'SUCCESS'): Response
+    public function respondSuccess(string $message = 'SUCCESS'): JsonResponse
     {
         return $this->statusCode(SymfonyResponse::HTTP_OK)->respond(['data' => ['message' => 'success']]);
     }
@@ -25,7 +25,7 @@ abstract class BaseApiController extends BaseController
     /**
      * Respond with not found status and message.
      */
-    public function respondNotFound(string $code = 'NOT_FOUND'): Response
+    public function respondNotFound(string $code = 'NOT_FOUND'): JsonResponse
     {
         return $this->statusCode(SymfonyResponse::HTTP_NOT_FOUND)->respondWithError($code);
     }
@@ -33,7 +33,7 @@ abstract class BaseApiController extends BaseController
     /**
      * Respond with method not allowed status and message.
      */
-    public function respondNotAllowed(string $code = 'NOT_ALLOWED'): Response
+    public function respondNotAllowed(string $code = 'NOT_ALLOWED'): JsonResponse
     {
         return $this->statusCode(SymfonyResponse::HTTP_METHOD_NOT_ALLOWED)->respondWithError($code);
     }
@@ -41,7 +41,7 @@ abstract class BaseApiController extends BaseController
     /**
      * Respond with unprocessable entity status and message.
      */
-    public function respondValidationError(string $code = 'VALIDATION_ERROR'): Response
+    public function respondValidationError(string $code = 'VALIDATION_ERROR'): JsonResponse
     {
         return $this->statusCode(SymfonyResponse::HTTP_UNPROCESSABLE_ENTITY)->respondWithError($code);
     }
@@ -49,7 +49,7 @@ abstract class BaseApiController extends BaseController
     /**
      * Respond with unauthorized status and code.
      */
-    public function respondUnauthorized(string $code = 'UNAUTHORIZED'): Response
+    public function respondUnauthorized(string $code = 'UNAUTHORIZED'): JsonResponse
     {
         return $this->statusCode(SymfonyResponse::HTTP_UNAUTHORIZED)->respondWithError($code);
     }
@@ -69,7 +69,7 @@ abstract class BaseApiController extends BaseController
     /**
      * Generate response with specific data and headers.
      */
-    public function respond(array $data, array $headers = []): Response
+    public function respond(array $data, array $headers = []): JsonResponse
     {
         return response()->json($data, $this->statusCode, $headers);
     }
@@ -77,7 +77,7 @@ abstract class BaseApiController extends BaseController
     /**
      * Return error response.
      */
-    public function respondWithError(string $code): Response
+    public function respondWithError(string $code): JsonResponse
     {
         return $this->respond([
             'errors' => [
