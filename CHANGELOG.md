@@ -184,3 +184,7 @@ All notable changes to `support` will be documented in this file.
 
 - change return type of base api controller
 - add test for base api controller
+
+## 1.5.2 - 2021-03-01
+
+- update interfaces for checkout items
