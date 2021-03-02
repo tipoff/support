@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\View\Components;
 
-
 use Illuminate\View\Component;
+use Illuminate\View\View;
 
 class Money extends Component
 {
@@ -20,6 +20,9 @@ class Money extends Component
 
     public function render()
     {
-        return view('components.money');
+        /** @var View $view */
+        $view = view('components.money');
+
+        return $view;
     }
 }
