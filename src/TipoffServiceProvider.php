@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tipoff\Support;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\Nova;
