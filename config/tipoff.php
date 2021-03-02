@@ -101,6 +101,8 @@ return [
         'tax' => \Tipoff\Taxes\Models\Tax::class,
 
         'theme' => \Tipoff\EscapeRoom\Models\Theme::class,
+        
+        'timezone' => \Tipoff\Locations\Models\Timezone::class,
 
         'topic' => \DrewRoberts\Blog\Models\Topic::class,
 
@@ -199,6 +201,8 @@ return [
         'tax' => \Tipoff\Taxes\Nova\Tax::class,
 
         'theme' => \Tipoff\EscapeRoom\Nova\Theme::class,
+        
+        'timezone' => \Tipoff\Locations\Nova\Timezone::class,
 
         'topic' => \DrewRoberts\Blog\Nova\Topic::class,
 
