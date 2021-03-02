@@ -2,24 +2,19 @@
 
 namespace Tipoff\Support;
 
-use Illuminate\Support\Facades\Blade;
+use Tipoff\Support\View\Components\Money;
 
 class SupportServiceProvider extends TipoffServiceProvider
 {
     public function configureTipoffPackage(TipoffPackage $package): void
     {
         $package
+            ->hasBladeComponents([
+                'money' => Money::class,
+            ])
             ->name('support')
+            ->hasViews()
             ->hasConfigFile('tipoff');
-    }
-
-    public function bootingPackage()
-    {
-        parent::bootingPackage();
-
-        Blade::directive('tipoffMoney', function ($amount) {
-            return "<?php echo '$' . number_format((int) ($amount ?? 0) / 100, 2); ?>";
-        });
     }
 
     /**
