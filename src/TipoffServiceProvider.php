@@ -35,7 +35,7 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 
         $this->loadMigrationsFrom($this->package->basePath.'/../database/migrations');
 
-        Blade::components($package->bladeComponents);
+        $this->loadViewComponentsAs('tipoff', $package->bladeComponents);
     }
 
     public function packageRegistered()
