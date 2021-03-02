@@ -2,6 +2,8 @@
 
 namespace Tipoff\Support;
 
+use Illuminate\Support\Facades\Blade;
+
 class SupportServiceProvider extends TipoffServiceProvider
 {
     public function configureTipoffPackage(TipoffPackage $package): void
@@ -9,6 +11,15 @@ class SupportServiceProvider extends TipoffServiceProvider
         $package
             ->name('support')
             ->hasConfigFile('tipoff');
+    }
+
+    public function bootingPackage()
+    {
+        parent::bootingPackage();
+
+        Blade::directive('tipoffMoney', function ($amount) {
+            return "<?php echo '$' . number_format((int) ($amount ?? 0) / 100, 2); ?>";
+        });
     }
 
     /**

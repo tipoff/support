@@ -53,7 +53,7 @@ class TipoffPackage extends Package
 
     /**
      * [
-     *   'x-tag-name' => ComponentClass,
+     *   'tag-name' => ComponentClass,
      *   // ...
      * ]
      */
