@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Tests\Unit\View\Components;
 
-
 use Illuminate\Foundation\Testing\Concerns\InteractsWithViews;
 use Tipoff\Support\Tests\TestCase;
 
