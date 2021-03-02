@@ -32,4 +32,15 @@ class MoneyTest extends TestCase
 
         $view->assertSee('$0.00');
     }
+
+    /** @test */
+    public function includes_label()
+    {
+        $view = $this->blade(
+            '<x-tipoff-money :amount="$amount" :label="$label"/>',
+            ['amount' => 1000, 'label' => 'Total']
+        );
+
+        $view->assertSee('Total: $10.00');
+    }
 }

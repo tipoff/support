@@ -10,10 +10,12 @@ use Illuminate\View\View;
 class Money extends Component
 {
     public int $amount;
+    public ?string $label;
     public string $formattedAmount;
 
-    public function __construct($amount = null)
+    public function __construct($amount = null, $label = null)
     {
+        $this->label = $label;
         $this->amount = (int) ($amount ?? 0);
         $this->formattedAmount = '$' . number_format($this->amount / 100, 2);
     }
