@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Checkout;
 
-interface CodedCartAdjustment
+use Tipoff\Support\Contracts\Models\BaseModelInterface;
+
+interface CodedCartAdjustment extends BaseModelInterface
 {
     /**
      * Locates an active adjustment by its code.  Null if nothing found.
@@ -18,7 +20,7 @@ interface CodedCartAdjustment
 
     /**
      * @param CartInterface $cart
-     * @return array|string[]
+     * @return array|CodedCartAdjustment[]
      */
     public static function getCodesForCart(CartInterface $cart): array;
 
