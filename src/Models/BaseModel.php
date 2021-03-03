@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Models\UserInterface;
-use Tipoff\Support\Transformers\BaseTransformer;
 
 class BaseModel extends Model implements BaseModelInterface
 {
