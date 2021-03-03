@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\Support\Contracts\Models;
 
 use Illuminate\Database\Eloquent\Builder;
+use Tipoff\Support\Transformers\BaseTransformer;
 
 interface BaseModelInterface
 {
@@ -22,6 +23,23 @@ interface BaseModelInterface
      * @return self
      */
     public static function findOrFail($id);
+
+    /**
+     * Return transformer instance for model, or null if transformation not supported.
+     *
+     * @param mixed|null $context
+     * @return BaseTransformer|null
+     */
+    public function getTransformer($context = null);
+
+    /**
+     * Get default view component for model, or null if not supported.  Can be helpful
+     * for dynamic component rendering.
+     *
+     * @param mixed|null $context
+     * @return string|null
+     */
+    public function getViewComponent($context = null);
 
     /**
      * @return mixed|null
