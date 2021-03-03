@@ -188,3 +188,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.5.2 - 2021-03-01
 
 - update interfaces for checkout items
+
+## 1.5.3 - 2021-03-02
+
+- support for blade component registration
+- replace money directive with blade component
