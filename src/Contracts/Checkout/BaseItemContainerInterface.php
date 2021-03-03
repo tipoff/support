@@ -6,10 +6,16 @@ namespace Tipoff\Support\Contracts\Checkout;
 
 use Illuminate\Support\Collection;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
+use Tipoff\Support\Contracts\Models\UserInterface;
 use Tipoff\Support\Objects\DiscountableValue;
 
 interface BaseItemContainerInterface extends BaseModelInterface
 {
+    /**
+     * Returns the user that owns the container
+     */
+    public function getUser(): UserInterface;
+
     /**
      * Returns the DiscountableValue representing the total item amount / total item amount discounts
      */
