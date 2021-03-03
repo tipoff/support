@@ -193,3 +193,8 @@ All notable changes to `support` will be documented in this file.
 
 - support for blade component registration
 - replace money directive with blade component
+
+## 1.5.4 - 2021-03-03
+
+- models specify default transformer instance
+- models specify default view component
