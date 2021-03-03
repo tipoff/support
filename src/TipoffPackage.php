@@ -51,6 +51,14 @@ class TipoffPackage extends Package
      */
     public array $novaResources = [];
 
+    /**
+     * [
+     *   'tag-name' => ComponentClass,
+     *   // ...
+     * ]
+     */
+    public array $bladeComponents = [];
+
     public array $bindings = [];
 
     public function __construct(Package $package)
@@ -140,7 +148,18 @@ class TipoffPackage extends Package
 
     public function hasNovaResources(array $novaResources): self
     {
-        $this->novaResources = array_merge($this->novaResources, $novaResources);
+        $this->novaResources = array_values(
+            array_unique(
+                array_merge($this->novaResources, $novaResources)
+            )
+        );
+
+        return $this;
+    }
+
+    public function hasBladeComponents(array $bladeComponents): self
+    {
+        $this->bladeComponents = array_merge($this->bladeComponents, $bladeComponents);
 
         return $this;
     }

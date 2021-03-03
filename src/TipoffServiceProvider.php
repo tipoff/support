@@ -29,7 +29,12 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 
     public function bootingPackage()
     {
+        /** @var TipoffPackage $package */
+        $package = $this->package;
+
         $this->loadMigrationsFrom($this->package->basePath.'/../database/migrations');
+
+        $this->loadViewComponentsAs('tipoff', $package->bladeComponents);
     }
 
     public function packageRegistered()

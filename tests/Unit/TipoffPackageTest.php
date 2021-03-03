@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\Support\Tests\Unit;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\View\Component;
 use Laravel\Nova\Nova;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Services\BaseService;
@@ -174,12 +175,32 @@ class TipoffPackageTest extends TestCase
     public function nova_resources_are_merged()
     {
         $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
-            $package->hasNovaResources([DemoNovaResource::class]);
+            $package
+                ->hasNovaResources([DemoNovaResource::class])
+                ->hasNovaResources([DemoNovaResource::class]);
         });
 
         $package = $provider->register()->getPackage();
         $this->assertCount(1, $package->novaResources);
         $this->assertEquals([DemoNovaResource::class], $package->novaResources);
+    }
+
+    /** @test */
+    public function blade_components_are_merged()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasBladeComponents(['x-abc' => TestBladeComponent::class])
+                ->hasBladeComponents(['x-def' => TestBladeComponent::class])
+                ->hasBladeComponents(['x-abc' => TestBladeComponent::class]);
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertCount(2, $package->bladeComponents);
+        $this->assertEquals([
+            'x-abc' => TestBladeComponent::class,
+            'x-def' => TestBladeComponent::class,
+        ], $package->bladeComponents);
     }
 
     /** @test */
@@ -295,4 +316,12 @@ class TestModel extends BaseModel implements TestModelInterface
 
 class DemoNovaResource extends Nova
 {
+}
+
+class TestBladeComponent extends Component
+{
+    public function render()
+    {
+        return '';
+    }
 }
