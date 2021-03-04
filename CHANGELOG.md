@@ -198,3 +198,7 @@ All notable changes to `support` will be documented in this file.
 
 - models specify default transformer instance
 - models specify default view component
+
+## 1.5.5 - 2021-03-04
+
+- tax interface allows default location rate
