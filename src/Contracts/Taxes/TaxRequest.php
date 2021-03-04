@@ -8,7 +8,7 @@ interface TaxRequest
 {
     public static function createTaxRequest(): self;
 
-    public function createTaxRequestItem(string $itemId, int $locationId, ?string $taxCode, int $amount): TaxRequestItem;
+    public function createTaxRequestItem(string $itemId, int $locationId, ?string $taxCode, int $amount): self;
 
     public function calculateTax(): self;
 
