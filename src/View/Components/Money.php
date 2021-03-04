@@ -23,7 +23,7 @@ class Money extends Component
     public function render()
     {
         /** @var View $view */
-        $view = view('components.money');
+        $view = view('support::components.money');
 
         return $view;
     }
