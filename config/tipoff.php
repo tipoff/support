@@ -48,7 +48,7 @@ return [
 
         'gmb_detail' => \Tipoff\Locations\Models\GmbDetail::class,
 
-        'gmb_hour' =>  => \Tipoff\Locations\Models\GmbHour::class,
+        'gmb_hour' =>  \Tipoff\Locations\Models\GmbHour::class,
 
         'hold' => \Tipoff\Scheduler\Models\Hold::class,
 
