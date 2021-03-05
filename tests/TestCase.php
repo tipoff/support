@@ -37,13 +37,4 @@ class TestCase extends Orchestra
             SupportServiceProvider::class,
         ];
     }
-
-    public function getEnvironmentSetUp($app)
-    {
-        // No common base, so add view dir ourselves for our own tests
-        $paths = array_merge($app['config']->get('view.paths'), [
-            __DIR__ . '/../resources/views',
-        ]);
-        $app['config']->set('view.paths', $paths);
-    }
 }

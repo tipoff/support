@@ -27,6 +27,10 @@ class Enum implements CastsAttributes
             return $value;
         }
 
+        if (is_string($value)) {
+            $value = call_user_func([$this->enumClass, 'byValue'], $value);
+        }
+
         if ($value instanceof \MabeEnum\Enum) {
             return $value->getValue();
         }
