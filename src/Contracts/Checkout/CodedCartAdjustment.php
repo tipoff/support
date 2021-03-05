@@ -25,6 +25,12 @@ interface CodedCartAdjustment extends BaseModelInterface
     public static function getCodesForCart(CartInterface $cart): array;
 
     /**
+     * @param OrderInterface $order
+     * @return array|CodedCartAdjustment[]
+     */
+    public static function getCodesForOrder(OrderInterface $order): array;
+
+    /**
      * @return string|null
      */
     public function getCode();
