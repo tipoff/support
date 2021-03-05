@@ -42,6 +42,8 @@ return [
 
         'discount' => \Tipoff\Discounts\Models\Discount::class,
 
+        'domain' => \Tipoff\Seo\Models\Domain::class,
+
         'fee' => \Tipoff\Fees\Models\Fee::class,
 
         'feedback' => \Tipoff\Feedback\Models\Feedback::class,
@@ -66,6 +68,8 @@ return [
 
         'key' => \Tipoff\GoogleApi\Models\Key::class,
 
+        'keyword' => \Tipoff\Seo\Models\Keyword::class,
+
         'location' => \Tipoff\Locations\Models\Location::class,
 
         'market' => \Tipoff\Locations\Models\Market::class,
@@ -82,11 +86,15 @@ return [
 
         'payment' => \Tipoff\Payments\Models\Payment::class,
 
+        'place' => \Tipoff\Seo\Models\Place::class,
+
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
         'profile_link' => \Tipoff\Locations\Models\ProfileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
+
+        'ranking' => \Tipoff\Seo\Models\Ranking::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
 
@@ -97,6 +105,8 @@ return [
         'room' => \Tipoff\EscapeRoom\Models\Room::class,
 
         'schedule_eraser' => \Tipoff\Scheduler\Models\ScheduleEraser::class,
+
+        'search_volume' => \Tipoff\Seo\Models\SearchVolume::class,
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
 
@@ -129,6 +139,8 @@ return [
         'voucher' => \Tipoff\Vouchers\Models\Voucher::class,
 
         'voucher_type' => \Tipoff\Vouchers\Models\VoucherType::class,
+
+        'webpage' => \Tipoff\Seo\Models\Webpage::class,
 
         'zip_code' => \Tipoff\Addresses\Models\ZipCode::class,
 
