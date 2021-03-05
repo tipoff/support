@@ -28,6 +28,8 @@ return [
 
         'competitor' => \Tipoff\Reviews\Models\Competitor::class,
 
+        'company' => \Tipoff\Seo\Models\Company::class,
+
         'contact' => \Tipoff\Forms\Models\Contact::class,
 
         'customer' => \Tipoff\Addresses\Models\Customer::class, // Will be renamed later to address when new features added
@@ -41,8 +43,12 @@ return [
         'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
 
         'game' => \Tipoff\Scheduler\Models\Game::class,
-        
+
         'gmb_account' => \Tipoff\GoogleApi\Models\GmbAccount::class,
+
+        'gmb_detail' => \Tipoff\Locations\Models\GmbDetail::class,
+
+        'gmb_hour' =>  \Tipoff\Locations\Models\GmbHour::class,
 
         'hold' => \Tipoff\Scheduler\Models\Hold::class,
 
@@ -71,6 +77,8 @@ return [
         'payment' => \Tipoff\Payments\Models\Payment::class,
 
         'post' => \DrewRoberts\Blog\Models\Post::class,
+
+        'profile_link' => \Tipoff\Locations\Models\ProfileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
 
@@ -101,7 +109,7 @@ return [
         'tax' => \Tipoff\Taxes\Models\Tax::class,
 
         'theme' => \Tipoff\EscapeRoom\Models\Theme::class,
-        
+
         'timezone' => \Tipoff\Locations\Models\Timezone::class,
 
         'topic' => \DrewRoberts\Blog\Models\Topic::class,
@@ -141,7 +149,7 @@ return [
         'flex_day' => \Tipoff\FlexScheduling\Nova\FlexDay::class,
 
         'game' => \Tipoff\Scheduler\Nova\Game::class,
-        
+
         'gmb_account' => \Tipoff\GoogleApi\Nova\GmbAccount::class,
 
         'hold' => \Tipoff\Scheduler\Nova\Hold::class,
@@ -201,7 +209,7 @@ return [
         'tax' => \Tipoff\Taxes\Nova\Tax::class,
 
         'theme' => \Tipoff\EscapeRoom\Nova\Theme::class,
-        
+
         'timezone' => \Tipoff\Locations\Nova\Timezone::class,
 
         'topic' => \DrewRoberts\Blog\Nova\Topic::class,
