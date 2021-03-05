@@ -110,7 +110,7 @@ return [
 
         'theme' => \Tipoff\EscapeRoom\Models\Theme::class,
 
-        'timezone' => \Tipoff\Locations\Models\Timezone::class,
+        'timezone' => \Tipoff\Addresses\Models\Timezone::class,
 
         'topic' => \DrewRoberts\Blog\Models\Topic::class,
 
@@ -210,7 +210,7 @@ return [
 
         'theme' => \Tipoff\EscapeRoom\Nova\Theme::class,
 
-        'timezone' => \Tipoff\Locations\Nova\Timezone::class,
+        'timezone' => \Tipoff\Addresses\Nova\Timezone::class,
 
         'topic' => \DrewRoberts\Blog\Nova\Topic::class,
 
