@@ -202,3 +202,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.5.5 - 2021-03-04
 
 - tax interface allows default location rate
+
+## 1.5.6 - 2021-03-04
+
+- namespace for package views
+- new classes in config
