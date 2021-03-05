@@ -18,6 +18,8 @@ return [
 
     'model_class' => [
 
+        'address' => \Tipoff\Addresses\Models\Address::class,
+
         'block' => \Tipoff\Scheduler\Models\Block::class,
 
         'booking' => \Tipoff\Bookings\Models\Booking::class,
@@ -26,9 +28,13 @@ return [
 
         'cart_item' => \Tipoff\Checkout\Models\CartItem::class,
 
+        'city' => \Tipoff\Addresses\Models\City::class,
+
         'competitor' => \Tipoff\Reviews\Models\Competitor::class,
 
         'company' => \Tipoff\Seo\Models\Company::class,
+
+        'country' => \Tipoff\Addresses\Models\Country::class,
 
         'contact' => \Tipoff\Forms\Models\Contact::class,
 
@@ -100,6 +106,8 @@ return [
 
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
+        'state' => \Tipoff\Addresses\Models\State::class,
+
         'status' => \Tipoff\Statuses\Models\Status::class,
 
         'supervision' => \Tipoff\EscapeRoom\Models\Supervision::class,
@@ -121,6 +129,8 @@ return [
         'voucher' => \Tipoff\Vouchers\Models\Voucher::class,
 
         'voucher_type' => \Tipoff\Vouchers\Models\VoucherType::class,
+
+        'zip_code' => \Tipoff\Addresses\Models\ZipCode::class,
 
     ],
 
