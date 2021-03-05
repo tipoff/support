@@ -30,8 +30,6 @@ return [
 
         'company' => \Tipoff\Seo\Models\Company::class,
 
-        'company_user' => \Tipoff\Seo\Models\CompanyUser::class,
-
         'contact' => \Tipoff\Forms\Models\Contact::class,
 
         'customer' => \Tipoff\Addresses\Models\Customer::class, // Will be renamed later to address when new features added
