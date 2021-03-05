@@ -207,3 +207,8 @@ All notable changes to `support` will be documented in this file.
 
 - namespace for package views
 - new classes in config
+
+
+## 1.5.7 - 2021-03-05
+
+- string value allowed in enum cast
