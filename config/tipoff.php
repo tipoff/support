@@ -90,7 +90,7 @@ return [
 
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
-        'profile_link' => \Tipoff\Locations\Models\ProfileLink::class,
+        'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
 
@@ -201,6 +201,8 @@ return [
         'payment' => \Tipoff\Payments\Nova\Payment::class,
 
         'post' => \DrewRoberts\Blog\Nova\Post::class,
+        
+        'profile_link' => \Tipoff\Seo\Nova\PofileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
 
