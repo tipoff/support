@@ -35,7 +35,7 @@ class EnumFilter extends Filter
 
     public function options(Request $request)
     {
-        $options = call_user_func([$this->class, 'getValues']);
+        $options = call_user_func([$this->class, 'optionsArray']);
 
         return array_flip($options);
     }
