@@ -166,6 +166,10 @@ return [
 
         'city' => \Tipoff\Addresses\Nova\City::class,
 
+        'company' => \Tipoff\Seo\Nova\Company::class,
+
+        'company_user' => \Tipoff\Seo\Nova\CompanyUser::class,
+
         'competitor' => \Tipoff\Reviews\Nova\Competitor::class,
 
         'contact' => \Tipoff\Forms\Nova\Contact::class,
@@ -173,6 +177,8 @@ return [
         'country' => \Tipoff\Addresses\Nova\Country::class,
 
         'discount' => \Tipoff\Discounts\Nova\Discount::class,
+
+        'domain' => \Tipoff\Seo\Nova\Domain::class,
 
         'fee' => \Tipoff\Fees\Nova\Fee::class,
 
@@ -194,6 +200,8 @@ return [
 
         'key' => \Tipoff\GoogleApi\Nova\Key::class,
 
+        'keyword' => \Tipoff\Seo\Nova\Keyword::class,
+
         'location' => \Tipoff\Locations\Nova\Location::class,
 
         'market' => \Tipoff\Locations\Nova\Market::class,
@@ -210,9 +218,17 @@ return [
 
         'payment' => \Tipoff\Payments\Nova\Payment::class,
 
+        'place' => \Tipoff\Seo\Nova\Place::class,
+
+        'place_details' => \Tipoff\Seo\Nova\PlaceDetails::class,
+        
+        'place_hours' => \Tipoff\Seo\Nova\PlaceHours::class,
+
         'post' => \DrewRoberts\Blog\Nova\Post::class,
 
         'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
+
+        'ranking' => \Tipoff\Seo\Nova\Ranking::class,
 
         'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
 
@@ -222,11 +238,15 @@ return [
 
         'region' => \Tipoff\Addresses\Nova\Region::class,
 
+        'result' => \Tipoff\Seo\Nova\Result::class,
+
         'review' => \Tipoff\Reviews\Nova\Review::class,
 
         'room' => \Tipoff\EscapeRoom\Nova\Room::class,
 
         'schedule_eraser' => \Tipoff\Scheduler\Nova\ScheduleEraser::class,
+
+        'search_volume' => \Tipoff\Seo\Nova\SearchVolume::class,
 
         'series' => \DrewRoberts\Blog\Nova\Series::class,
 
@@ -259,6 +279,8 @@ return [
         'voucher' => \Tipoff\Vouchers\Nova\Voucher::class,
 
         'voucher_type' => \Tipoff\Vouchers\Nova\VoucherType::class,
+
+        'webpage' => \Tipoff\Seo\Nova\Webpage::class,
 
         'zip_code' => \Tipoff\Addresses\Nova\ZipCode::class,
 
