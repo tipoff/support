@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Nova\Fields;
 
+use Assert\Assert;
 use Laravel\Nova\Fields\Select;
-use Laravel\Nova\Http\Requests\NovaRequest;
-use Laravel\Nova\Nova;
+use Tipoff\Support\Enums\BaseEnum;
 
 class Enum extends Select
 {
@@ -22,25 +22,15 @@ class Enum extends Select
 
         $this->displayUsing(
             function ($value) {
-                return $value instanceof \MabeEnum\Enum ? $value->getValue() : $value;
-            }
-        );
-
-        $this->fillUsing(
-            function (NovaRequest $request, $model, $attribute, $requestAttribute) {
-                if ($request->exists($requestAttribute)) {
-                    $model->{$attribute} = $request[$requestAttribute];
-                }
+                return $value instanceof BaseEnum ? $value->humanize() : $value;
             }
         );
     }
 
-    public function attach($class)
+    public function attach(string $class): self
     {
-        $options = [];
-        foreach (call_user_func([$class, 'getValues']) as $value) {
-            $options[Nova::humanize($value)] = $value;
-        }
+        Assert::that($class)->subclassOf(BaseEnum::class);
+        $options = call_user_func([$class, 'optionsArray']);
 
         return $this->options($options)
             ->rules(new \Tipoff\Support\Rules\Enum($class));

@@ -5,9 +5,12 @@ declare(strict_types=1);
 namespace Tipoff\Support\Nova\Filters;
 
 
+use Assert\Assert;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Nova;
+use Tipoff\Support\Enums\BaseEnum;
 
 class EnumFilter extends Filter
 {
@@ -17,6 +20,7 @@ class EnumFilter extends Filter
 
     public function __construct(string $column, string $class)
     {
+        Assert::that($class)->subclassOf(BaseEnum::class);
         $this->column = $column;
         $this->class = $class;
     }
@@ -33,11 +37,8 @@ class EnumFilter extends Filter
 
     public function options(Request $request)
     {
-        $options = [];
-        foreach (call_user_func([$this->class, 'getValues']) as $value) {
-            $options[Nova::humanize($value)] = $value;
-        }
+        $options = call_user_func([$this->class, 'getValues']);
 
-        return $options;
+        return array_flip($options);
     }
 }

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Enums;
 
-use MabeEnum\Enum;
-
 /**
  * @method static AppliesTo ORDER()
  * @method static AppliesTo PARTICIPANT()
@@ -16,7 +14,7 @@ use MabeEnum\Enum;
 
  * @psalm-immutable
  */
-class AppliesTo extends Enum
+class AppliesTo extends BaseEnum
 {
     const ORDER = 'order';
     const PARTICIPANT = 'participant';
