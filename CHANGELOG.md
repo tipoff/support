@@ -216,7 +216,7 @@ All notable changes to `support` will be documented in this file.
 
 - profile links model location
 
-## 1.5.9 - 2021-03-06
+## 1.5.9 - 2021-03-08
 
 - seo package model locations
 - addresses package model locations
