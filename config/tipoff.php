@@ -214,7 +214,7 @@ return [
 
         'post' => \DrewRoberts\Blog\Nova\Post::class,
 
-        'profile_link' => \Tipoff\Seo\Nova\PofileLink::class,
+        'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
 
