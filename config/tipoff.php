@@ -98,6 +98,8 @@ return [
 
         'refund' => \Tipoff\Refunds\Models\Refund::class,
 
+        'region' => \Tipoff\Addresses\Models\Region::class,
+
         'review' => \Tipoff\Reviews\Models\Review::class,
 
         'room' => \Tipoff\EscapeRoom\Models\Room::class,
