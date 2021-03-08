@@ -44,8 +44,6 @@ return [
         
         'gmb_account' => \Tipoff\GoogleApi\Models\GmbAccount::class,
 
-        'hold' => \Tipoff\Scheduler\Models\Hold::class,
-
         'image' => \DrewRoberts\Media\Models\Image::class,
 
         'insight' => \Tipoff\Reviews\Models\Insight::class,
@@ -88,7 +86,7 @@ return [
 
         'signature' => \Tipoff\Waivers\Models\Signature::class,
 
-        'slot' => \Tipoff\Bookings\Models\Slot::class,
+        'slot' => \Tipoff\Scheduler\Models\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
@@ -144,8 +142,6 @@ return [
         
         'gmb_account' => \Tipoff\GoogleApi\Nova\GmbAccount::class,
 
-        'hold' => \Tipoff\Scheduler\Nova\Hold::class,
-
         'image' => \DrewRoberts\Media\Nova\Image::class,
 
         'insight' => \Tipoff\Reviews\Nova\Insight::class,
@@ -188,7 +184,7 @@ return [
 
         'signature' => \Tipoff\Waivers\Nova\Signature::class,
 
-        'slot' => \Tipoff\Bookings\Nova\Slot::class,
+        'slot' => \Tipoff\Scheduler\Nova\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
 
