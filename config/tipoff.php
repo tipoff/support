@@ -86,6 +86,10 @@ return [
 
         'place' => \Tipoff\Seo\Models\Place::class,
 
+        'place_details' => \Tipoff\Seo\Models\PlaceDetails::class,
+
+        'place_hours' => \Tipoff\Seo\Models\PlaceHours::class,
+
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
@@ -97,6 +101,10 @@ return [
         'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
 
         'refund' => \Tipoff\Refunds\Models\Refund::class,
+
+        'region' => \Tipoff\Addresses\Models\Region::class,
+
+        'result' => \Tipoff\Seo\Models\Result::class,
 
         'review' => \Tipoff\Reviews\Models\Review::class,
 
@@ -146,6 +154,8 @@ return [
 
     'nova_class' => [
 
+        'address' => \Tipoff\Addresses\Nova\Address::class,
+
         'block' => \Tipoff\Scheduler\Nova\Block::class,
 
         'booking' => \Tipoff\Bookings\Nova\Booking::class,
@@ -154,9 +164,13 @@ return [
 
         'cart_item' => \Tipoff\Checkout\Nova\CartItem::class,
 
+        'city' => \Tipoff\Addresses\Nova\City::class,
+
         'competitor' => \Tipoff\Reviews\Nova\Competitor::class,
 
         'contact' => \Tipoff\Forms\Nova\Contact::class,
+
+        'country' => \Tipoff\Addresses\Nova\Country::class,
 
         'discount' => \Tipoff\Discounts\Nova\Discount::class,
 
@@ -198,13 +212,15 @@ return [
 
         'post' => \DrewRoberts\Blog\Nova\Post::class,
 
-        'profile_link' => \Tipoff\Seo\Nova\PofileLink::class,
+        'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Nova\RecurringSchedule::class,
 
         'refund' => \Tipoff\Refunds\Nova\Refund::class,
+
+        'region' => \Tipoff\Addresses\Nova\Region::class,
 
         'review' => \Tipoff\Reviews\Nova\Review::class,
 
@@ -219,6 +235,8 @@ return [
         'slot' => \Tipoff\Bookings\Nova\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
+
+        'state' => \Tipoff\Addresses\Nova\State::class,
 
         'status' => \Tipoff\Statuses\Nova\Status::class,
 
@@ -241,6 +259,8 @@ return [
         'voucher' => \Tipoff\Vouchers\Nova\Voucher::class,
 
         'voucher_type' => \Tipoff\Vouchers\Nova\VoucherType::class,
+
+        'zip_code' => \Tipoff\Addresses\Nova\ZipCode::class,
 
     ]
 
