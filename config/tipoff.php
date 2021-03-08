@@ -38,8 +38,6 @@ return [
 
         'contact' => \Tipoff\Forms\Models\Contact::class,
 
-        'customer' => \Tipoff\Addresses\Models\Customer::class, // Will be renamed later to address when new features added
-
         'discount' => \Tipoff\Discounts\Models\Discount::class,
 
         'domain' => \Tipoff\Seo\Models\Domain::class,
@@ -160,8 +158,6 @@ return [
 
         'contact' => \Tipoff\Forms\Nova\Contact::class,
 
-        'customer' => \Tipoff\Addresses\Nova\Customer::class, // Will be renamed later to address when new features added
-
         'discount' => \Tipoff\Discounts\Nova\Discount::class,
 
         'fee' => \Tipoff\Fees\Nova\Fee::class,
@@ -201,7 +197,7 @@ return [
         'payment' => \Tipoff\Payments\Nova\Payment::class,
 
         'post' => \DrewRoberts\Blog\Nova\Post::class,
-        
+
         'profile_link' => \Tipoff\Seo\Nova\PofileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
