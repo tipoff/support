@@ -84,6 +84,16 @@ class BaseModel extends Model implements BaseModelInterface
         return $result;
     }
 
+    public function getTransformer($context = null)
+    {
+        return null;
+    }
+
+    public function getViewComponent($context = null)
+    {
+        return null;
+    }
+
     public function getId()
     {
         return $this->id;

@@ -10,7 +10,7 @@ interface TaxRequestItem
 
     public function getLocationId(): int;
 
-    public function getTaxCode(): string;
+    public function getTaxCode(): ?string;
 
     public function getAmount(): int;
 

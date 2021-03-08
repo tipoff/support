@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Sellable;
 
-interface Sellable
+use Tipoff\Support\Contracts\Models\BaseModelInterface;
+
+interface Sellable extends BaseModelInterface
 {
     public function getDescription(): string;
 

@@ -44,6 +44,28 @@ class EnumTest extends TestCase
     }
 
     /** @test */
+    public function set_by_string()
+    {
+        $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
+        $value = $cast->set(new class extends Model {
+        }, 'attribute', 'test_value', []);
+
+        $this->assertIsString($value);
+        $this->assertEquals(TestEnum::TEST_VALUE, $value);
+    }
+
+    /** @test */
+    public function set_by_unknown_string_fails()
+    {
+        $this->expectException(\Exception::class);
+        $this->expectExceptionMessage('Unknown value \'bad_value\' for enumeration Tipoff\Support\Tests\Unit\Casts\TestEnum');
+
+        $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
+        $cast->set(new class extends Model {
+        }, 'attribute', 'bad_value', []);
+    }
+
+    /** @test */
     public function set_by_non_enum_fails()
     {
         $this->expectException(\InvalidArgumentException::class);
@@ -51,7 +73,7 @@ class EnumTest extends TestCase
 
         $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
         $cast->set(new class extends Model {
-        }, 'attribute', 'NotEnum', []);
+        }, 'attribute', 123, []);
     }
 }
 

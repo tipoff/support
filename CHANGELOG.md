@@ -188,3 +188,41 @@ All notable changes to `support` will be documented in this file.
 ## 1.5.2 - 2021-03-01
 
 - update interfaces for checkout items
+
+## 1.5.3 - 2021-03-02
+
+- support for blade component registration
+- replace money directive with blade component
+
+## 1.5.4 - 2021-03-03
+
+- models specify default transformer instance
+- models specify default view component
+
+## 1.5.5 - 2021-03-04
+
+- tax interface allows default location rate
+
+## 1.5.6 - 2021-03-04
+
+- namespace for package views
+- new classes in config
+
+## 1.5.7 - 2021-03-05
+
+- string value allowed in enum cast
+
+## 1.5.8 - 2021-03-06
+
+- profile links model location
+
+## 1.5.9 - 2021-03-08
+
+- seo package model locations
+- addresses package model locations
+- enum class nova support
+
+## 1.5.10 - 2021-03-08
+
+- renamed zip model
+- new nova resources

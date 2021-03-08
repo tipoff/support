@@ -2,12 +2,18 @@
 
 namespace Tipoff\Support;
 
+use Tipoff\Support\View\Components\Money;
+
 class SupportServiceProvider extends TipoffServiceProvider
 {
     public function configureTipoffPackage(TipoffPackage $package): void
     {
         $package
+            ->hasBladeComponents([
+                'money' => Money::class,
+            ])
             ->name('support')
+            ->hasViews()
             ->hasConfigFile('tipoff');
     }
 
