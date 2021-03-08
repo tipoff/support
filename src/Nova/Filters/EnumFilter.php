@@ -4,10 +4,8 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Nova\Filters;
 
-
 use Assert\Assert;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
 use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Nova;
 use Tipoff\Support\Enums\BaseEnum;
