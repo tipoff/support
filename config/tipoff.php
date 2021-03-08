@@ -34,6 +34,8 @@ return [
 
         'company' => \Tipoff\Seo\Models\Company::class,
 
+        'company_user' => \Tipoff\Seo\Models\CompanyUser::class,
+
         'country' => \Tipoff\Addresses\Models\Country::class,
 
         'contact' => \Tipoff\Forms\Models\Contact::class,
@@ -86,6 +88,10 @@ return [
 
         'place' => \Tipoff\Seo\Models\Place::class,
 
+        'place_details' => \Tipoff\Seo\Models\PlaceDetails::class,
+
+        'place_hours' => \Tipoff\Seo\Models\PlaceHours::class,
+
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
@@ -99,6 +105,8 @@ return [
         'refund' => \Tipoff\Refunds\Models\Refund::class,
 
         'region' => \Tipoff\Addresses\Models\Region::class,
+
+        'result' => \Tipoff\Seo\Models\Result::class,
 
         'review' => \Tipoff\Reviews\Models\Review::class,
 
