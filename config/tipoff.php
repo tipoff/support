@@ -168,8 +168,6 @@ return [
 
         'company' => \Tipoff\Seo\Nova\Company::class,
 
-        'company_user' => \Tipoff\Seo\Nova\CompanyUser::class,
-
         'competitor' => \Tipoff\Reviews\Nova\Competitor::class,
 
         'contact' => \Tipoff\Forms\Nova\Contact::class,
