@@ -6,11 +6,11 @@ namespace Tipoff\Support\Contracts\Booking;
 
 interface BookingExperience
 {
-	/**
-	 * Get label used in lists.
-	 *
-	 * @return string
-	 */
+    /**
+     * Get label used in lists.
+     *
+     * @return string
+     */
     public function getLabel(): string;
 
     /**
@@ -20,11 +20,10 @@ interface BookingExperience
      */
     public function getId();
 
-	/**
-	 * Get experience type.
-	 *
-	 * @return string
-	 */
+    /**
+     * Get experience type.
+     *
+     * @return string
+     */
     public function getType(): string;
-
 }

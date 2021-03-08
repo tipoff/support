@@ -6,10 +6,10 @@ namespace Tipoff\Support\Contracts\Booking;
 
 interface BookingSubject
 {
-	/**
-	 * Get label used in lists.
-	 *
-	 * @return string
-	 */
+    /**
+     * Get label used in lists.
+     *
+     * @return string
+     */
     public function getLabel(): string;
 }

@@ -8,18 +8,18 @@ use Tipoff\Support\Contracts\Scheduler\SlotInterface;
 
 interface BookingRateInterface extends SlotInterface
 {
-	/**
-	 * Get label used in lists.
-	 *
-	 * @return string
-	 */
+    /**
+     * Get label used in lists.
+     *
+     * @return string
+     */
     public function getLabel(): string;
 
-	/**
-	 * Get slug used in urls.
-	 *
-	 * @return string
-	 */
+    /**
+     * Get slug used in urls.
+     *
+     * @return string
+     */
     public function getSlug(): string;
 
     /**
