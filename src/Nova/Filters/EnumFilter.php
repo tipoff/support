@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Nova\Filters;
 
-
 use Illuminate\Http\Request;
 use Laravel\Nova\Filters\Filter;
 use Laravel\Nova\Nova;
