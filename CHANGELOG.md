@@ -215,3 +215,9 @@ All notable changes to `support` will be documented in this file.
 ## 1.5.8 - 2021-03-06
 
 - profile links model location
+
+## 1.5.9 - 2021-03-06
+
+- seo package model locations
+- addresses package model locations
+- enum class nova support
