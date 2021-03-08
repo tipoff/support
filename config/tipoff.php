@@ -34,8 +34,6 @@ return [
 
         'company' => \Tipoff\Seo\Models\Company::class,
 
-        'company_user' => \Tipoff\Seo\Models\CompanyUser::class,
-
         'country' => \Tipoff\Addresses\Models\Country::class,
 
         'contact' => \Tipoff\Forms\Models\Contact::class,
