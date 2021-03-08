@@ -148,7 +148,7 @@ return [
 
         'webpage' => \Tipoff\Seo\Models\Webpage::class,
 
-        'zip_code' => \Tipoff\Addresses\Models\ZipCode::class,
+        'zip' => \Tipoff\Addresses\Models\Zip::class,
 
     ],
 
@@ -260,7 +260,7 @@ return [
 
         'voucher_type' => \Tipoff\Vouchers\Nova\VoucherType::class,
 
-        'zip_code' => \Tipoff\Addresses\Nova\ZipCode::class,
+        'zip' => \Tipoff\Addresses\Nova\Zip::class,
 
     ]
 
