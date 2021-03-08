@@ -221,3 +221,8 @@ All notable changes to `support` will be documented in this file.
 - seo package model locations
 - addresses package model locations
 - enum class nova support
+
+## 1.5.10 - 2021-03-08
+
+- renamed zip model
+- new nova resources
