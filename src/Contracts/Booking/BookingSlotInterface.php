@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Booking;
 
-interface BookingSlotInterface
+use Tipoff\Support\Contracts\Models\BaseModelInterface;
+
+interface BookingSlotInterface extends BaseModelInterface
 {
 }
