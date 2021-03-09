@@ -238,6 +238,8 @@ return [
 
         'post' => \DrewRoberts\Blog\Nova\Post::class,
 
+        'product' => \Tipoff\Products\Nova\Product::class,
+
         'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Nova\Ranking::class,
