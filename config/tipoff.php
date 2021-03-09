@@ -256,6 +256,8 @@ return [
 
         'slot' => \Tipoff\Scheduler\Nova\Slot::class,
 
+        'slot_bookings' => \Tipoff\Bookings\Nova\Slot::class,
+
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
 
         'state' => \Tipoff\Addresses\Nova\State::class,
