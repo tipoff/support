@@ -26,6 +26,8 @@ return [
 
         'booking' => \Tipoff\Bookings\Models\Booking::class,
 
+        'booking_category' => \Tipoff\Bookings\Models\BookingCategory::class,
+
         'cart' => \Tipoff\Checkout\Models\Cart::class,
 
         'cart_item' => \Tipoff\Checkout\Models\CartItem::class,
