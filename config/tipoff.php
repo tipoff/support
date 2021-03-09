@@ -128,8 +128,6 @@ return [
 
         'slot' => \Tipoff\Scheduler\Models\Slot::class,
 
-        'slot_bookings' => \Tipoff\Bookings\Models\Slot::class,
-
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
         'state' => \Tipoff\Addresses\Models\State::class,
@@ -263,8 +261,6 @@ return [
         'signature' => \Tipoff\Waivers\Nova\Signature::class,
 
         'slot' => \Tipoff\Scheduler\Nova\Slot::class,
-
-        'slot_bookings' => \Tipoff\Bookings\Nova\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
 
