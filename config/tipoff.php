@@ -46,6 +46,10 @@ return [
 
         'domain' => \Tipoff\Seo\Models\Domain::class,
 
+        'escape_room_location' => \Tipoff\EscapeRoom\Models\EscapeRoomLocation::class,
+
+        'escape_room_market' => \Tipoff\EscapeRoom\Models\EscapeRoomMarket::class,
+
         'fee' => \Tipoff\Fees\Models\Fee::class,
 
         'feedback' => \Tipoff\Feedback\Models\Feedback::class,
