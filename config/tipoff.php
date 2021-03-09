@@ -124,6 +124,8 @@ return [
 
         'slot' => \Tipoff\Scheduler\Models\Slot::class,
 
+        'slot_bookings' => \Tipoff\Bookings\Models\Slot::class,
+
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
         'state' => \Tipoff\Addresses\Models\State::class,
