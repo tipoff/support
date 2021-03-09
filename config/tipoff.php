@@ -164,6 +164,8 @@ return [
 
         'voucher_type' => \Tipoff\Vouchers\Models\VoucherType::class,
 
+        'waiver' => \Tipoff\Waivers\Models\Waiver::class,
+
         'webpage' => \Tipoff\Seo\Models\Webpage::class,
 
         'zip' => \Tipoff\Addresses\Models\Zip::class,
