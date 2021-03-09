@@ -188,6 +188,10 @@ return [
 
         'domain' => \Tipoff\Seo\Nova\Domain::class,
 
+        'escape_room_location' => \Tipoff\EscapeRoom\Nova\EscapeRoomLocation::class,
+
+        'escape_room_market' => \Tipoff\EscapeRoom\Nova\EscapeRoomMarket::class,
+
         'fee' => \Tipoff\Fees\Nova\Fee::class,
 
         'feedback' => \Tipoff\Feedback\Nova\Feedback::class,
