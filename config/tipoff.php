@@ -64,6 +64,8 @@ return [
 
         'key' => \Tipoff\GoogleApi\Models\Key::class,
 
+        'key_agora' => \Tipoff\LaravelAgoraApi\Models\Key::class,
+
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
