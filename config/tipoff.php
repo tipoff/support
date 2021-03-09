@@ -78,6 +78,8 @@ return [
 
         'location' => \Tipoff\Locations\Models\Location::class,
 
+        'location_payment_setting' => \Tipoff\Payments\Models\LocationPaymentSetting::class,
+
         'market' => \Tipoff\Locations\Models\Market::class,
 
         'note' => \Tipoff\Notes\Models\Note::class,
