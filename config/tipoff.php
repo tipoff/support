@@ -20,6 +20,8 @@ return [
 
         'address' => \Tipoff\Addresses\Models\Address::class,
 
+        'alternate_email' => \Tipoff\Authorization\Models\AlternateEmail::class,
+
         'block' => \Tipoff\Scheduler\Models\Block::class,
 
         'booking' => \Tipoff\Bookings\Models\Booking::class,
