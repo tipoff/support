@@ -102,6 +102,8 @@ return [
 
         'post' => \DrewRoberts\Blog\Models\Post::class,
 
+        'product' => \Tipoff\Products\Models\Product::class,
+
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
 
         'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
