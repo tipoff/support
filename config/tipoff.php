@@ -304,6 +304,8 @@ return [
 
         'voucher_type' => \Tipoff\Vouchers\Nova\VoucherType::class,
 
+        'waiver' => \Tipoff\Waivers\Nova\Waiver::class,
+
         'webpage' => \Tipoff\Seo\Nova\Webpage::class,
 
         'zip' => \Tipoff\Addresses\Nova\Zip::class,
