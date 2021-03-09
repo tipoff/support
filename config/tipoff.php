@@ -222,6 +222,8 @@ return [
 
         'location' => \Tipoff\Locations\Nova\Location::class,
 
+        'location_tax' => \Tipoff\Taxes\Nova\LocationTax::class,
+
         'market' => \Tipoff\Locations\Nova\Market::class,
 
         'note' => \Tipoff\Notes\Nova\Note::class,
