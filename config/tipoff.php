@@ -64,6 +64,8 @@ return [
 
         'gmb_hour' =>  \Tipoff\Locations\Models\GmbHour::class,
 
+        'hold' => \Tipoff\Scheduler\Models\Hold::class,
+
         'image' => \DrewRoberts\Media\Models\Image::class,
 
         'insight' => \Tipoff\Reviews\Models\Insight::class,
