@@ -76,6 +76,8 @@ return [
 
         'key_agora' => \Tipoff\LaravelAgoraApi\Models\Key::class,
 
+        'key_serp' => \Tipoff\LaravelSerpapi\Models\Key::class,
+
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
