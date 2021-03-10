@@ -45,6 +45,8 @@ return [
         'discount' => \Tipoff\Discounts\Models\Discount::class,
 
         'domain' => \Tipoff\Seo\Models\Domain::class,
+        
+        'domestic_address' => \Tipoff\Addresses\Models\DomesticAddress::class,
 
         'escape_room_location' => \Tipoff\EscapeRoom\Models\EscapeRoomLocation::class,
 
@@ -195,6 +197,8 @@ return [
         'discount' => \Tipoff\Discounts\Nova\Discount::class,
 
         'domain' => \Tipoff\Seo\Nova\Domain::class,
+        
+        'domestic_address' => \Tipoff\Addresses\Nova\DomesticAddress::class,
 
         'escape_room_location' => \Tipoff\EscapeRoom\Nova\EscapeRoomLocation::class,
 
