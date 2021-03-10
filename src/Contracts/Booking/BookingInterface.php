@@ -41,7 +41,7 @@ interface BookingInterface extends BaseModelInterface
     /**
      * Get slot.
      *
-     * @return SlotInterface
+     * @return BookingSlotInterface
      */
     public function getSlot(): BookingSlotInterface;
 

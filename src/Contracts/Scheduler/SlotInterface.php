@@ -34,7 +34,7 @@ interface SlotInterface extends BaseModelInterface
     /**
      * Relese slot hold.
      *
-     * @return bool
+     * @return self
      */
     public function releaseHold(): self;
 
