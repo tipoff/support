@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\Support\Contracts\Booking;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\Relation;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
 interface BookingInterface extends BaseModelInterface
@@ -57,5 +57,5 @@ interface BookingInterface extends BaseModelInterface
      *
      * @return int
      */
-    public function participants(): BelongsToMany;
+    public function participants(): Relation;
 }
