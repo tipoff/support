@@ -226,3 +226,8 @@ All notable changes to `support` will be documented in this file.
 
 - renamed zip model
 - new nova resources
+
+## 1.5.11 - 2021-03-09
+
+- new model locations
+- new nova resources
