@@ -231,3 +231,7 @@ All notable changes to `support` will be documented in this file.
 
 - new model locations
 - new nova resources
+
+## 1.5.12 - 2021-03-10
+
+- domestic address model
