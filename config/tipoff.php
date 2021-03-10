@@ -20,9 +20,13 @@ return [
 
         'address' => \Tipoff\Addresses\Models\Address::class,
 
+        'alternate_email' => \Tipoff\Authorization\Models\AlternateEmail::class,
+
         'block' => \Tipoff\Scheduler\Models\Block::class,
 
         'booking' => \Tipoff\Bookings\Models\Booking::class,
+
+        'booking_category' => \Tipoff\Bookings\Models\BookingCategory::class,
 
         'cart' => \Tipoff\Checkout\Models\Cart::class,
 
@@ -42,6 +46,10 @@ return [
 
         'domain' => \Tipoff\Seo\Models\Domain::class,
 
+        'escape_room_location' => \Tipoff\EscapeRoom\Models\EscapeRoomLocation::class,
+
+        'escape_room_market' => \Tipoff\EscapeRoom\Models\EscapeRoomMarket::class,
+
         'fee' => \Tipoff\Fees\Models\Fee::class,
 
         'feedback' => \Tipoff\Feedback\Models\Feedback::class,
@@ -56,6 +64,8 @@ return [
 
         'gmb_hour' =>  \Tipoff\Locations\Models\GmbHour::class,
 
+        'hold' => \Tipoff\Scheduler\Models\Hold::class,
+
         'image' => \DrewRoberts\Media\Models\Image::class,
 
         'insight' => \Tipoff\Reviews\Models\Insight::class,
@@ -64,9 +74,17 @@ return [
 
         'key' => \Tipoff\GoogleApi\Models\Key::class,
 
+        'key_agora' => \Tipoff\LaravelAgoraApi\Models\Key::class,
+
+        'key_serp' => \Tipoff\LaravelSerpapi\Models\Key::class,
+
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
+
+        'location_payment_setting' => \Tipoff\Payments\Models\LocationPaymentSetting::class,
+
+        'location_tax' => \Tipoff\Taxes\Models\LocationTax::class,
 
         'market' => \Tipoff\Locations\Models\Market::class,
 
@@ -89,6 +107,8 @@ return [
         'place_hours' => \Tipoff\Seo\Models\PlaceHours::class,
 
         'post' => \DrewRoberts\Blog\Models\Post::class,
+
+        'product' => \Tipoff\Products\Models\Product::class,
 
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
 
@@ -144,6 +164,8 @@ return [
 
         'voucher_type' => \Tipoff\Vouchers\Models\VoucherType::class,
 
+        'waiver' => \Tipoff\Waivers\Models\Waiver::class,
+
         'webpage' => \Tipoff\Seo\Models\Webpage::class,
 
         'zip' => \Tipoff\Addresses\Models\Zip::class,
@@ -176,6 +198,10 @@ return [
 
         'domain' => \Tipoff\Seo\Nova\Domain::class,
 
+        'escape_room_location' => \Tipoff\EscapeRoom\Nova\EscapeRoomLocation::class,
+
+        'escape_room_market' => \Tipoff\EscapeRoom\Nova\EscapeRoomMarket::class,
+
         'fee' => \Tipoff\Fees\Nova\Fee::class,
 
         'feedback' => \Tipoff\Feedback\Nova\Feedback::class,
@@ -198,6 +224,8 @@ return [
 
         'location' => \Tipoff\Locations\Nova\Location::class,
 
+        'location_tax' => \Tipoff\Taxes\Nova\LocationTax::class,
+
         'market' => \Tipoff\Locations\Nova\Market::class,
 
         'note' => \Tipoff\Notes\Nova\Note::class,
@@ -219,6 +247,8 @@ return [
         'place_hours' => \Tipoff\Seo\Nova\PlaceHours::class,
 
         'post' => \DrewRoberts\Blog\Nova\Post::class,
+
+        'product' => \Tipoff\Products\Nova\Product::class,
 
         'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
 
@@ -273,6 +303,8 @@ return [
         'voucher' => \Tipoff\Vouchers\Nova\Voucher::class,
 
         'voucher_type' => \Tipoff\Vouchers\Nova\VoucherType::class,
+
+        'waiver' => \Tipoff\Waivers\Nova\Waiver::class,
 
         'webpage' => \Tipoff\Seo\Nova\Webpage::class,
 
