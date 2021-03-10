@@ -84,8 +84,6 @@ return [
 
         'location_payment_setting' => \Tipoff\Payments\Models\LocationPaymentSetting::class,
 
-        'location_tax' => \Tipoff\Taxes\Models\LocationTax::class,
-
         'market' => \Tipoff\Locations\Models\Market::class,
 
         'note' => \Tipoff\Notes\Models\Note::class,
@@ -223,8 +221,6 @@ return [
         'keyword' => \Tipoff\Seo\Nova\Keyword::class,
 
         'location' => \Tipoff\Locations\Nova\Location::class,
-
-        'location_tax' => \Tipoff\Taxes\Nova\LocationTax::class,
 
         'market' => \Tipoff\Locations\Nova\Market::class,
 
