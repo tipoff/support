@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Booking;
 
-use Tipoff\Support\Contracts\Scheduler\SlotInterface;
-
-interface BookingRateInterface extends SlotInterface
+interface BookingRateInterface
 {
     /**
      * Get label used in lists.
