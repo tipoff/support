@@ -41,7 +41,7 @@ interface BookingInterface extends BaseModelInterface
     /**
      * Get slot.
      *
-     * @return Slot|null
+     * @return SlotInterface
      */
     public function getSlot(): BookingSlotInterface;
 
@@ -55,7 +55,7 @@ interface BookingInterface extends BaseModelInterface
     /**
      * Get amount in cents.
      *
-     * @return int
+     * @return Relation
      */
     public function participants(): Relation;
 }

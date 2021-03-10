@@ -57,7 +57,7 @@ interface SlotInterface extends BaseModelInterface
     /**
      * Get local time.
      *
-     * @return string
+     * @return Carbon
      */
     public function getTime(): Carbon;
 
@@ -103,5 +103,5 @@ interface SlotInterface extends BaseModelInterface
      * @param Carbon|null $expiresAt
      * @return self
      */
-    public function setHold($id, ?Carbon $expiresAt)
+    public function setHold($id, ?Carbon $expiresAt): self;
 }

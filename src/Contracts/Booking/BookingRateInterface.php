@@ -34,5 +34,5 @@ interface BookingRateInterface extends SlotInterface
      *
      * @return int|null
      */
-    public function getParticipantsLimit(): int;
+    public function getParticipantsLimit(): ?int;
 }
