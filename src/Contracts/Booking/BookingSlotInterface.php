@@ -4,8 +4,21 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Booking;
 
-use Tipoff\Support\Contracts\Models\BaseModelInterface;
+use Tipoff\Support\Contracts\Scheduler\SlotInterface;
 
-interface BookingSlotInterface extends BaseModelInterface
+interface BookingSlotInterface extends SlotInterface
 {
+    /**
+     * If slot is bookable.
+     *
+     * @return bool
+     */
+    public function isBookable(): bool;
+
+    /**
+     * Relationship with bookings.
+     *
+     * @return Relation
+     */
+    public function bookings(): Relation;
 }
