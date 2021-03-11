@@ -235,3 +235,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.5.12 - 2021-03-10
 
 - domestic address model
+
+## 1.6.0 - 2021-03-10
+
+- booking contracts
