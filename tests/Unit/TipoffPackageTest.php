@@ -186,6 +186,21 @@ class TipoffPackageTest extends TestCase
     }
 
     /** @test */
+    public function nova_tools_are_added()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasNovaTools([
+                    new DemoNovaResource()
+                ]);
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertCount(1, $package->novaTools);
+        $this->assertInstanceOf(DemoNovaResource::class, $package->novaTools[0]);
+    }
+
+    /** @test */
     public function blade_components_are_merged()
     {
         $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
