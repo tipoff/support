@@ -239,3 +239,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.6.0 - 2021-03-10
 
 - booking contracts
+
+## 1.6.1 - 2021-03-12
+
+- registration of nova tools
