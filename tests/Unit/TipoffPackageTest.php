@@ -191,7 +191,7 @@ class TipoffPackageTest extends TestCase
         $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
             $package
                 ->hasNovaTools([
-                    new DemoNovaResource()
+                    new DemoNovaResource(),
                 ]);
         });
 
