@@ -22,6 +22,7 @@
         "illuminate/collections": "^8.0",
         "illuminate/contracts": "^8.0",
         "illuminate/database": "^8.18",
+        "laravel/cashier": "^12.9",
         "laravel/nova": "^3.20",
         "marc-mabe/php-enum": "^4.4",
         "nesbot/carbon": "^2.44",
