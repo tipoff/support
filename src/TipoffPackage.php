@@ -53,6 +53,14 @@ class TipoffPackage extends Package
 
     /**
      * [
+     *   new NovaTool(...),
+     *   // ...
+     * ]
+     */
+    public array $novaTools = [];
+
+    /**
+     * [
      *   'tag-name' => ComponentClass,
      *   // ...
      * ]
@@ -153,6 +161,13 @@ class TipoffPackage extends Package
                 array_merge($this->novaResources, $novaResources)
             )
         );
+
+        return $this;
+    }
+
+    public function hasNovaTools(array $novaTools): self
+    {
+        $this->novaTools = array_merge($this->novaTools, $novaTools);
 
         return $this;
     }

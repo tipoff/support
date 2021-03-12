@@ -45,7 +45,7 @@ return [
         'discount' => \Tipoff\Discounts\Models\Discount::class,
 
         'domain' => \Tipoff\Seo\Models\Domain::class,
-        
+
         'domestic_address' => \Tipoff\Addresses\Models\DomesticAddress::class,
 
         'escape_room_location' => \Tipoff\EscapeRoom\Models\EscapeRoomLocation::class,
@@ -83,8 +83,6 @@ return [
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
-
-        'location_payment_setting' => \Tipoff\Payments\Models\LocationPaymentSetting::class,
 
         'market' => \Tipoff\Locations\Models\Market::class,
 
@@ -197,7 +195,7 @@ return [
         'discount' => \Tipoff\Discounts\Nova\Discount::class,
 
         'domain' => \Tipoff\Seo\Nova\Domain::class,
-        
+
         'domestic_address' => \Tipoff\Addresses\Nova\DomesticAddress::class,
 
         'escape_room_location' => \Tipoff\EscapeRoom\Nova\EscapeRoomLocation::class,
@@ -243,7 +241,7 @@ return [
         'place' => \Tipoff\Seo\Nova\Place::class,
 
         'place_details' => \Tipoff\Seo\Nova\PlaceDetails::class,
-        
+
         'place_hours' => \Tipoff\Seo\Nova\PlaceHours::class,
 
         'post' => \DrewRoberts\Blog\Nova\Post::class,
