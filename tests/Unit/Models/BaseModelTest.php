@@ -163,11 +163,4 @@ class TestModel extends BaseModel implements UserInterface
     {
         return false;
     }
-
-    public function charge($amount, $paymentMethod, array $options = [])
-    {
-        return new Payment(new PaymentIntent([
-            'id' => 'ok',
-        ]));
-    }
 }
