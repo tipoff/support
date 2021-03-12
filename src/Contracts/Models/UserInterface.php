@@ -12,14 +12,4 @@ interface UserInterface extends AuthenticatableContract, AuthorizableContract, B
     public function hasRole($roles, string $guard = null): bool;
 
     public function hasPermissionTo($permission, $guardName = null): bool;
-
-    /**
-     * (From Laravel/Cashier) Make a "one off" charge on the customer for the given amount.
-     *
-     * @param  int  $amount
-     * @param  string  $paymentMethod
-     * @param  array  $options
-     * @return \Laravel\Cashier\Payment
-     */
-    public function charge($amount, $paymentMethod, array $options = []);
 }
