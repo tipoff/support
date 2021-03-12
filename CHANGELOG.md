@@ -243,3 +243,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.6.1 - 2021-03-12
 
 - registration of nova tools
+
+## 1.6.2 - 2021-03-12
+
+- checkout item filters
