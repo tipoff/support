@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-use Laravel\Cashier\Payment;
-use Stripe\PaymentIntent;
 use Tipoff\Support\Contracts\Models\UserInterface;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Models\TestModelStub;
