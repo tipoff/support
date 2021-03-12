@@ -5,12 +5,18 @@ declare(strict_types=1);
 namespace Tipoff\Support\Contracts\Checkout;
 
 use Illuminate\Support\Collection;
+use Tipoff\Support\Contracts\Checkout\Filters\ItemFilter;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Models\UserInterface;
 use Tipoff\Support\Objects\DiscountableValue;
 
 interface BaseItemContainerInterface extends BaseModelInterface
 {
+    /**
+     * Creates and returns an ItemFilter instance for constructing a collection of matching items
+     */
+    public static function itemFilter(): ItemFilter;
+
     /**
      * Returns the user that owns the container
      */
