@@ -80,5 +80,9 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 
         // Register Nova resources
         Nova::resources($package->novaResources);
+
+        if ($package->novaTools) {
+            Nova::tools($package->novaTools);
+        }
     }
 }
