@@ -9,6 +9,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Laravel\Cashier\Payment;
+use Stripe\PaymentIntent;
 use Tipoff\Support\Contracts\Models\UserInterface;
 use Tipoff\Support\Models\BaseModel;
 use Tipoff\Support\Models\TestModelStub;
@@ -160,5 +162,12 @@ class TestModel extends BaseModel implements UserInterface
     public function hasPermissionTo($permission, $guardName = null): bool
     {
         return false;
+    }
+
+    public function charge($amount, $paymentMethod, array $options = [])
+    {
+        return new Payment(new PaymentIntent([
+            'id' => 'ok',
+        ]));
     }
 }
