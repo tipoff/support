@@ -142,6 +142,8 @@ return [
 
         'status' => \Tipoff\Statuses\Models\Status::class,
 
+        'status_record' => \Tipoff\Statuses\Models\StatusRecord::class,
+
         'supervision' => \Tipoff\EscapeRoom\Models\Supervision::class,
 
         'tag' => \DrewRoberts\Media\Models\Tag::class,
@@ -281,6 +283,8 @@ return [
         'state' => \Tipoff\Addresses\Nova\State::class,
 
         'status' => \Tipoff\Statuses\Nova\Status::class,
+
+        'status_record' => \Tipoff\Statuses\Nova\StatusRecord::class,
 
         'supervision' => \Tipoff\EscapeRoom\Nova\Supervision::class,
 
