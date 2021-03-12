@@ -62,6 +62,29 @@ class TestTest extends TestCase
     }
 
     /** @test */
+    public function test_morphClass_with_existing_resource()
+    {
+        createModelStub(config('tipoff.model_class.user'));
+
+        $user = morphClass('user');
+        $this->assertStringContainsString('\\User', $user);
+    }
+
+    /** @test */
+    public function test_morphClass_unknown_alias()
+    {
+        $result = morphClass('usr');
+        $this->assertNull($result);
+    }
+
+    /** @test */
+    public function test_morphClass_unknown_class()
+    {
+        $result = morphClass('order');
+        $this->assertNull($result);
+    }
+
+    /** @test */
     public function test_find_model()
     {
         createModelStub(config('tipoff.model_class.user'));

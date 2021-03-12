@@ -56,6 +56,24 @@ if (! function_exists('nova')) {
     }
 }
 
+if (! function_exists('morphClass')) {
+    function morphClass(string $model): ?string
+    {
+        $alias = app()->getAlias($model);
+
+        if ($alias === $model) {
+            // Alias has no definition
+            return null;
+        }
+
+        if (! class_exists($alias)) {
+            return null;
+        }
+
+        return app($alias)->getMorphClass();
+    }
+}
+
 if (! function_exists('findModel')) {
     /**
      * Helper to retrieve model interface by Id but only if
