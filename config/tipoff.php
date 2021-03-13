@@ -128,6 +128,8 @@ return [
 
         'schedule_eraser' => \Tipoff\Scheduler\Models\ScheduleEraser::class,
 
+        'search_locale' => \Tipoff\Seo\Models\SearchLocale::class,
+
         'search_volume' => \Tipoff\Seo\Models\SearchVolume::class,
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
