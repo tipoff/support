@@ -271,6 +271,8 @@ return [
         'room' => \Tipoff\EscapeRoom\Nova\Room::class,
 
         'schedule_eraser' => \Tipoff\Scheduler\Nova\ScheduleEraser::class,
+        
+        'search_locale' => \Tipoff\Seo\Nova\SearchLocale::class,
 
         'search_volume' => \Tipoff\Seo\Nova\SearchVolume::class,
 
