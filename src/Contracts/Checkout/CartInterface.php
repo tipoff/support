@@ -119,6 +119,5 @@ interface CartInterface extends BaseItemContainerInterface
      * - verifies payment can be created
      * - creates order from cart
      */
-    // TODO - enable after Cart implementation is added
-    // public function purchase($paymentMethod): OrderInterface;
+    public function purchase($paymentMethod): OrderInterface;
 }
