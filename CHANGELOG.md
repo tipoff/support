@@ -251,3 +251,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.6.3 - 2021-03-12
 
 - add chargeable interface
+
+## 1.6.4 - 2021-03-15
+
+- update interfaces for payments
+- cart purchase support
