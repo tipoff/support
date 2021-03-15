@@ -8,7 +8,5 @@ use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
 interface RefundInterface extends BaseModelInterface
 {
-    public static function createRefund(PaymentInterface $payment, int $amount): self;
-
-    public function getPayment(): PaymentInterface;
+    public static function createRefund(PaymentInterface $payment, int $amount, string $method): self;
 }

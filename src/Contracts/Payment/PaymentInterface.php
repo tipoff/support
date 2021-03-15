@@ -9,7 +9,7 @@ use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
 interface PaymentInterface extends BaseModelInterface
 {
-    public static function createPayment(int $locationId, $chargeable, int $amount, $paymentMethod): self;
+    public static function createPayment(int $locationId, $chargeable, int $amount, $paymentMethod, string $source): self;
 
     public function attachOrder(OrderInterface $order): self;
 
