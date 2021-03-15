@@ -91,6 +91,11 @@ interface CartInterface extends BaseItemContainerInterface
     public function setLocationId(?int $locationId): self;
 
     /**
+     * Returns balance owned in cents.
+     */
+    public function getBalanceDue(): int;
+
+    /**
      * Verify cart can be purchased.  Exception thrown if not valid.
      *
      * CartItemPurchaseVerification events are dispatched allowing Sellable an
@@ -107,4 +112,12 @@ interface CartInterface extends BaseItemContainerInterface
      * An OrderCreated event is dispatched just before committing the transaction.
      */
     public function completePurchase(): OrderInterface;
+
+    /**
+     * Transactional completion of purchase with payment.
+     * - verifies cart is purchasable
+     * - verifies payment can be created
+     * - creates order from cart
+     */
+    public function purchase($paymentMethod): OrderInterface;
 }
