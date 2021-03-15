@@ -128,6 +128,8 @@ return [
 
         'schedule_eraser' => \Tipoff\Scheduler\Models\ScheduleEraser::class,
 
+        'search_locale' => \Tipoff\Seo\Models\SearchLocale::class,
+
         'search_volume' => \Tipoff\Seo\Models\SearchVolume::class,
 
         'series' => \DrewRoberts\Blog\Models\Series::class,
@@ -141,6 +143,8 @@ return [
         'state' => \Tipoff\Addresses\Models\State::class,
 
         'status' => \Tipoff\Statuses\Models\Status::class,
+
+        'status_record' => \Tipoff\Statuses\Models\StatusRecord::class,
 
         'supervision' => \Tipoff\EscapeRoom\Models\Supervision::class,
 
@@ -267,6 +271,8 @@ return [
         'room' => \Tipoff\EscapeRoom\Nova\Room::class,
 
         'schedule_eraser' => \Tipoff\Scheduler\Nova\ScheduleEraser::class,
+        
+        'search_locale' => \Tipoff\Seo\Nova\SearchLocale::class,
 
         'search_volume' => \Tipoff\Seo\Nova\SearchVolume::class,
 
@@ -281,6 +287,8 @@ return [
         'state' => \Tipoff\Addresses\Nova\State::class,
 
         'status' => \Tipoff\Statuses\Nova\Status::class,
+
+        'status_record' => \Tipoff\Statuses\Nova\StatusRecord::class,
 
         'supervision' => \Tipoff\EscapeRoom\Nova\Supervision::class,
 
