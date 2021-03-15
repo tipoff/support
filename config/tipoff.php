@@ -39,6 +39,8 @@ return [
         'company' => \Tipoff\Seo\Models\Company::class,
 
         'country' => \Tipoff\Addresses\Models\Country::class,
+        
+        'country_callingcode' => \Tipoff\Addresses\Models\CountryCallingcode::class,
 
         'contact' => \Tipoff\Forms\Models\Contact::class,
 
@@ -97,6 +99,10 @@ return [
         'participant' => \Tipoff\Bookings\Models\Participant::class,
 
         'payment' => \Tipoff\Payments\Models\Payment::class,
+        
+        'phone' => \Tipoff\Addresses\Models\Phone::class,
+        
+        'phone_area' => \Tipoff\Addresses\Models\PhoneArea::class,
 
         'place' => \Tipoff\Seo\Models\Place::class,
 
@@ -195,6 +201,8 @@ return [
         'contact' => \Tipoff\Forms\Nova\Contact::class,
 
         'country' => \Tipoff\Addresses\Nova\Country::class,
+        
+        'country_callingcode' => \Tipoff\Addresses\Nova\CountryCallingcode::class,
 
         'discount' => \Tipoff\Discounts\Nova\Discount::class,
 
@@ -241,6 +249,10 @@ return [
         'participant' => \Tipoff\Bookings\Nova\Participant::class,
 
         'payment' => \Tipoff\Payments\Nova\Payment::class,
+        
+        'phone' => \Tipoff\Addresses\Nova\Phone::class,
+        
+        'phone_area' => \Tipoff\Addresses\Nova\PhoneArea::class,
 
         'place' => \Tipoff\Seo\Nova\Place::class,
 
