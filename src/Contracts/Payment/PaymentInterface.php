@@ -6,7 +6,6 @@ namespace Tipoff\Support\Contracts\Payment;
 
 use Tipoff\Support\Contracts\Checkout\OrderInterface;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
-use Tipoff\Support\Contracts\Models\UserInterface;
 
 interface PaymentInterface extends BaseModelInterface
 {
