@@ -256,3 +256,4 @@ All notable changes to `support` will be documented in this file.
 
 - update interfaces for payments
 - cart purchase support
+
