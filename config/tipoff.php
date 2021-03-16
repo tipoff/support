@@ -56,6 +56,8 @@ return [
         
         'escaperoom_rate' => \Tipoff\EscapeRoom\Models\EscaperoomRate::class,
         
+        'escaperoom_slot' => \Tipoff\Scheduler\Models\EscaperoomSlot::class,
+        
         'escaperoom_theme' => \Tipoff\EscapeRoom\Models\EscaperoomTheme::class,
 
         'fee' => \Tipoff\Fees\Models\Fee::class,
@@ -146,8 +148,6 @@ return [
 
         'signature' => \Tipoff\Waivers\Models\Signature::class,
 
-        'slot' => \Tipoff\Scheduler\Models\Slot::class,
-
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
         'state' => \Tipoff\Addresses\Models\State::class,
@@ -217,6 +217,8 @@ return [
         'escaperoom_market' => \Tipoff\EscapeRoom\Nova\EscaperoomMarket::class,
         
         'escaperoom_rate' => \Tipoff\EscapeRoom\Nova\EscaperoomRate::class,
+        
+        'escaperoom_slot' => \Tipoff\Scheduler\Nova\EscaperoomSlot::class,
         
         'escaperoom_theme' => \Tipoff\EscapeRoom\Nova\EscaperoomTheme::class,
 
@@ -297,8 +299,6 @@ return [
         'series' => \DrewRoberts\Blog\Nova\Series::class,
 
         'signature' => \Tipoff\Waivers\Nova\Signature::class,
-
-        'slot' => \Tipoff\Scheduler\Nova\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
 
