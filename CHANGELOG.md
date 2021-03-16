@@ -257,3 +257,7 @@ All notable changes to `support` will be documented in this file.
 - update interfaces for payments
 - cart purchase support
 
+## 1.6.5 - 2021-03-15
+
+- register phone classes in service container
+- update escape room classes
