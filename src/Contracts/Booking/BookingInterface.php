@@ -65,5 +65,4 @@ interface BookingInterface extends BaseModelInterface
      * @return Relation
      */
     public function getSubject(): Relation;
-
 }
