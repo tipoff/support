@@ -265,3 +265,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.6.6 - 2021-03-16
 
 - update scheduler classes
+
+## 1.7.0 - 2021-03-16
+
+- booking experience interface
