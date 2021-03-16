@@ -261,3 +261,7 @@ All notable changes to `support` will be documented in this file.
 
 - register phone classes in service container
 - update escape room classes
+
+## 1.6.6 - 2021-03-16
+
+- update scheduler classes
