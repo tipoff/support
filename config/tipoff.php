@@ -121,6 +121,8 @@ return [
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Models\Ranking::class,
+        
+        'rate' => \Tipoff\Bookings\Models\Rate::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
 
@@ -271,6 +273,8 @@ return [
         'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Nova\Ranking::class,
+        
+        'rate' => \Tipoff\Bookings\Nova\Rate::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Nova\RecurringSchedule::class,
 
