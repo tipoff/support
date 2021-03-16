@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Booking;
 
-interface BookingSubject
+interface BookingCategoryInterface
 {
     /**
      * Get label used in lists.

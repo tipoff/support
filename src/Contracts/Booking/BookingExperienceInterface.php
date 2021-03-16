@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Booking;
 
-interface BookingExperience
+interface BookingExperienceInterface
 {
     /**
      * Get label used in lists.
