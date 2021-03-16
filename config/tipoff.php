@@ -56,6 +56,8 @@ return [
         
         'escaperoom_rate' => \Tipoff\EscapeRoom\Models\EscaperoomRate::class,
         
+        'escaperoom_slot' => \Tipoff\Scheduler\Models\EscaperoomSlot::class,
+        
         'escaperoom_theme' => \Tipoff\EscapeRoom\Models\EscaperoomTheme::class,
 
         'fee' => \Tipoff\Fees\Models\Fee::class,
@@ -121,6 +123,8 @@ return [
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Models\Ranking::class,
+        
+        'rate' => \Tipoff\Bookings\Models\Rate::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
 
@@ -143,8 +147,6 @@ return [
         'series' => \DrewRoberts\Blog\Models\Series::class,
 
         'signature' => \Tipoff\Waivers\Models\Signature::class,
-
-        'slot' => \Tipoff\Scheduler\Models\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Models\Snapshot::class,
 
@@ -216,6 +218,8 @@ return [
         
         'escaperoom_rate' => \Tipoff\EscapeRoom\Nova\EscaperoomRate::class,
         
+        'escaperoom_slot' => \Tipoff\Scheduler\Nova\EscaperoomSlot::class,
+        
         'escaperoom_theme' => \Tipoff\EscapeRoom\Nova\EscaperoomTheme::class,
 
         'fee' => \Tipoff\Fees\Nova\Fee::class,
@@ -271,6 +275,8 @@ return [
         'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Nova\Ranking::class,
+        
+        'rate' => \Tipoff\Bookings\Nova\Rate::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Nova\RecurringSchedule::class,
 
@@ -293,8 +299,6 @@ return [
         'series' => \DrewRoberts\Blog\Nova\Series::class,
 
         'signature' => \Tipoff\Waivers\Nova\Signature::class,
-
-        'slot' => \Tipoff\Scheduler\Nova\Slot::class,
 
         'snapshot' => \Tipoff\Reviews\Nova\Snapshot::class,
 
