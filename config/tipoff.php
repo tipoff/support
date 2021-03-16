@@ -50,9 +50,13 @@ return [
 
         'domestic_address' => \Tipoff\Addresses\Models\DomesticAddress::class,
 
-        'escape_room_location' => \Tipoff\EscapeRoom\Models\EscapeRoomLocation::class,
+        'escaperoom_location' => \Tipoff\EscapeRoom\Models\EscaperoomLocation::class,
 
-        'escape_room_market' => \Tipoff\EscapeRoom\Models\EscapeRoomMarket::class,
+        'escaperoom_market' => \Tipoff\EscapeRoom\Models\EscaperoomMarket::class,
+        
+        'escaperoom_rate' => \Tipoff\EscapeRoom\Models\EscaperoomRate::class,
+        
+        'escaperoom_theme' => \Tipoff\EscapeRoom\Models\EscaperoomTheme::class,
 
         'fee' => \Tipoff\Fees\Models\Fee::class,
 
@@ -116,8 +120,6 @@ return [
 
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
 
-        'rate' => \Tipoff\EscapeRoom\Models\Rate::class,
-
         'ranking' => \Tipoff\Seo\Models\Ranking::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
@@ -157,8 +159,6 @@ return [
         'tag' => \DrewRoberts\Media\Models\Tag::class,
 
         'tax' => \Tipoff\Taxes\Models\Tax::class,
-
-        'theme' => \Tipoff\EscapeRoom\Models\Theme::class,
 
         'timezone' => \Tipoff\Addresses\Models\Timezone::class,
 
@@ -210,9 +210,13 @@ return [
 
         'domestic_address' => \Tipoff\Addresses\Nova\DomesticAddress::class,
 
-        'escape_room_location' => \Tipoff\EscapeRoom\Nova\EscapeRoomLocation::class,
+        'escaperoom_location' => \Tipoff\EscapeRoom\Nova\EscaperoomLocation::class,
 
-        'escape_room_market' => \Tipoff\EscapeRoom\Nova\EscapeRoomMarket::class,
+        'escaperoom_market' => \Tipoff\EscapeRoom\Nova\EscaperoomMarket::class,
+        
+        'escaperoom_rate' => \Tipoff\EscapeRoom\Nova\EscaperoomRate::class,
+        
+        'escaperoom_theme' => \Tipoff\EscapeRoom\Nova\EscaperoomTheme::class,
 
         'fee' => \Tipoff\Fees\Nova\Fee::class,
 
@@ -268,8 +272,6 @@ return [
 
         'ranking' => \Tipoff\Seo\Nova\Ranking::class,
 
-        'rate' => \Tipoff\EscapeRoom\Nova\Rate::class,
-
         'recurring_schedule' => \Tipoff\Scheduler\Nova\RecurringSchedule::class,
 
         'refund' => \Tipoff\Refunds\Nova\Refund::class,
@@ -307,8 +309,6 @@ return [
         'tag' => \DrewRoberts\Media\Nova\Tag::class,
 
         'tax' => \Tipoff\Taxes\Nova\Tax::class,
-
-        'theme' => \Tipoff\EscapeRoom\Nova\Theme::class,
 
         'timezone' => \Tipoff\Addresses\Nova\Timezone::class,
 
