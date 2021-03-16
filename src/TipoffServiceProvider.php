@@ -15,6 +15,7 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 abstract class TipoffServiceProvider extends PackageServiceProvider
 {
     abstract public function configureTipoffPackage(TipoffPackage $tipoffPackage): void;
+
     abstract public function name(): string;
 
     /**
