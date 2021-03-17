@@ -60,9 +60,9 @@ interface BookingInterface extends BaseModelInterface
     public function participants(): Relation;
 
     /**
-     * Booking subject like room.
+     * Booking subject.
      *
-     * @return Relation
+     * @return BookingSubjectInterface
      */
     public function getSubject(): BookingSubjectInterface;
 }
