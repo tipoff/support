@@ -14,13 +14,6 @@ interface BookingRateCategoryInterface
     public function getLabel(): string;
 
     /**
-     * Get label used in lists.
-     *
-     * @return string
-     */
-    public function getLabel(): string;
-
-    /**
      * Get rates inside category.
      *
      * @return Relation
