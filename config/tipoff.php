@@ -28,6 +28,8 @@ return [
 
         'booking_category' => \Tipoff\Bookings\Models\BookingCategory::class,
 
+        'business_category' => \Tipoff\Seo\Models\BusinessCategory::class,
+
         'cart' => \Tipoff\Checkout\Models\Cart::class,
 
         'cart_item' => \Tipoff\Checkout\Models\CartItem::class,
@@ -39,7 +41,7 @@ return [
         'company' => \Tipoff\Seo\Models\Company::class,
 
         'country' => \Tipoff\Addresses\Models\Country::class,
-        
+
         'country_callingcode' => \Tipoff\Addresses\Models\CountryCallingcode::class,
 
         'contact' => \Tipoff\Forms\Models\Contact::class,
@@ -53,11 +55,11 @@ return [
         'escaperoom_location' => \Tipoff\EscapeRoom\Models\EscaperoomLocation::class,
 
         'escaperoom_market' => \Tipoff\EscapeRoom\Models\EscaperoomMarket::class,
-        
+
         'escaperoom_rate' => \Tipoff\EscapeRoom\Models\EscaperoomRate::class,
-        
+
         'escaperoom_slot' => \Tipoff\Scheduler\Models\EscaperoomSlot::class,
-        
+
         'escaperoom_theme' => \Tipoff\EscapeRoom\Models\EscaperoomTheme::class,
 
         'fee' => \Tipoff\Fees\Models\Fee::class,
@@ -105,9 +107,9 @@ return [
         'participant' => \Tipoff\Bookings\Models\Participant::class,
 
         'payment' => \Tipoff\Payments\Models\Payment::class,
-        
+
         'phone' => \Tipoff\Addresses\Models\Phone::class,
-        
+
         'phone_area' => \Tipoff\Addresses\Models\PhoneArea::class,
 
         'place' => \Tipoff\Seo\Models\Place::class,
@@ -123,7 +125,7 @@ return [
         'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Models\Ranking::class,
-        
+
         'rate' => \Tipoff\Bookings\Models\Rate::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
@@ -189,6 +191,8 @@ return [
         'block' => \Tipoff\Scheduler\Nova\Block::class,
 
         'booking' => \Tipoff\Bookings\Nova\Booking::class,
+        
+        'business_category' => \Tipoff\Seo\Nova\BusinessCategory::class,
 
         'cart' => \Tipoff\Checkout\Nova\Cart::class,
 
@@ -203,7 +207,7 @@ return [
         'contact' => \Tipoff\Forms\Nova\Contact::class,
 
         'country' => \Tipoff\Addresses\Nova\Country::class,
-        
+
         'country_callingcode' => \Tipoff\Addresses\Nova\CountryCallingcode::class,
 
         'discount' => \Tipoff\Discounts\Nova\Discount::class,
@@ -215,11 +219,11 @@ return [
         'escaperoom_location' => \Tipoff\EscapeRoom\Nova\EscaperoomLocation::class,
 
         'escaperoom_market' => \Tipoff\EscapeRoom\Nova\EscaperoomMarket::class,
-        
+
         'escaperoom_rate' => \Tipoff\EscapeRoom\Nova\EscaperoomRate::class,
-        
+
         'escaperoom_slot' => \Tipoff\Scheduler\Nova\EscaperoomSlot::class,
-        
+
         'escaperoom_theme' => \Tipoff\EscapeRoom\Nova\EscaperoomTheme::class,
 
         'fee' => \Tipoff\Fees\Nova\Fee::class,
@@ -257,9 +261,9 @@ return [
         'participant' => \Tipoff\Bookings\Nova\Participant::class,
 
         'payment' => \Tipoff\Payments\Nova\Payment::class,
-        
+
         'phone' => \Tipoff\Addresses\Nova\Phone::class,
-        
+
         'phone_area' => \Tipoff\Addresses\Nova\PhoneArea::class,
 
         'place' => \Tipoff\Seo\Nova\Place::class,
@@ -275,7 +279,7 @@ return [
         'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Nova\Ranking::class,
-        
+
         'rate' => \Tipoff\Bookings\Nova\Rate::class,
 
         'recurring_schedule' => \Tipoff\Scheduler\Nova\RecurringSchedule::class,
@@ -291,7 +295,7 @@ return [
         'room' => \Tipoff\EscapeRoom\Nova\Room::class,
 
         'schedule_eraser' => \Tipoff\Scheduler\Nova\ScheduleEraser::class,
-        
+
         'search_locale' => \Tipoff\Seo\Nova\SearchLocale::class,
 
         'search_volume' => \Tipoff\Seo\Nova\SearchVolume::class,
