@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\Support\Contracts\Booking;
 
 use Illuminate\Database\Eloquent\Relations\Relation;
+use Tipoff\Support\Contracts\Booking\BookingRateCategoryInterface;
 
 interface BookingRateInterface
 {
@@ -35,6 +36,13 @@ interface BookingRateInterface
      * @return Relation
      */
     public function category(): Relation;
+
+    /**
+     * Get rate category.
+     *
+     * @return Relation
+     */
+    public function getCategory(): BookingRateCategoryInterface;
 
     /**
      * Get number of participants for the rate.
