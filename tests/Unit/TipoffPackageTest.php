@@ -303,7 +303,8 @@ class TestServiceProvider extends TipoffServiceProvider
         ($this->testSetup)($package->name('test'));
     }
 
-    public function name(): string {
+    public function name(): string
+    {
         return 'test';
     }
 

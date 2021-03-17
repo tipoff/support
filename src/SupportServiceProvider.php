@@ -17,7 +17,8 @@ class SupportServiceProvider extends TipoffServiceProvider
             ->hasConfigFile('tipoff');
     }
 
-    public function name(): string {
+    public function name(): string
+    {
         return 'support';
     }
 
