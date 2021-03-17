@@ -86,5 +86,4 @@ interface BookingInterface extends BaseModelInterface
      * @return Relation
      */
     public function experience(): Relation;
-
 }
