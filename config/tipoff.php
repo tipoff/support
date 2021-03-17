@@ -191,6 +191,8 @@ return [
         'block' => \Tipoff\Scheduler\Nova\Block::class,
 
         'booking' => \Tipoff\Bookings\Nova\Booking::class,
+        
+        'business_category' => \Tipoff\Seo\Nova\BusinessCategory::class,
 
         'cart' => \Tipoff\Checkout\Nova\Cart::class,
 
