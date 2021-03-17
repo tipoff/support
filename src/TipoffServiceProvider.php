@@ -16,6 +16,8 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 {
     abstract public function configureTipoffPackage(TipoffPackage $tipoffPackage): void;
 
+    abstract public function name(): string;
+
     /**
      * Override required to inject TipoffPackage class as replacement
      * and then invoke new abstract for tipoff package configuration
