@@ -278,3 +278,7 @@ All notable changes to `support` will be documented in this file.
 
 - revert registry pattern
 
+## 1.7.3 - 2021-03-17
+
+- business category class
+
