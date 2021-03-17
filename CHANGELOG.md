@@ -273,3 +273,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.7.1 - 2021-03-16
 
 - implement registry pattern
+
+## 1.7.2 - 2021-03-17
+
+- revert registry pattern
+
