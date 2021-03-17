@@ -53,16 +53,37 @@ interface BookingInterface extends BaseModelInterface
     public function getAmount(): int;
 
     /**
-     * Get amount in cents.
+     * Get participants.
      *
      * @return Relation
      */
     public function participants(): Relation;
 
     /**
-     * Booking subject like room.
+     * Booking subject.
+     *
+     * @return BookingSubjectInterface
+     */
+    public function getSubject(): BookingSubjectInterface;
+
+    /**
+     * Booking experience.
+     *
+     * @return BookingExperienceInterface
+     */
+    public function getExperience(): BookingExperienceInterface;
+
+    /**
+     * Relation with subject.
      *
      * @return Relation
      */
-    public function getSubject(): Relation;
+    public function subject(): Relation;
+
+    /**
+     * Relation with experience.
+     *
+     * @return Relation
+     */
+    public function experience(): Relation;
 }

@@ -30,11 +30,18 @@ interface BookingRateInterface
     public function getAmount(): int;
 
     /**
-     * Get rate category.
+     * Get rate category relationship.
      *
      * @return Relation
      */
     public function category(): Relation;
+
+    /**
+     * Get rate category.
+     *
+     * @return BookingRateCategoryInterface
+     */
+    public function getCategory(): BookingRateCategoryInterface;
 
     /**
      * Get number of participants for the rate.
