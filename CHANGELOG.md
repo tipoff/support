@@ -282,3 +282,8 @@ All notable changes to `support` will be documented in this file.
 
 - business category class
 
+## 1.8.0 - 2021-03-17
+
+- enhanced booking interface
+
+
