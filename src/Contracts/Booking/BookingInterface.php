@@ -6,7 +6,6 @@ namespace Tipoff\Support\Contracts\Booking;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\Relation;
-use Tipoff\Support\Contracts\Booking\BookingExperienceInterface;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
 interface BookingInterface extends BaseModelInterface
