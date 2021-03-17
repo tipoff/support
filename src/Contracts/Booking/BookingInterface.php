@@ -6,6 +6,7 @@ namespace Tipoff\Support\Contracts\Booking;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\Relation;
+use Tipoff\Support\Contracts\Booking\BookingSubjectInterface;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
 interface BookingInterface extends BaseModelInterface
@@ -64,5 +65,5 @@ interface BookingInterface extends BaseModelInterface
      *
      * @return Relation
      */
-    public function getSubject(): Relation;
+    public function getSubject(): BookingSubjectInterface;
 }
