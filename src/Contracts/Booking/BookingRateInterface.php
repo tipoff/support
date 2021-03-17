@@ -31,7 +31,7 @@ interface BookingRateInterface
     public function getAmount(): int;
 
     /**
-     * Get rate category.
+     * Get rate category relationship.
      *
      * @return Relation
      */
@@ -40,7 +40,7 @@ interface BookingRateInterface
     /**
      * Get rate category.
      *
-     * @return Relation
+     * @return BookingRateCategoryInterface
      */
     public function getCategory(): BookingRateCategoryInterface;
 
