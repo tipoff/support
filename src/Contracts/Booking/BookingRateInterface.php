@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Tipoff\Support\Contracts\Booking;
 
 use Illuminate\Database\Eloquent\Relations\Relation;
-use Tipoff\Support\Contracts\Booking\BookingRateCategoryInterface;
 
 interface BookingRateInterface
 {
