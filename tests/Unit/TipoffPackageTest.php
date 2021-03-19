@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Tipoff\Support\Tests\Unit;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 use Illuminate\View\Component;
 use Laravel\Nova\Nova;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
@@ -284,6 +285,47 @@ class TipoffPackageTest extends TestCase
 
         $package = $provider->register()->getPackage();
         $this->assertEquals([], $package->routeFileNames);
+    }
+
+    /** @test */
+    public function data_migrations_with_no_path_specified()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasDataMigrations();
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertCount(1, $package->dataMigrationPaths);
+        $this->assertStringEndsWith('database/datamigrations', $package->dataMigrationPaths[0]);
+    }
+
+    /** @test */
+    public function data_migrations_with_path_specified()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasDataMigrations('a', 'b', 'c');
+        });
+
+        $package = $provider->register()->getPackage();
+        $this->assertEquals(['a', 'b', 'c'], $package->dataMigrationPaths);
+    }
+
+    /** @test */
+    public function data_migrations_not_loaded_in_testing_env()
+    {
+        $provider = new TestServiceProvider($this->app, function (TipoffPackage $package) {
+            $package
+                ->hasDataMigrations();
+        });
+
+        $provider->register()->boot();
+        $migrator = $this->app->make('migrator');
+        $first = collect($migrator->paths())->first(function ($path) {
+            return Str::endsWith($path, 'datamigrations');
+        });
+        $this->assertNull($first);
     }
 }
 
