@@ -286,4 +286,6 @@ All notable changes to `support` will be documented in this file.
 
 - enhanced booking interface
 
+## 1.8.1 - 2021-03-19
 
+- data migrations
