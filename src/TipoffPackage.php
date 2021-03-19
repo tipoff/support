@@ -69,6 +69,14 @@ class TipoffPackage extends Package
 
     public array $bindings = [];
 
+    /**
+     * [
+     *    '/path/to/seeder/migration/files',
+     *    // ..
+     * ]
+     */
+    public array $dataMigrationPaths = [];
+
     public function __construct(Package $package)
     {
         $this->setBasePath($package->basePath);
@@ -182,6 +190,15 @@ class TipoffPackage extends Package
     public function hasBindings(array $bindings): self
     {
         $this->bindings = array_merge($this->bindings, $bindings);
+
+        return $this;
+    }
+
+    public function hasDataMigrations(...$dataMigrationPaths): self
+    {
+        $this->dataMigrationPaths = array_unique(
+            array_merge($this->dataMigrationPaths, $dataMigrationPaths ?: [ $this->basePath.'/../database/datamigrations' ])
+        );
 
         return $this;
     }

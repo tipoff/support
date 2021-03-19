@@ -34,6 +34,10 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
 
         $this->loadMigrationsFrom($this->package->basePath.'/../database/migrations');
 
+        if ($package->dataMigrationPaths && ! app()->runningUnitTests()) {
+            $this->loadMigrationsFrom($package->dataMigrationPaths);
+        }
+
         $this->loadViewComponentsAs('tipoff', $package->bladeComponents);
     }
 
