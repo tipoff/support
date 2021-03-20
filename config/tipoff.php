@@ -52,6 +52,8 @@ return [
 
         'domestic_address' => \Tipoff\Addresses\Models\DomesticAddress::class,
 
+        'escaperoom_game' => \Tipoff\Scheduler\Models\EscaperoomGame::class,
+
         'escaperoom_location' => \Tipoff\EscapeRoom\Models\EscaperoomLocation::class,
 
         'escaperoom_market' => \Tipoff\EscapeRoom\Models\EscaperoomMarket::class,
@@ -67,8 +69,6 @@ return [
         'feedback' => \Tipoff\Feedback\Models\Feedback::class,
 
         'flex_day' => \Tipoff\FlexScheduling\Models\FlexDay::class,
-
-        'game' => \Tipoff\Scheduler\Models\Game::class,
 
         'gmb_account' => \Tipoff\GoogleApi\Models\GmbAccount::class,
 
@@ -218,6 +218,8 @@ return [
 
         'domestic_address' => \Tipoff\Addresses\Nova\DomesticAddress::class,
 
+        'escaperoom_game' => \Tipoff\Scheduler\Nova\EscaperoomGame::class,
+
         'escaperoom_location' => \Tipoff\EscapeRoom\Nova\EscaperoomLocation::class,
 
         'escaperoom_market' => \Tipoff\EscapeRoom\Nova\EscaperoomMarket::class,
@@ -233,8 +235,6 @@ return [
         'feedback' => \Tipoff\Feedback\Nova\Feedback::class,
 
         'flex_day' => \Tipoff\FlexScheduling\Nova\FlexDay::class,
-
-        'game' => \Tipoff\Scheduler\Nova\Game::class,
 
         'gmb_account' => \Tipoff\GoogleApi\Nova\GmbAccount::class,
 
