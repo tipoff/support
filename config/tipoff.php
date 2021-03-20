@@ -284,6 +284,8 @@ return [
 
         'rate' => \Tipoff\Bookings\Nova\Rate::class,
 
+        'rate_category' => Tipoff\Bookings\Nova\RateCategory::class,
+
         'recurring_schedule' => \Tipoff\Scheduler\Nova\RecurringSchedule::class,
 
         'refund' => \Tipoff\Refunds\Nova\Refund::class,
