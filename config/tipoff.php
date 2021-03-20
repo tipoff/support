@@ -128,6 +128,8 @@ return [
 
         'rate' => \Tipoff\Bookings\Models\Rate::class,
 
+        'rate_category' => Tipoff\Bookings\Models\RateCategory::class,
+
         'recurring_schedule' => \Tipoff\Scheduler\Models\RecurringSchedule::class,
 
         'refund' => \Tipoff\Refunds\Models\Refund::class,
