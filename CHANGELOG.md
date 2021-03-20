@@ -289,3 +289,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.8.1 - 2021-03-19
 
 - data migrations
+
+## 1.8.2 - 2021-03-20
+
+- update classes for escape room booking app
