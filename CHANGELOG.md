@@ -293,3 +293,8 @@ All notable changes to `support` will be documented in this file.
 ## 1.8.2 - 2021-03-20
 
 - update classes for escape room booking app
+
+## 1.8.3 - 2021-03-21
+
+- register email address
+- register lead classes
