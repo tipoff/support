@@ -91,6 +91,10 @@ return [
         'key_serp' => \Tipoff\LaravelSerpapi\Models\Key::class,
 
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
+        
+        'lead' => \Roberts\Leads\Models\Lead::class,
+        
+        'lead_business' => \Roberts\Leads\Models\LeadBusiness::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
 
@@ -249,6 +253,10 @@ return [
         'key' => \Tipoff\GoogleApi\Nova\Key::class,
 
         'keyword' => \Tipoff\Seo\Nova\Keyword::class,
+        
+        'lead' => \Roberts\Leads\Models\Lead::class,
+        
+        'lead_business' => \Roberts\Leads\Models\LeadBusiness::class,
 
         'location' => \Tipoff\Locations\Nova\Location::class,
 
