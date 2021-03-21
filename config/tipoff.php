@@ -20,8 +20,6 @@ return [
 
         'address' => \Tipoff\Addresses\Models\Address::class,
 
-        'alternate_email' => \Tipoff\Authorization\Models\AlternateEmail::class,
-
         'block' => \Tipoff\Scheduler\Models\Block::class,
 
         'booking' => \Tipoff\Bookings\Models\Booking::class,
@@ -51,6 +49,8 @@ return [
         'domain' => \Tipoff\Seo\Models\Domain::class,
 
         'domestic_address' => \Tipoff\Addresses\Models\DomesticAddress::class,
+        
+        'email_address' => \Tipoff\Authorization\Models\EmailAddress::class,
 
         'escaperoom_game' => \Tipoff\Scheduler\Models\EscaperoomGame::class,
 
@@ -217,6 +217,8 @@ return [
         'domain' => \Tipoff\Seo\Nova\Domain::class,
 
         'domestic_address' => \Tipoff\Addresses\Nova\DomesticAddress::class,
+        
+        'email_address' => \Tipoff\Authorization\Nova\EmailAddress::class,
 
         'escaperoom_game' => \Tipoff\Scheduler\Nova\EscaperoomGame::class,
 
