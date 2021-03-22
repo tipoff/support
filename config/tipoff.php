@@ -49,7 +49,7 @@ return [
         'domain' => \Tipoff\Seo\Models\Domain::class,
 
         'domestic_address' => \Tipoff\Addresses\Models\DomesticAddress::class,
-        
+
         'email_address' => \Tipoff\Authorization\Models\EmailAddress::class,
 
         'escaperoom_game' => \Tipoff\Scheduler\Models\EscaperoomGame::class,
@@ -91,9 +91,9 @@ return [
         'key_serp' => \Tipoff\LaravelSerpapi\Models\Key::class,
 
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
-        
+
         'lead' => \Roberts\Leads\Models\Lead::class,
-        
+
         'lead_business' => \Roberts\Leads\Models\LeadBusiness::class,
 
         'location' => \Tipoff\Locations\Models\Location::class,
@@ -197,9 +197,9 @@ return [
         'block' => \Tipoff\Scheduler\Nova\Block::class,
 
         'booking' => \Tipoff\Bookings\Nova\Booking::class,
-        
+
         'booking_category' => \Tipoff\Bookings\Nova\BookingCategory::class,
-        
+
         'business_category' => \Tipoff\Seo\Nova\BusinessCategory::class,
 
         'cart' => \Tipoff\Checkout\Nova\Cart::class,
@@ -223,7 +223,7 @@ return [
         'domain' => \Tipoff\Seo\Nova\Domain::class,
 
         'domestic_address' => \Tipoff\Addresses\Nova\DomesticAddress::class,
-        
+
         'email_address' => \Tipoff\Authorization\Nova\EmailAddress::class,
 
         'escaperoom_game' => \Tipoff\Scheduler\Nova\EscaperoomGame::class,
@@ -255,10 +255,10 @@ return [
         'key' => \Tipoff\GoogleApi\Nova\Key::class,
 
         'keyword' => \Tipoff\Seo\Nova\Keyword::class,
-        
-        'lead' => \Roberts\Leads\Models\Lead::class,
-        
-        'lead_business' => \Roberts\Leads\Models\LeadBusiness::class,
+
+        'lead' => \Roberts\Leads\Nova\Lead::class,
+
+        'lead_business' => \Roberts\Leads\Nova\LeadBusiness::class,
 
         'location' => \Tipoff\Locations\Nova\Location::class,
 
