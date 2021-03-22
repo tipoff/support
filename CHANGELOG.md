@@ -302,3 +302,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.8.4 - 2021-03-21
 
 - register booking classes
+
+## 1.8.5 - 2021-03-22
+
+- fix nova classes
