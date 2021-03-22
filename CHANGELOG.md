@@ -298,3 +298,7 @@ All notable changes to `support` will be documented in this file.
 
 - register email address
 - register lead classes
+
+## 1.8.4 - 2021-03-21
+
+- register booking classes
