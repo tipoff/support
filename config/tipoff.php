@@ -198,6 +198,8 @@ return [
 
         'booking' => \Tipoff\Bookings\Nova\Booking::class,
         
+        'booking_category' => \Tipoff\Bookings\Nova\BookingCategory::class,
+        
         'business_category' => \Tipoff\Seo\Nova\BusinessCategory::class,
 
         'cart' => \Tipoff\Checkout\Nova\Cart::class,
