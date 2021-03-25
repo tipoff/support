@@ -12,4 +12,11 @@ interface BookingSubjectInterface
      * @return string
      */
     public function getLabel(): string;
+
+    /**
+     * Get timezone.
+     *
+     * @return string
+     */
+    public function getTimezone(): string;
 }
