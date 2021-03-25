@@ -30,7 +30,7 @@ class SupportServiceProvider extends TipoffServiceProvider
     }
 
     /**
-     * Add model aliases to service conainer.
+     * Add model aliases to service container.
      *
      * @return void
      */
