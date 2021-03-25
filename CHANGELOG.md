@@ -310,3 +310,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.8.6 - 2021-03-25
 
 - base support layout
+
+## 1.8.7 - 2021-03-25
+
+- booking slot
