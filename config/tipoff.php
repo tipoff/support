@@ -4,14 +4,14 @@ return [
 
     'api' => [
         'enabled' => true,
-        'uri_prefix' => 'tipoff',
+        'uri_prefix' => 'tipoff/api',
         'middleware_group' => 'api',
         'auth_middleware' => 'auth',
     ],
 
     'web' => [
         'enabled' => true,
-        'uri_prefix' => 'tipoff',
+        'uri_prefix' => '',
         'middleware_group' => 'web',
         'auth_middleware' => 'auth',
     ],
