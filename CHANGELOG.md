@@ -318,3 +318,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.8.8 - 2021-03-26
 
 - route prefixes
+
+## 1.8.9 - 2021-04-06
+
+- register layout
