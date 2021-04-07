@@ -93,6 +93,8 @@ return [
         'key_serp' => \Tipoff\LaravelSerpapi\Models\Key::class,
 
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
+        
+        'layout' => \DrewRoberts\Blog\Models\Layout::class,
 
         'lead' => \Roberts\Leads\Models\Lead::class,
 
@@ -257,6 +259,8 @@ return [
         'key' => \Tipoff\GoogleApi\Nova\Key::class,
 
         'keyword' => \Tipoff\Seo\Nova\Keyword::class,
+        
+        'layout' => \DrewRoberts\Blog\Nova\Layout::class,
 
         'lead' => \Roberts\Leads\Nova\Lead::class,
 
