@@ -322,3 +322,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.8.9 - 2021-04-06
 
 - register layout
+
+## 1.8.10 - 2021-04-08
+
+- layout type enum
