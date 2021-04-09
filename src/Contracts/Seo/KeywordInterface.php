@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Contracts\Seo;
 
-use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
@@ -22,7 +21,6 @@ interface KeywordInterface extends BaseModelInterface
      *
      * @return bool
      */
-
     public function isGeneric(): bool;
 
     /**
@@ -30,7 +28,6 @@ interface KeywordInterface extends BaseModelInterface
      *
      * @return bool
      */
-
     public function isLocal(): bool;
 
     /**
