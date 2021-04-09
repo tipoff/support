@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -16,13 +17,13 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-
-            <!-- Page Content -->
-            <main>
-                @yield('content')
-            </main>
+    <body class="body">
+        <div id="app" class="website">
+            <div class="website-wrapper">
+                <main class="main">
+                    @yield('content')
+                </main>
+            </div>
         </div>
     </body>
 </html>
