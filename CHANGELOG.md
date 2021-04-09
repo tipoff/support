@@ -326,3 +326,7 @@ All notable changes to `support` will be documented in this file.
 ## 1.8.10 - 2021-04-08
 
 - layout type enum
+
+## 2.0.0 - 2021-04-09
+
+- structures for layout templates
