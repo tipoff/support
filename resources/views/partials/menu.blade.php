@@ -322,16 +322,7 @@
         </div>
         <div class="lightbox__menu-buttons">
             <div class="button-container">
-                @if(\Illuminate\Support\Facades\Route::has('reservations'))
-                <a
-                    href="{{ $market->reservations_path ?? route('reservations') }}"
-                    class="button5">Play Anytime</a>
-                @endif
-                @if(\Illuminate\Support\Facades\Route::has('bookings'))
-                <a
-                    href="{{ $market->bookings_path ?? route('bookings') }}"
-                    class="button6">Book Online</a>
-                @endif
+                Call To Action Placeholder
             </div>
         </div>
     </div>
