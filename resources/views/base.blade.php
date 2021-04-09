@@ -16,13 +16,20 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
+    <body class="body">
+        <div id="app" class="website">
+            @include('support::partials.header')
 
-            <!-- Page Content -->
-            <main>
-                @yield('content')
-            </main>
+            <div class="website-wrapper">
+
+                <main class="main">
+                    @yield('content')
+
+                    @include('support::partials.menu')
+                </main>
+
+                @include('support::partials.footer')
+            </div>
         </div>
     </body>
 </html>
