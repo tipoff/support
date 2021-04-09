@@ -5,17 +5,17 @@
                 Logo
             </a>
             <div class="hamburger-close-link" role="button" tabindex="0" on="tap:menu.close">
-                <svg 
-                    version="1.1" 
-                    class="menu-close-hamburger" 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    xmlns:xlink="http://www.w3.org/1999/xlink" 
+                <svg
+                    version="1.1"
+                    class="menu-close-hamburger"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
                     width="45"
                     height="45"
                     viewBox="0 0 318.89 326.27"
                     style=""
                     xml:space="preserve">
-                    <g>                        
+                    <g>
                         <rect x="122.97" y="104.77" transform="matrix(0.6613 -0.7501 0.7501 0.6613 -11.1673 197.0859)" class="svg-no-fill" width="179.39" height="12.28"/>
                         <path d="M244.03,67.65c0.03-0.1,0.14-0.24,0.27-0.39C244.32,67.35,244.19,67.58,244.03,67.65z"/>
                         <path d="M255.01,67.8c0.07-0.13,0.31-0.52,0.39-0.39C255.23,67.61,255.14,67.67,255.01,67.8z"/>
@@ -108,7 +108,7 @@
                             c0.21,0.14-0.53,0.75-0.39,0.93c-0.26,0.26-0.38,0.39-0.41,0.59c-0.56,0.51-0.55,0.73-0.99,1.1
                             C258.05,61.37,257.91,61.58,257.82,61.44z"/>
                     </g>
-                    <g>                        
+                    <g>
                         <rect x="16.35" y="220.15" transform="matrix(0.6613 -0.7501 0.7501 0.6613 -132.1644 159.8608)" class="svg-no-fill" width="189.19" height="12.28"/>
                         <path d="M77.66,271.72c-0.04,0.11-0.15,0.25-0.29,0.41C77.35,272.05,77.5,271.81,77.66,271.72z"/>
                         <path d="M66.43,271.87c-0.07,0.14-0.33,0.54-0.41,0.41C66.19,272.07,66.29,272.01,66.43,271.87z"/>
@@ -200,7 +200,7 @@
                             c-0.09,0.1,0.21,0.02,0.09,0.21c-0.25,0.17-0.52,0.39-0.85,0.77c-0.21-0.14,0.56-0.79,0.43-0.97c0.27-0.28,0.4-0.41,0.43-0.62
                             c0.59-0.54,0.59-0.77,1.05-1.16C63.13,278.58,63.28,278.36,63.37,278.5z"/>
                     </g>
-                    <g>                        
+                    <g>
                         <rect x="154.05" y="1.38" transform="matrix(0.7501 -0.6613 0.6613 0.7501 -72.6827 148.525)" class="svg-no-fill" width="12.28" height="338.11"/>
                         <path d="M230.29,242.27c0.15,0.11,0.38,0.35,0.63,0.63C230.81,242.88,230.44,242.54,230.29,242.27z"/>
                         <path d="M232.96,257.89c0.21,0.18,0.82,0.77,0.65,0.79C233.28,258.33,233.18,258.15,232.96,257.89z"/>
@@ -295,14 +295,14 @@
                 </svg>
             </div>
         </div>
-        
+
         <div class="lightbox__menu-menu">
             <ul class="navbar-nav mr-auto lightbox__navigation">
                 <li class="nav-item dropdown">
                     <amp-accordion animate>
                         <section>
                             <h6 class="nav-link">
-                                <span class="header-heading-arrow">Locations <amp-img 
+                                <span class="header-heading-arrow">Locations <amp-img
                                     src="{{ url('img/menus/menu-chevrons.svg') }}"
                                     width="25"
                                     height="25.57856941265"
@@ -310,25 +310,20 @@
                                     class="chevron-icon"></amp-img></span>
                             </h6>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                @foreach ($navmarkets as $navmarket)
+                                @foreach ($navmarkets ?? [] as $navmarket)
                                     <a class="dropdown-item" href="{{ url($navmarket->path) }}">{{ $navmarket->name}}, {{ $navmarket->state}}</a>
                                 @endforeach
                             </div>
                         </section>
                     </amp-accordion>
                 </li>
-            
-            </ul>            
+
+            </ul>
         </div>
         <div class="lightbox__menu-buttons">
             <div class="button-container">
-                <a 
-                    href="{{ $market->reservations_path ?? route('reservations') }}" 
-                    class="button5">Play Anytime</a>
-                <a 
-                    href="{{ $market->bookings_path ?? route('bookings') }}" 
-                    class="button6">Book Online</a>
+                Call To Action Placeholder
             </div>
-        </div>        
+        </div>
     </div>
 </amp-lightbox>

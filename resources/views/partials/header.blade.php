@@ -4,16 +4,16 @@
                <div class="website-header__navbar-left">
                     <a class="logo" href="{{ url('/') }}">
                       Logo
-                    </a> 
+                    </a>
                     <div class="header-desktop-locations">
-                         @if($market)
+                         @if($market ?? null)
                               <a href="{{ $market->path }}" class="button0" role="button" aria-disabled="true">
                                    <svg
                                         version="1.1"
                                         xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
                                         class="location-pin"
-                                        viewBox="0 0 230.4 436.7" 
+                                        viewBox="0 0 230.4 436.7"
                                         xml:space="preserve">
                                         <path class="svg-location-pin" d="M115.2,25.1C55.7,25.1,7.4,73.4,7.4,132.9c0,8.4,1,16.6,2.8,24.4c-1.6-1.1,103.1,252.3,103.1,252.3
                                         c1.1,2.8,5.1,2.6,5.9-0.3c0,0,102.6-253.1,101.1-252c1.8-7.8,2.8-16,2.8-24.3C223,73.4,174.8,25.1,115.2,25.1z M115.2,209.9
@@ -23,12 +23,12 @@
                               </a>
                          @else
                          <button class="button0" type="button" on="tap:menu">
-                                   Locations 
-                                   <svg 
-                                        version="1.1" 
-                                        class="locations-chevron" 
-                                        xmlns="http://www.w3.org/2000/svg" 
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"                                   
+                                   Locations
+                                   <svg
+                                        version="1.1"
+                                        class="locations-chevron"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink"
                                         viewBox="0 0 318.89 326.27"
                                         style="margin-left: 5px; position: relative; top: 1px;"
                                         xml:space="preserve">
@@ -132,13 +132,13 @@
                </div>
                <div class="website-header__navbar-right">
                     <div class="hamburger-open-link" role="button" tabindex="0" on="tap:menu.open">
-                         <svg 
-                              version="1.1" 
-                              id="menu-open-hamburger" 
-                              xmlns="http://www.w3.org/2000/svg" 
-                              xmlns:xlink="http://www.w3.org/1999/xlink" 
-                              width="45" 
-                              height="45" 
+                         <svg
+                              version="1.1"
+                              id="menu-open-hamburger"
+                              xmlns="http://www.w3.org/2000/svg"
+                              xmlns:xlink="http://www.w3.org/1999/xlink"
+                              width="45"
+                              height="45"
                               viewBox="0 0 318.89 326.27"
                               style=""
                               xml:space="preserve">
@@ -327,8 +327,8 @@
                                         c1.05,0.08,1.28-0.07,2.08,0.02C65.4,202.33,65.75,202.3,65.69,202.46z"/>
                               </g>
                          </svg>
-                    </div>            
-               </div>            
+                    </div>
+               </div>
           </div>
      </nav>
 </header>
