@@ -93,7 +93,7 @@ return [
         'key_serp' => \Tipoff\LaravelSerpapi\Models\Key::class,
 
         'keyword' => \Tipoff\Seo\Models\Keyword::class,
-        
+
         'layout' => \DrewRoberts\Blog\Models\Layout::class,
 
         'lead' => \Roberts\Leads\Models\Lead::class,
@@ -250,6 +250,10 @@ return [
 
         'gmb_account' => \Tipoff\GoogleApi\Nova\GmbAccount::class,
 
+        'gmb_detail' => \Tipoff\Locations\Nova\GmbDetail::class,
+
+        'gmb_hour' => \Tipoff\Locations\Nova\GmbHour::class,
+
         'image' => \DrewRoberts\Media\Nova\Image::class,
 
         'insight' => \Tipoff\Reviews\Nova\Insight::class,
@@ -259,7 +263,7 @@ return [
         'key' => \Tipoff\GoogleApi\Nova\Key::class,
 
         'keyword' => \Tipoff\Seo\Nova\Keyword::class,
-        
+
         'layout' => \DrewRoberts\Blog\Nova\Layout::class,
 
         'lead' => \Roberts\Leads\Nova\Lead::class,
