@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Tipoff\Support\Tests\Unit\Enums;
 
-use Tipoff\Support\Tests\TestCase;
 use Tipoff\Support\Enums\AppliesTo;
+use Tipoff\Support\Tests\TestCase;
 
 class AppliesToTest extends TestCase
 {

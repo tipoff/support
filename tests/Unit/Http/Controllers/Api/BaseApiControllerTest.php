@@ -95,6 +95,6 @@ class BaseApiControllerTest extends TestCase
         $result = $controller->buildRelationships('comment,post');
         $this->assertIsArray($result);
         $this->assertContainsEquals('comment', $result);
-        $this->assertNotContains('post',$result);
+        $this->assertNotContains('post', $result);
     }
 }
