@@ -84,4 +84,17 @@ class BaseApiControllerTest extends TestCase
         $this->assertIsArray($result);
         $this->assertEmpty($result);
     }
+
+    /** @test */
+    public function build_relationships_can_return_array_with_data()
+    {
+        $controller = new class extends BaseApiController {
+            protected array $allowedRelationships = ['comment'];
+        };
+
+        $result = $controller->buildRelationships('comment,post');
+        $this->assertIsArray($result);
+        $this->assertContainsEquals('comment', $result);
+        $this->assertNotContains('post',$result);
+    }
 }
