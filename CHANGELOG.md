@@ -334,3 +334,7 @@ All notable changes to `support` will be documented in this file.
 ## 2.0.1 - 2021-04-09
 
 - fix variables in layout template strutures
+
+## 2.0.2 - 2021-04-12
+
+- aliases for gmb details & hours
