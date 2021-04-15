@@ -15,6 +15,8 @@
 
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+
+        <livewire:styles />
     </head>
     <body class="body">
         <div id="app" class="website">
@@ -31,5 +33,7 @@
                 @include('support::partials.footer')
             </div>
         </div>
+
+        <livewire:scripts />
     </body>
 </html>
