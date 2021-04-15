@@ -55,6 +55,16 @@ class EnumTest extends TestCase
     }
 
     /** @test */
+    public function set_by_null_returns_null()
+    {
+        $cast = new \Tipoff\Support\Casts\Enum(TestEnum::class);
+        $value = $cast->set(new class extends Model {
+        }, 'attribute', null, []);
+
+        $this->assertEquals(null, $value);
+    }
+
+    /** @test */
     public function set_by_unknown_string_fails()
     {
         $this->expectException(\Exception::class);

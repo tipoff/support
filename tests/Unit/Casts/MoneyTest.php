@@ -22,6 +22,16 @@ class MoneyTest extends TestCase
     }
 
     /** @test */
+    public function set_by_null_returns_null()
+    {
+        $cast = new \Tipoff\Support\Casts\Money();
+        $value = $cast->set(new class extends Model {
+        }, 'attribute', null, []);
+
+        $this->assertEquals(null, $value);
+    }
+
+    /** @test */
     public function set_by_money_converts_to_int()
     {
         $cast = new \Tipoff\Support\Casts\Money();

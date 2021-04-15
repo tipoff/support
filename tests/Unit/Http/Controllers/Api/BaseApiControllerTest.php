@@ -69,4 +69,32 @@ class BaseApiControllerTest extends TestCase
         $this->assertEquals(401, $result->status());
         $this->assertEquals('{"errors":[{"status":{},"code":"UNAUTHORIZED","title":"errors.UNAUTHORIZED"}]}', $result->content());
     }
+
+    /** @test */
+    public function build_relationships_can_return_empty_array()
+    {
+        $controller = new class extends BaseApiController {
+        };
+
+        $result = $controller->buildRelationships('');
+        $this->assertIsArray($result);
+        $this->assertEmpty($result);
+
+        $result = $controller->buildRelationships('comment,post');
+        $this->assertIsArray($result);
+        $this->assertEmpty($result);
+    }
+
+    /** @test */
+    public function build_relationships_can_return_array_with_data()
+    {
+        $controller = new class extends BaseApiController {
+            protected array $allowedRelationships = ['comment'];
+        };
+
+        $result = $controller->buildRelationships('comment,post');
+        $this->assertIsArray($result);
+        $this->assertContainsEquals('comment', $result);
+        $this->assertNotContains('post', $result);
+    }
 }
