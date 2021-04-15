@@ -77,6 +77,10 @@ class TipoffPackage extends Package
      */
     public array $dataMigrationPaths = [];
 
+    public array $apiRouteFileNames = [];
+
+    public array $webRouteFileNames = [];
+
     public function __construct(Package $package)
     {
         $this->setBasePath($package->basePath);
@@ -94,36 +98,28 @@ class TipoffPackage extends Package
 
     public function hasApiRoute(string $routeFileName): self
     {
-        if (config('tipoff.api.enabled')) {
-            return parent::hasRoute($routeFileName);
-        }
+        $this->apiRouteFileNames[] = $routeFileName;
 
         return $this;
     }
 
     public function hasApiRoutes(...$routeFileNames): self
     {
-        if (config('tipoff.api.enabled')) {
-            return parent::hasRoutes(...$routeFileNames);
-        }
+        $this->apiRouteFileNames = array_merge($this->apiRouteFileNames, collect($routeFileNames)->flatten()->toArray());
 
         return $this;
     }
 
     public function hasWebRoute(string $routeFileName): self
     {
-        if (config('tipoff.web.enabled')) {
-            return parent::hasRoute($routeFileName);
-        }
+        $this->webRouteFileNames[] = $routeFileName;
 
         return $this;
     }
 
     public function hasWebRoutes(...$routeFileNames): self
     {
-        if (config('tipoff.web.enabled')) {
-            return parent::hasRoutes(...$routeFileNames);
-        }
+        $this->webRouteFileNames = array_merge($this->webRouteFileNames, collect($routeFileNames)->flatten()->toArray());
 
         return $this;
     }

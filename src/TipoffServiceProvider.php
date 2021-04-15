@@ -39,6 +39,14 @@ abstract class TipoffServiceProvider extends PackageServiceProvider
         }
 
         $this->loadViewComponentsAs('tipoff', $package->bladeComponents);
+
+        if (config('tipoff.web.enabled')) {
+            $package->routeFileNames = array_merge($package->routeFileNames, $package->webRouteFileNames);
+        }
+
+        if (config('tipoff.api.enabled')) {
+            $package->routeFileNames = array_merge($package->routeFileNames, $package->apiRouteFileNames);
+        }
     }
 
     public function packageRegistered()
