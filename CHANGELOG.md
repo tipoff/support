@@ -338,3 +338,7 @@ All notable changes to `support` will be documented in this file.
 ## 2.0.2 - 2021-04-12
 
 - aliases for gmb details & hours
+
+## 2.0.3 - 2021-04-15
+
+- update return types to allow method chaining without psalm errors
