@@ -92,7 +92,7 @@ class TipoffPackage extends Package
         throw new \Exception('Use hasApiRoutes or hasWebRoutes for Tipoff routes');
     }
 
-    public function hasApiRoute(string $routeFileName): Package
+    public function hasApiRoute(string $routeFileName): self
     {
         if (config('tipoff.api.enabled')) {
             return parent::hasRoute($routeFileName);
@@ -101,7 +101,7 @@ class TipoffPackage extends Package
         return $this;
     }
 
-    public function hasApiRoutes(...$routeFileNames): Package
+    public function hasApiRoutes(...$routeFileNames): self
     {
         if (config('tipoff.api.enabled')) {
             return parent::hasRoutes(...$routeFileNames);
@@ -110,7 +110,7 @@ class TipoffPackage extends Package
         return $this;
     }
 
-    public function hasWebRoute(string $routeFileName): Package
+    public function hasWebRoute(string $routeFileName): self
     {
         if (config('tipoff.web.enabled')) {
             return parent::hasRoute($routeFileName);
@@ -119,7 +119,7 @@ class TipoffPackage extends Package
         return $this;
     }
 
-    public function hasWebRoutes(...$routeFileNames): Package
+    public function hasWebRoutes(...$routeFileNames): self
     {
         if (config('tipoff.web.enabled')) {
             return parent::hasRoutes(...$routeFileNames);
