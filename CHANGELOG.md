@@ -350,3 +350,7 @@ All notable changes to `support` will be documented in this file.
 ## 2.1.1 - 2021-04-15
 
 - add livewire tags to skeleton structures
+
+## 2.1.2 - 2021-04-15
+
+- require livewire
