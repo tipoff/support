@@ -10,12 +10,22 @@ use Tipoff\Support\Objects\DiscountableValue;
 interface CartInterface extends BaseItemContainerInterface
 {
     /**
+     * Resolve a route name to an url, using a package default if the route doesn't exist.
+     *
+     * @param string $name
+     * @param array $parameters
+     * @param bool $absolute
+     * @return string
+     */
+    public static function route(string $name, array $parameters = [], bool $absolute = true): string;
+
+    /**
      * Retrieve or create the current active cart for the given user.
      *
-     * @param int $userId
+     * @param int $emailAddressId
      * @return static
      */
-    public static function activeCart(int $userId): self;
+    public static function activeCart(int $emailAddressId): self;
 
     /**
      * Creates a new, DETACHED, cart item with required information.  Use `upsertItem` to attach
@@ -28,6 +38,17 @@ interface CartInterface extends BaseItemContainerInterface
      * @return CartItemInterface
      */
     public static function createItem(Sellable $sellable, string $itemId, $amount, int $quantity = 1): CartItemInterface;
+
+    /**
+     * Performs an upsertItem on the activeCart when emailAddressId is provided.  When emailAddressId is not provided,
+     * the cartItem is stored in session data.  When/if a login event is raised, the cartItem in session data will
+     * be moved to the logged in users cart.
+     *
+     * @param CartItemInterface $cartItem
+     * @param int|null $emailAddressId
+     * @return CartItemInterface
+     */
+    public static function queuedUpsertItem(CartItemInterface $cartItem, ?int $emailAddressId = null): CartItemInterface;
 
     /**
      * Adds a newly created cart item to the cart or indicates an existing item has been changed. Item is validated as
