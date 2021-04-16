@@ -346,3 +346,7 @@ All notable changes to `support` will be documented in this file.
 ## 2.1.0 - 2021-04-15
 
 - update web route registration
+
+## 2.1.1 - 2021-04-15
+
+- add livewire tags to skeleton structures
