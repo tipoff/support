@@ -24,6 +24,7 @@
         "illuminate/database": "^8.18",
         "laravel/cashier": "^12.11.10",
         "laravel/nova": "^3.22",
+        "livewire/livewire": "^2.4.2",
         "marc-mabe/php-enum": "^4.4",
         "nesbot/carbon": "^2.44",
         "spatie/laravel-fractal": "^5.8.1",
