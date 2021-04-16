@@ -354,3 +354,7 @@ All notable changes to `support` will be documented in this file.
 ## 2.1.2 - 2021-04-15
 
 - require livewire
+
+## 2.1.3 - 2021-04-16
+
+- update cart interface
