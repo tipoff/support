@@ -6,9 +6,18 @@ namespace Tipoff\Support\Contracts\Booking;
 
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 use Tipoff\Support\Contracts\Models\UserInterface;
+use Tipoff\Support\Contracts\Waivers\SignatureInterface;
 
 interface BookingParticipantInterface extends BaseModelInterface
 {
+    /**
+     * Find existing or create new participant from signature
+     *
+     * @param SignatureInterface $signature
+     * @return static
+     */
+    public static function findOrCreateFromSignature(SignatureInterface $signature): self;
+
     /**
      * Get label used in lists.
      *
