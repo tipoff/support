@@ -6,6 +6,8 @@ namespace Tipoff\Support\Contracts\Waivers;
 
 use Carbon\Carbon;
 use Tipoff\Support\Contracts\Authorization\EmailAddressInterface;
+use Tipoff\Support\Contracts\Booking\BookingParticipantInterface;
+use Tipoff\Support\Contracts\Locations\LocationInterface;
 use Tipoff\Support\Contracts\Models\BaseModelInterface;
 
 interface SignatureInterface extends BaseModelInterface
@@ -32,9 +34,30 @@ interface SignatureInterface extends BaseModelInterface
     public function getEmailAddress(): EmailAddressInterface;
 
     /**
-     * Get email address.
+     * Get location.
+     *
+     * @return LocationInterface
+     */
+    public function getLocation(): LocationInterface;
+
+    /**
+     * Get participant.
+     *
+     * @return BookingParticipantInterface|null
+     */
+    public function getParticipant(): ?BookingParticipantInterface;
+
+    /**
+     * Get date of birth.
      *
      * @return Carbon
      */
     public function getDob(): Carbon;
+
+    /**
+     * Get signature date
+     *
+     * @return Carbon
+     */
+    public function getSignatureDate(): Carbon;
 }
