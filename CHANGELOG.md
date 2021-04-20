@@ -358,3 +358,7 @@ All notable changes to `support` will be documented in this file.
 ## 2.1.3 - 2021-04-16
 
 - update cart interface
+
+## 2.1.4 - 2021-04-20
+
+- model contracts for locations & waiver signatures
