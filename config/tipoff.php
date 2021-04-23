@@ -104,6 +104,8 @@ return [
 
         'market' => \Tipoff\Locations\Models\Market::class,
 
+        'market_announcement' => \Tipoff\Locations\Models\MarketAnnouncement::class,
+
         'note' => \Tipoff\Notes\Models\Note::class,
 
         'order' => \Tipoff\Checkout\Models\Order::class,
@@ -273,6 +275,8 @@ return [
         'location' => \Tipoff\Locations\Nova\Location::class,
 
         'market' => \Tipoff\Locations\Nova\Market::class,
+
+        'market_announcement' => \Tipoff\Locations\Nova\MarketAnnouncement::class,
 
         'note' => \Tipoff\Notes\Nova\Note::class,
 
