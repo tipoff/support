@@ -362,3 +362,7 @@ All notable changes to `support` will be documented in this file.
 ## 2.1.4 - 2021-04-20
 
 - model contracts for locations & waiver signatures
+
+## 2.1.5 - 2021-04-23
+
+- market announcements
