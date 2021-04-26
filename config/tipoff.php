@@ -11,7 +11,7 @@ return [
 
     'web' => [
         'enabled' => true,
-        'uri_prefix' => '',
+        'uri_prefix' => '/',
         'middleware_group' => 'web',
         'auth_middleware' => 'auth',
     ],
