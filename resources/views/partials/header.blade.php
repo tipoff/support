@@ -12,7 +12,7 @@
                                         version="1.1"
                                         xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        class="location-pin"
+                                        class="location-pin w-4"
                                         viewBox="0 0 230.4 436.7"
                                         xml:space="preserve">
                                         <path class="svg-location-pin" d="M115.2,25.1C55.7,25.1,7.4,73.4,7.4,132.9c0,8.4,1,16.6,2.8,24.4c-1.6-1.1,103.1,252.3,103.1,252.3
@@ -26,7 +26,7 @@
                                    Locations
                                    <svg
                                         version="1.1"
-                                        class="locations-chevron"
+                                        class="locations-chevron w-4"
                                         xmlns="http://www.w3.org/2000/svg"
                                         xmlns:xlink="http://www.w3.org/1999/xlink"
                                         viewBox="0 0 318.89 326.27"
