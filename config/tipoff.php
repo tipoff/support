@@ -366,6 +366,8 @@ return [
 
         'zip' => \Tipoff\Addresses\Nova\Zip::class,
 
+        'booking_slot' => \Tipoff\Bookings\Nova\BookingSlot::class,
+
     ]
 
 ];
