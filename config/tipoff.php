@@ -102,6 +102,8 @@ return [
 
         'location' => \Tipoff\Locations\Models\Location::class,
 
+        'location_fee' => \Tipoff\Fees\Models\LocationFee::class,
+
         'market' => \Tipoff\Locations\Models\Market::class,
 
         'market_announcement' => \Tipoff\Locations\Models\MarketAnnouncement::class,
@@ -273,6 +275,8 @@ return [
         'lead_business' => \Roberts\Leads\Nova\LeadBusiness::class,
 
         'location' => \Tipoff\Locations\Nova\Location::class,
+
+        'location_fee' => \Tipoff\Fees\Nova\LocationFee::class,
 
         'market' => \Tipoff\Locations\Nova\Market::class,
 
