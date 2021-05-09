@@ -134,7 +134,9 @@ return [
 
         'product' => \Tipoff\Products\Models\Product::class,
 
-        'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
+        'profile' => \Tipoff\Profiles\Models\Profile::class,
+
+        'profile_link' => \Tipoff\Profiles\Models\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Models\Ranking::class,
 
@@ -308,7 +310,9 @@ return [
 
         'product' => \Tipoff\Products\Nova\Product::class,
 
-        'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
+        'profile' => \Tipoff\Profiles\Nova\Profile::class,
+
+        'profile_link' => \Tipoff\Profiles\Nova\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Nova\Ranking::class,
 
