@@ -102,6 +102,8 @@ return [
 
         'location' => \Tipoff\Locations\Models\Location::class,
 
+        'location_fee' => \Tipoff\Fees\Models\LocationFee::class,
+
         'market' => \Tipoff\Locations\Models\Market::class,
 
         'market_announcement' => \Tipoff\Locations\Models\MarketAnnouncement::class,
@@ -132,7 +134,9 @@ return [
 
         'product' => \Tipoff\Products\Models\Product::class,
 
-        'profile_link' => \Tipoff\Seo\Models\ProfileLink::class,
+        'profile' => \Tipoff\Profiles\Models\Profile::class,
+
+        'profile_link' => \Tipoff\Profiles\Models\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Models\Ranking::class,
 
@@ -274,6 +278,8 @@ return [
 
         'location' => \Tipoff\Locations\Nova\Location::class,
 
+        'location_fee' => \Tipoff\Fees\Nova\LocationFee::class,
+
         'market' => \Tipoff\Locations\Nova\Market::class,
 
         'market_announcement' => \Tipoff\Locations\Nova\MarketAnnouncement::class,
@@ -304,7 +310,9 @@ return [
 
         'product' => \Tipoff\Products\Nova\Product::class,
 
-        'profile_link' => \Tipoff\Seo\Nova\ProfileLink::class,
+        'profile' => \Tipoff\Profiles\Nova\Profile::class,
+
+        'profile_link' => \Tipoff\Profiles\Nova\ProfileLink::class,
 
         'ranking' => \Tipoff\Seo\Nova\Ranking::class,
 
